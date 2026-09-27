@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.contactTitle">Contact — Voice-Based Neurological Screening</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.contactDescription"
+        content="Get in touch with the team behind our voice-based neurological screening technology — for research, clinical, partnership or investment enquiries." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content" data-i18n="meta.contactTitle"
+        content="Contact — Voice-Based Neurological Screening" />
+  <meta property="og:description" data-i18n-attr="content" data-i18n="meta.contactDescription"
+        content="Get in touch with the team behind our voice-based neurological screening technology." />
+  <meta property="og:image" content="/assets/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/contact.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 12" width="32" height="12" fill="none">
+            <path d="M0 6h3l2-4 3 8 3-10 3 12 3-8 2 2h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Vocalis</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="fa" aria-pressed="false">FA</button>
+          <button type="button" class="lang-btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav aria-label="Mobile">
+        <ul>
+          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. HERO / INTRO -->
+    <section class="contact-hero" aria-labelledby="contact-hero-title">
+      <div class="container contact-hero-inner">
+        <div class="contact-hero-copy">
+          <p class="eyebrow" data-i18n="contact.hero.eyebrow">Contact</p>
+          <h1 id="contact-hero-title" data-i18n="contact.hero.title">
+            Let's start a conversation
+          </h1>
+          <p class="lead" data-i18n="contact.hero.description">
+            For research, clinical, partnership or investment enquiries — we welcome
+            direct conversations.
+          </p>
+          <p class="contact-hero-audience" data-i18n="contact.hero.audience">
+            Investors · Research · Partnerships
+          </p>
+        </div>
+
+        <div class="contact-hero-visual" aria-hidden="true">
+          <svg class="contact-signal" viewBox="0 0 480 260" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="contactGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%"   stop-color="#26384A" stop-opacity="0.10" />
+                <stop offset="50%"  stop-color="#3DD6C6" stop-opacity="1" />
+                <stop offset="100%" stop-color="#26384A" stop-opacity="0.10" />
+              </linearGradient>
+            </defs>
+
+            <!-- baseline -->
+            <line x1="30" y1="130" x2="450" y2="130"
+                  stroke="#0B1726" stroke-opacity="0.08" stroke-dasharray="2 6" />
+
+            <!-- primary signal -->
+            <path class="contact-wave contact-wave-1"
+              d="M30,130 C60,130 70,70 100,70 C130,70 140,200 170,200 C200,200 210,50 240,50 C270,50 280,210 310,210 C340,210 350,90 380,90 C410,90 420,160 450,160"
+              fill="none" stroke="url(#contactGrad)" stroke-width="1.6" stroke-linecap="round" />
+
+            <!-- echo -->
+            <path class="contact-wave contact-wave-2"
+              d="M30,130 C70,130 90,100 130,100 C170,100 190,180 230,180 C270,180 290,80 330,80 C370,80 390,160 430,160 C445,160 450,130 450,130"
+              fill="none" stroke="#0B1726" stroke-opacity="0.14" stroke-width="1" stroke-linecap="round" />
+
+            <!-- node -->
+            <circle cx="240" cy="50" r="2.5" fill="#3DD6C6" />
+            <circle cx="310" cy="210" r="2.5" fill="#3DD6C6" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONTACT INFO + FORM -->
+    <section class="contact-main reveal" aria-labelledby="contact-main-title">
+      <div class="container contact-main-inner">
+        <h2 id="contact-main-title" class="sr-only" data-i18n="contact.info.title">
+          Contact details
+        </h2>
+
+        <!-- Left: contact information -->
+        <aside class="contact-info" aria-labelledby="contact-info-title">
+          <p class="contact-info-title" id="contact-info-title"
+             data-i18n="contact.info.title">Contact details</p>
+
+          <dl class="contact-info-list">
+            <div class="contact-info-row">
+              <dt class="contact-info-key" data-i18n="contact.info.emailLabel">Email</dt>
+              <dd class="contact-info-val" data-i18n="contact.info.emailValue">[Email Address]</dd>
+            </div>
+            <div class="contact-info-row">
+              <dt class="contact-info-key" data-i18n="contact.info.locationLabel">Location</dt>
+              <dd class="contact-info-val" data-i18n="contact.info.locationValue">[Office Location]</dd>
+            </div>
+            <div class="contact-info-row">
+              <dt class="contact-info-key" data-i18n="contact.info.phoneLabel">Phone</dt>
+              <dd class="contact-info-val" data-i18n="contact.info.phoneValue">[Phone Number]</dd>
+            </div>
+          </dl>
+
+          <p class="contact-info-note" data-i18n="contact.info.note">
+            For investment and partnership enquiries, please use the form or reach out
+            directly by email.
+          </p>
+        </aside>
+
+        <!-- Right: minimal form -->
+        <form
+          class="contact-form"
+          id="contactForm"
+          name="contact"
+          method="post"
+          action="#"
+          novalidate
+        >
+          <!-- Note: no backend is wired yet. When a real endpoint is available,
+               update `action` and remove `novalidate` if using server-side validation. -->
+
+          <div class="form-field">
+            <label for="contact-name" data-i18n="contact.form.name">Name</label>
+            <input
+              id="contact-name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+              data-i18n-attr="placeholder"
+              data-i18n="contact.form.namePlaceholder"
+              placeholder="Your full name"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="contact-email" data-i18n="contact.form.email">Email</label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              data-i18n-attr="placeholder"
+              data-i18n="contact.form.emailPlaceholder"
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="contact-subject" data-i18n="contact.form.subject">Subject</label>
+            <input
+              id="contact-subject"
+              name="subject"
+              type="text"
+              required
+              data-i18n-attr="placeholder"
+              data-i18n="contact.form.subjectPlaceholder"
+              placeholder="How can we help?"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="contact-message" data-i18n="contact.form.message">Message</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="4"
+              required
+              data-i18n-attr="placeholder"
+              data-i18n="contact.form.messagePlaceholder"
+              placeholder="A short note"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary contact-submit"
+            data-i18n="contact.form.submit"
+          >
+            Send Message
+          </button>
+
+          <p class="contact-form-note" data-i18n="contact.form.note">
+            We'll respond using the email address you provide.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 3. CLOSING CTA -->
+    <section class="contact-closing reveal" aria-labelledby="contact-closing-title">
+      <div class="container contact-closing-inner">
+        <h2 id="contact-closing-title" class="contact-closing-title"
+            data-i18n="contact.closing.title">
+          Have a question or want to explore a collaboration?
+        </h2>
+        <p class="contact-closing-line"
+           data-i18n="contact.closing.description">
+          Reach out directly at
+          <a class="contact-closing-link" href="mailto:hello@example.com">
+            <span data-i18n="contact.info.emailValue">[Email Address]</span>
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Vocalis</span>
+        <p class="footer-tag" data-i18n="footer.tagline">
+          Voice-based screening for neurological disorders.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-legal">
+        <p data-i18n="footer.disclaimer">
+          This technology is intended for screening purposes and does not provide a medical diagnosis.
+        </p>
+        <p class="footer-copy">
+          © <span id="year"></span> Vocalis. <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

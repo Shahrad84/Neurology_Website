@@ -1,0 +1,554 @@
+/* =========================================================
+   Applications page — section-specific styles
+   Depends on tokens/primitives in /css/global.css
+   ========================================================= */
+
+/* ---------- Shared helpers on this page ---------- */
+.eyebrow--accent { color: var(--accent); }
+
+.lead--onDark {
+  color: rgba(247, 248, 246, 0.72);
+}
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
+.apps-hero {
+  padding-block: clamp(3rem, 6vw, 6rem) clamp(3rem, 5vw, 5.5rem);
+  border-block-end: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.apps-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .apps-hero-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: clamp(3rem, 5vw, 5rem);
+  }
+}
+
+.apps-hero-copy h1 {
+  margin-block: 0.5rem 1.25rem;
+  max-width: 20ch;
+}
+html[lang="fa"] .apps-hero-copy h1 { max-width: 24ch; }
+
+.apps-hero-copy .lead {
+  margin-block-end: 2rem;
+  max-width: 54ch;
+}
+
+.apps-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Hero visual */
+.apps-hero-visual {
+  width: 100%;
+  max-width: 620px;
+  margin-inline: auto;
+  aspect-ratio: 4 / 3;
+  position: relative;
+}
+
+.apps-signal {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.app-wave {
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  animation: appDraw 2s var(--ease) forwards;
+}
+.app-wave-2 { animation-delay: 0.2s; }
+.app-wave-3 { animation-delay: 0.4s; }
+
+@keyframes appDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-wave { stroke-dashoffset: 0; animation: none; }
+}
+
+/* =========================================================
+   2. CURRENT VALIDATED APPLICATION — dark anchor section
+   ========================================================= */
+.apps-current {
+  background: var(--ink-strong);
+  color: #F7F8F6;
+  border-block: 1px solid rgba(247, 248, 246, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle signal trace behind the dark section */
+.apps-current::before {
+  content: "";
+  position: absolute;
+  inset-block-end: -60px;
+  inset-inline-start: -5%;
+  width: 110%;
+  height: 160px;
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(61, 214, 198, 0.06) 0 2px,
+      transparent 2px 12px
+    );
+  mask-image: linear-gradient(to top, rgba(0,0,0,1), transparent 90%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), transparent 90%);
+  pointer-events: none;
+}
+
+.apps-current-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .apps-current-inner {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: clamp(3rem, 5vw, 5rem);
+  }
+}
+
+.apps-current h2 {
+  color: #fff;
+  margin-block: 0.5rem 1.25rem;
+  font-size: clamp(1.8rem, 3.6vw, 2.75rem);
+  letter-spacing: -0.025em;
+  max-width: 22ch;
+}
+
+.apps-current-copy .lead {
+  max-width: 56ch;
+}
+
+.apps-current-note {
+  margin-block-start: 1.75rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--accent);
+  color: rgba(247, 248, 246, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+/* Metadata list */
+.apps-current-meta {
+  display: grid;
+  gap: 0;
+  border-block-start: 1px solid rgba(247, 248, 246, 0.14);
+}
+
+.meta-row {
+  display: grid;
+  grid-template-columns: minmax(90px, 0.6fr) 1fr;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-block-end: 1px solid rgba(247, 248, 246, 0.10);
+}
+
+.meta-key {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 248, 246, 0.55);
+  align-self: center;
+}
+
+.meta-val {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #F7F8F6;
+  line-height: 1.5;
+}
+
+html[lang="fa"] .meta-key {
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-size: 0.82rem;
+}
+
+/* =========================================================
+   3. WHY VOICE / WHY PARKINSON'S
+   ========================================================= */
+.apps-why .apps-why-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .apps-why .apps-why-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(3rem, 6vw, 6rem);
+  }
+}
+
+.apps-why h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 20ch;
+}
+
+.apps-why .lead {
+  max-width: 52ch;
+}
+
+/* Chain diagram */
+.why-chain {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding-inline-start: 0.25rem;
+}
+
+.chain-node {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 1.25rem;
+  border-block-end: 1px solid var(--line);
+}
+
+.chain-node--accent {
+  border-block-end: 0;
+}
+
+.chain-index {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.chain-label {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-weight: 500;
+  color: var(--ink-strong);
+  line-height: 1.4;
+}
+
+.chain-node--accent .chain-label {
+  color: var(--ink-strong);
+  position: relative;
+  padding-inline-start: 1rem;
+}
+.chain-node--accent .chain-label::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0.6em;
+  inset-inline-start: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.chain-connector {
+  display: none;
+}
+
+/* =========================================================
+   4. HOW THE TECHNOLOGY IS APPLIED — workflow
+   ========================================================= */
+.apps-workflow {
+  background: var(--bg-elevated);
+  border-block: 1px solid var(--line);
+}
+
+.apps-workflow .section-head {
+  max-width: 720px;
+  margin-block-end: clamp(2.5rem, 5vw, 4rem);
+}
+
+.apps-workflow h2 { margin-block-end: 1rem; }
+
+.app-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .app-steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+  .app-steps::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 28px;
+    inset-inline-start: 5%;
+    inset-inline-end: 5%;
+    height: 1px;
+    background: var(--line);
+    z-index: 0;
+  }
+}
+
+.app-step {
+  padding: 1.5rem 1.25rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  position: relative;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease),
+              border-color 0.25s var(--ease);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.app-step.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.app-step:hover { border-color: var(--line-strong); }
+
+.app-step-index {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.app-step-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.app-step-glyph {
+  color: var(--accent);
+  opacity: 0.85;
+  margin-block-start: auto;
+}
+.app-step-glyph svg { width: 100%; height: auto; max-width: 100px; }
+
+.app-step-wave {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: stroke-dashoffset 1.6s var(--ease);
+}
+.app-step.is-visible .app-step-wave { stroke-dashoffset: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .app-step { opacity: 1; transform: none; }
+  .app-step-wave { stroke-dashoffset: 0; transition: none; }
+}
+
+.apps-workflow-cta {
+  margin-block-start: clamp(2rem, 4vw, 3rem);
+}
+
+/* =========================================================
+   5. FUTURE RESEARCH DIRECTIONS
+   ========================================================= */
+.apps-future .section-head {
+  max-width: 760px;
+  margin-block-end: clamp(2.5rem, 5vw, 4rem);
+}
+
+.apps-future h2 { margin-block-end: 1rem; }
+
+.apps-future .lead strong {
+  color: var(--ink-strong);
+  font-weight: 600;
+}
+
+.apps-future-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 720px) {
+  .apps-future-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.future-card {
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+/* Current card — slightly stronger weight, still not "dark" (that is reserved for section 2) */
+.future-card--current {
+  background: var(--bg-elevated);
+  border-color: var(--line-strong);
+}
+
+.future-card--current::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: clamp(1.5rem, 3vw, 2rem);
+  inset-inline-end: clamp(1.5rem, 3vw, 2rem);
+  height: 2px;
+  background: var(--accent);
+  border-end-start-radius: 2px;
+  border-end-end-radius: 2px;
+}
+
+.future-card-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.future-card-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+html[lang="fa"] .future-card-tag {
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-size: 0.82rem;
+}
+
+.future-card--current .future-card-tag { color: var(--accent); }
+
+.future-card-title {
+  font-size: clamp(1.15rem, 1.9vw, 1.35rem);
+  font-weight: 600;
+  color: var(--ink-strong);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.future-card-text {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 46ch;
+}
+
+.future-card-status {
+  margin-block-start: auto;
+  padding-block-start: 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-block-start: 1px solid var(--line);
+}
+
+.future-card-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--line-strong);
+  flex: 0 0 auto;
+}
+
+.future-card-status--current {
+  color: var(--ink-strong);
+}
+.future-card-status--current::before {
+  background: var(--accent);
+}
+
+.apps-future-footnote {
+  margin-block-start: clamp(1.75rem, 3vw, 2.5rem);
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--line-strong);
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 68ch;
+}
+
+/* =========================================================
+   6. FINAL CTA
+   ========================================================= */
+.apps-cta {
+  border-block-start: 1px solid var(--line);
+}
+
+.apps-cta-inner {
+  max-width: 760px;
+  margin-inline: auto;
+  padding: clamp(2.5rem, 5vw, 3.75rem) clamp(1.75rem, 4vw, 3rem);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.apps-cta-inner::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent), transparent);
+}
+html[dir="rtl"] .apps-cta-inner::before {
+  background: linear-gradient(to left, var(--accent), transparent);
+}
+
+.apps-cta-inner h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 24ch;
+}
+
+.apps-cta-inner .lead { margin-block-end: 2rem; }
+
+.apps-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* =========================================================
+   Persian typography refinements (page-local)
+   ========================================================= */
+html[lang="fa"] .app-step-title,
+html[lang="fa"] .future-card-title,
+html[lang="fa"] .apps-current h2 { letter-spacing: 0; }
+
+html[lang="fa"] .app-step { line-height: 1.85; }

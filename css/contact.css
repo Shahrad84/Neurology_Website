@@ -1,0 +1,303 @@
+/* =========================================================
+   Contact page — section-specific styles
+   Depends on tokens/primitives in /css/global.css
+   ========================================================= */
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
+.contact-hero {
+  padding-block: clamp(2.5rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3.5rem);
+  border-block-end: 1px solid var(--line);
+}
+
+.contact-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.75rem, 3vw, 3rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .contact-hero-inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+}
+
+.contact-hero-copy h1 {
+  margin-block: 0.5rem 1rem;
+  max-width: 16ch;
+}
+html[lang="fa"] .contact-hero-copy h1 { max-width: 20ch; }
+
+.contact-hero-copy .lead {
+  margin-block-end: 1.25rem;
+  max-width: 46ch;
+}
+
+.contact-hero-audience {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-block-start: 0.85rem;
+  border-block-start: 1px solid var(--line);
+  display: inline-block;
+  padding-inline-end: 1rem;
+}
+html[lang="fa"] .contact-hero-audience {
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-size: 0.88rem;
+}
+
+.contact-hero-visual {
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+  aspect-ratio: 48 / 26;
+}
+
+.contact-signal {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.contact-wave {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: contactDraw 1.8s var(--ease) forwards;
+}
+.contact-wave-2 { animation-delay: 0.2s; }
+
+@keyframes contactDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-wave { stroke-dashoffset: 0; animation: none; }
+}
+
+/* =========================================================
+   2. CONTACT INFO + FORM
+   ========================================================= */
+.contact-main {
+  padding-block: clamp(2.5rem, 5vw, 4rem) clamp(2.5rem, 5vw, 4rem);
+}
+
+.contact-main-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .contact-main-inner {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(3rem, 6vw, 5.5rem);
+  }
+}
+
+/* --- Left: contact info --- */
+.contact-info {
+  position: relative;
+  padding-inline-start: clamp(1rem, 2vw, 1.5rem);
+  border-inline-start: 2px solid var(--accent);
+}
+
+@media (max-width: 899px) {
+  .contact-info {
+    padding-inline-start: 1rem;
+  }
+}
+
+.contact-info-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-block-end: 1.5rem;
+}
+html[lang="fa"] .contact-info-title {
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-size: 0.84rem;
+}
+
+.contact-info-list {
+  display: grid;
+  gap: 0;
+}
+
+.contact-info-row {
+  display: grid;
+  gap: 0.25rem;
+  padding-block: 1rem;
+  border-block-end: 1px solid var(--line);
+}
+.contact-info-row:first-child { padding-block-start: 0; }
+.contact-info-row:last-child  { border-block-end: 0; }
+
+.contact-info-key {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink-strong);
+}
+
+.contact-info-val {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.55;
+  word-break: break-word;
+}
+
+.contact-info-note {
+  margin-block-start: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 40ch;
+}
+
+/* --- Right: form --- */
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+@media (min-width: 900px) {
+  .contact-form {
+    padding: clamp(2rem, 3vw, 2.5rem);
+  }
+}
+
+.form-field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+  letter-spacing: 0.02em;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  padding-block: 0.8rem;
+  padding-inline: 1rem;
+  line-height: 1.45;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease),
+              background-color 0.2s var(--ease);
+  min-height: 0;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 108px;
+  padding-block: 0.85rem;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.75;
+}
+
+.form-field input:hover,
+.form-field textarea:hover {
+  border-color: var(--ink-soft);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(61, 214, 198, 0.18);
+  background: #fff;
+}
+
+.form-field input:invalid:not(:placeholder-shown),
+.form-field textarea:invalid:not(:placeholder-shown) {
+  border-color: rgba(199, 62, 62, 0.55);
+}
+.form-field input:invalid:not(:placeholder-shown):focus,
+.form-field textarea:invalid:not(:placeholder-shown):focus {
+  box-shadow: 0 0 0 3px rgba(199, 62, 62, 0.14);
+}
+
+.contact-submit {
+  justify-self: start;
+  margin-block-start: 0.25rem;
+}
+
+.contact-form-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-block-start: 0.25rem;
+}
+
+/* =========================================================
+   3. CLOSING CTA
+   ========================================================= */
+.contact-closing {
+  border-block-start: 1px solid var(--line);
+  padding-block: clamp(2rem, 4vw, 3rem);
+}
+
+.contact-closing-inner {
+  max-width: 720px;
+}
+
+.contact-closing-title {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 600;
+  color: var(--ink-strong);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin-block-end: 0.5rem;
+}
+
+.contact-closing-line {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-closing-link {
+  color: var(--ink-strong);
+  font-weight: 500;
+  border-block-end: 1px solid var(--accent);
+  padding-block-end: 1px;
+  transition: color 0.2s var(--ease);
+}
+.contact-closing-link:hover { color: var(--accent); }
+
+/* =========================================================
+   Persian typography refinements (page-local)
+   ========================================================= */
+html[lang="fa"] .contact-closing-title { letter-spacing: 0; }
+html[lang="fa"] .contact-form { line-height: 1.75; }
+html[lang="fa"] .form-field input,
+html[lang="fa"] .form-field textarea {
+  line-height: 1.7;
+}

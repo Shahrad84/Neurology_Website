@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.applicationsTitle">Applications — Voice-Based Neurological Screening</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.applicationsDescription"
+        content="Parkinson's disease is the first validated application of our voice-based neurological screening technology, with broader neurological research as a future direction." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content" data-i18n="meta.applicationsTitle"
+        content="Applications — Voice-Based Neurological Screening" />
+  <meta property="og:description" data-i18n-attr="content" data-i18n="meta.applicationsDescription"
+        content="Parkinson's disease is the first validated application, with broader neurological research as a future direction." />
+  <meta property="og:image" content="/assets/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/applications.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 12" width="32" height="12" fill="none">
+            <path d="M0 6h3l2-4 3 8 3-10 3 12 3-8 2 2h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Vocalis</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications" aria-current="page">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="fa" aria-pressed="false">FA</button>
+          <button type="button" class="lang-btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav aria-label="Mobile">
+        <ul>
+          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications" aria-current="page">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. HERO -->
+    <section class="apps-hero" aria-labelledby="apps-hero-title">
+      <div class="container apps-hero-inner">
+        <div class="apps-hero-copy">
+          <p class="eyebrow" data-i18n="applications.hero.eyebrow">Applications</p>
+          <h1 id="apps-hero-title" data-i18n="applications.hero.title">
+            Applications of Voice-Based Neurological Screening
+          </h1>
+          <p class="lead" data-i18n="applications.hero.description">
+            The technology is initially focused on Parkinson's disease screening — the first
+            validated application — with potential to support broader neurological research
+            in the future.
+          </p>
+
+          <div class="apps-hero-actions">
+            <a class="btn btn-primary" href="#current-application" data-i18n="applications.hero.ctaPrimary">
+              See the Current Application
+            </a>
+            <a class="btn btn-ghost" href="#future-directions" data-i18n="applications.hero.ctaSecondary">
+              Future Directions
+            </a>
+          </div>
+        </div>
+
+        <div class="apps-hero-visual" aria-hidden="true">
+          <svg class="apps-signal" viewBox="0 0 560 420" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="appsGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%"   stop-color="#26384A" stop-opacity="0.10" />
+                <stop offset="50%"  stop-color="#3DD6C6" stop-opacity="1" />
+                <stop offset="100%" stop-color="#26384A" stop-opacity="0.10" />
+              </linearGradient>
+              <radialGradient id="appsGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%"  stop-color="#3DD6C6" stop-opacity="0.14" />
+                <stop offset="70%" stop-color="#3DD6C6" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+
+            <circle cx="280" cy="210" r="190" fill="url(#appsGlow)" />
+
+            <!-- baseline -->
+            <line x1="40" y1="210" x2="520" y2="210" stroke="#0B1726" stroke-opacity="0.08" stroke-dasharray="2 6" />
+
+            <!-- main signal -->
+            <path class="app-wave app-wave-1"
+              d="M40,210 C70,210 80,120 110,120 C140,120 150,300 180,300 C210,300 220,90 250,90 C280,90 290,320 320,320 C350,320 360,140 390,140 C420,140 430,260 460,260 C485,260 500,210 520,210"
+              fill="none" stroke="url(#appsGrad)" stroke-width="1.6" stroke-linecap="round" />
+
+            <!-- echo lines -->
+            <path class="app-wave app-wave-2"
+              d="M40,210 C80,210 100,160 140,160 C180,160 200,270 240,270 C280,270 300,150 340,150 C380,150 400,240 440,240 C480,240 500,210 520,210"
+              fill="none" stroke="#0B1726" stroke-opacity="0.14" stroke-width="1" stroke-linecap="round" />
+
+            <path class="app-wave app-wave-3"
+              d="M40,210 C90,210 110,190 160,190 C210,190 230,230 280,230 C330,230 350,180 400,180 C450,180 470,210 520,210"
+              fill="none" stroke="#0B1726" stroke-opacity="0.08" stroke-width="1" stroke-linecap="round" />
+
+            <!-- sample nodes -->
+            <circle cx="110" cy="120" r="2.5" fill="#3DD6C6" />
+            <circle cx="250" cy="90"  r="2.5" fill="#3DD6C6" />
+            <circle cx="390" cy="140" r="2.5" fill="#3DD6C6" />
+            <circle cx="460" cy="260" r="2.5" fill="#3DD6C6" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CURRENT VALIDATED APPLICATION (dark contrast anchor) -->
+    <section class="apps-current reveal" id="current-application" aria-labelledby="current-title">
+      <div class="container apps-current-inner">
+        <div class="apps-current-copy">
+          <p class="eyebrow eyebrow--accent" data-i18n="applications.current.eyebrow">
+            Current Validated Application
+          </p>
+          <h2 id="current-title" data-i18n="applications.current.title">
+            Parkinson's Disease Screening
+          </h2>
+          <p class="lead lead--onDark" data-i18n="applications.current.description">
+            Parkinson's disease is the first application of our voice-based technology to
+            have been validated. Voice carries measurable characteristics that may be
+            relevant to neurological assessment. Our system analyzes these voice-derived
+            signals computationally to support screening.
+          </p>
+          <p class="apps-current-note" data-i18n="applications.current.note">
+            Screening supports early awareness and clinical conversation. It does not
+            provide a diagnosis.
+          </p>
+        </div>
+
+        <div class="apps-current-meta" role="list" aria-label="Application summary">
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="applications.current.metaStatusKey">Status</span>
+            <span class="meta-val" data-i18n="applications.current.metaStatusValue">Validated application</span>
+          </div>
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="applications.current.metaFocusKey">Focus</span>
+            <span class="meta-val" data-i18n="applications.current.metaFocusValue">Parkinson's disease screening</span>
+          </div>
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="applications.current.metaInputKey">Input</span>
+            <span class="meta-val" data-i18n="applications.current.metaInputValue">Voice-derived signal</span>
+          </div>
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="applications.current.metaOutputKey">Output</span>
+            <span class="meta-val" data-i18n="applications.current.metaOutputValue">Screening support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WHY VOICE / WHY PARKINSON'S -->
+    <section class="apps-why reveal" aria-labelledby="why-title">
+      <div class="container">
+        <div class="apps-why-inner">
+          <div class="apps-why-copy">
+            <p class="eyebrow" data-i18n="applications.whyVoice.eyebrow">Why Voice</p>
+            <h2 id="why-title" data-i18n="applications.whyVoice.title">
+              Voice as a measurable signal
+            </h2>
+            <p class="lead" data-i18n="applications.whyVoice.description">
+              Speech and voice contain acoustic and temporal characteristics that
+              researchers can study in relation to neurological function. Changes in these
+              characteristics may carry information relevant to screening — which is what
+              our approach is designed to analyze.
+            </p>
+          </div>
+
+          <ol class="why-chain" aria-label="Voice to screening-related patterns">
+            <li class="chain-node">
+              <span class="chain-index">01</span>
+              <span class="chain-label" data-i18n="applications.whyVoice.chain1">Voice</span>
+            </li>
+            <li class="chain-connector" aria-hidden="true"></li>
+            <li class="chain-node">
+              <span class="chain-index">02</span>
+              <span class="chain-label" data-i18n="applications.whyVoice.chain2">
+                Measurable acoustic &amp; signal characteristics
+              </span>
+            </li>
+            <li class="chain-connector" aria-hidden="true"></li>
+            <li class="chain-node">
+              <span class="chain-index">03</span>
+              <span class="chain-label" data-i18n="applications.whyVoice.chain3">Computational analysis</span>
+            </li>
+            <li class="chain-connector" aria-hidden="true"></li>
+            <li class="chain-node chain-node--accent">
+              <span class="chain-index">04</span>
+              <span class="chain-label" data-i18n="applications.whyVoice.chain4">
+                Screening-related patterns
+              </span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. HOW THE TECHNOLOGY IS APPLIED -->
+    <section class="apps-workflow reveal" aria-labelledby="workflow-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="applications.workflow.eyebrow">How It Is Applied</p>
+          <h2 id="workflow-title" data-i18n="applications.workflow.title">
+            A four-step screening pathway
+          </h2>
+          <p class="lead narrow" data-i18n="applications.workflow.description">
+            The same underlying approach that powers our Parkinson's screening pathway.
+            The Technology page explains each step in more detail.
+          </p>
+        </div>
+
+        <ol class="app-steps" aria-label="Screening pathway">
+          <li class="app-step" data-appstep="1">
+            <div class="app-step-index">01</div>
+            <h3 class="app-step-title" data-i18n="applications.workflow.steps.capture">Voice Capture</h3>
+            <div class="app-step-glyph" aria-hidden="true">
+              <svg viewBox="0 0 72 32" width="72" height="32">
+                <path class="app-step-wave"
+                      d="M2,16 C10,16 12,4 20,4 C28,4 30,28 38,28 C46,28 48,6 56,6 C64,6 66,24 70,24"
+                      fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+              </svg>
+            </div>
+          </li>
+
+          <li class="app-step" data-appstep="2">
+            <div class="app-step-index">02</div>
+            <h3 class="app-step-title" data-i18n="applications.workflow.steps.processing">Signal Processing</h3>
+            <div class="app-step-glyph" aria-hidden="true">
+              <svg viewBox="0 0 72 32" width="72" height="32">
+                <path class="app-step-wave"
+                      d="M2,16 L10,16 L10,6 L20,6 L20,26 L30,26 L30,4 L40,4 L40,28 L50,28 L50,12 L60,12 L60,22 L70,22"
+                      fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </li>
+
+          <li class="app-step" data-appstep="3">
+            <div class="app-step-index">03</div>
+            <h3 class="app-step-title" data-i18n="applications.workflow.steps.analysis">Computational Analysis</h3>
+            <div class="app-step-glyph" aria-hidden="true">
+              <svg viewBox="0 0 72 32" width="72" height="32">
+                <g fill="currentColor" opacity="0.75">
+                  <rect x="4"  y="18" width="3" height="10" rx="1"/>
+                  <rect x="12" y="12" width="3" height="16" rx="1"/>
+                  <rect x="20" y="16" width="3" height="12" rx="1"/>
+                  <rect x="28" y="6"  width="3" height="22" rx="1"/>
+                  <rect x="36" y="4"  width="3" height="24" rx="1"/>
+                  <rect x="44" y="10" width="3" height="18" rx="1"/>
+                  <rect x="52" y="14" width="3" height="14" rx="1"/>
+                  <rect x="60" y="20" width="3" height="8"  rx="1"/>
+                </g>
+              </svg>
+            </div>
+          </li>
+
+          <li class="app-step" data-appstep="4">
+            <div class="app-step-index">04</div>
+            <h3 class="app-step-title" data-i18n="applications.workflow.steps.screening">Screening Support</h3>
+            <div class="app-step-glyph" aria-hidden="true">
+              <svg viewBox="0 0 72 32" width="72" height="32">
+                <circle cx="36" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35" />
+                <circle cx="36" cy="16" r="7"  fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.65" />
+                <circle cx="36" cy="16" r="2"  fill="#3DD6C6" />
+              </svg>
+            </div>
+          </li>
+        </ol>
+
+        <div class="apps-workflow-cta">
+          <a class="link-arrow" href="/technology.html" data-i18n="applications.workflow.cta">
+            Explore the Technology
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FUTURE RESEARCH DIRECTIONS (explicitly not validated) -->
+    <section class="apps-future reveal" id="future-directions" aria-labelledby="future-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="applications.future.eyebrow">Research Directions</p>
+          <h2 id="future-title" data-i18n="applications.future.title">
+            Potential Future Applications
+          </h2>
+          <p class="lead narrow" data-i18n="applications.future.description">
+            The underlying approach may have potential for broader neurological research.
+            Applications beyond Parkinson's disease are <strong>research directions</strong> —
+            not currently validated. We will only present them as applications once the
+            appropriate evidence exists.
+          </p>
+        </div>
+
+        <div class="apps-future-grid" role="list" aria-label="Current vs future applications">
+          <article class="future-card future-card--current" role="listitem">
+            <header class="future-card-head">
+              <span class="future-card-tag" data-i18n="applications.future.currentTag">Current</span>
+              <h3 class="future-card-title" data-i18n="applications.future.currentTitle">
+                Parkinson's disease
+              </h3>
+            </header>
+            <p class="future-card-text" data-i18n="applications.future.currentText">
+              The first application of the technology to have been validated for screening support.
+            </p>
+            <span class="future-card-status future-card-status--current"
+                  data-i18n="applications.future.currentStatus">
+              Validated application
+            </span>
+          </article>
+
+          <article class="future-card" role="listitem">
+            <header class="future-card-head">
+              <span class="future-card-tag" data-i18n="applications.future.futureTag">Future</span>
+              <h3 class="future-card-title" data-i18n="applications.future.futureTitle">
+                Broader neurological research
+              </h3>
+            </header>
+            <p class="future-card-text" data-i18n="applications.future.futureText">
+              The same voice-as-signal approach may support research in other neurological
+              areas. No additional applications are currently validated.
+            </p>
+            <span class="future-card-status" data-i18n="applications.future.futureStatus">
+              Research direction — not currently validated
+            </span>
+          </article>
+        </div>
+
+        <p class="apps-future-footnote" data-i18n="applications.future.footnote">
+          We do not present any future application as a validated capability unless it has
+          been supported by appropriate scientific and clinical evidence.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. FINAL CTA -->
+    <section class="apps-cta reveal" aria-labelledby="apps-cta-title">
+      <div class="container">
+        <div class="apps-cta-inner">
+          <p class="eyebrow" data-i18n="applications.cta.eyebrow">Continue</p>
+          <h2 id="apps-cta-title" data-i18n="applications.cta.title">
+            Explore how the technology works
+          </h2>
+          <p class="lead" data-i18n="applications.cta.description">
+            For researchers, clinicians and partners interested in the scientific and
+            technical foundations behind our screening approach.
+          </p>
+          <div class="apps-cta-actions">
+            <a class="btn btn-primary" href="/technology.html" data-i18n="applications.cta.technology">
+              Explore the Technology
+            </a>
+            <a class="btn btn-ghost" href="/contact.html" data-i18n="applications.cta.contact">
+              Talk to Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Vocalis</span>
+        <p class="footer-tag" data-i18n="footer.tagline">
+          Voice-based screening for neurological disorders.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-legal">
+        <p data-i18n="footer.disclaimer">
+          This technology is intended for screening purposes and does not provide a medical diagnosis.
+        </p>
+        <p class="footer-copy">
+          © <span id="year"></span> Vocalis. <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js" defer></script>
+  <script src="/js/main.js" defer></script>
+
+  <!-- Scoped stagger for the workflow steps (mirrors the Technology page pattern). -->
+  <script>
+    (function () {
+      "use strict";
+      var steps = document.querySelectorAll("[data-appstep]");
+      if (!steps.length) return;
+
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce || !("IntersectionObserver" in window)) {
+        steps.forEach(function (el) { el.classList.add("is-visible"); });
+        return;
+      }
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          var i = parseInt(el.dataset.appstep, 10) || 1;
+          var delay = Math.min(i - 1, 3) * 110;
+          setTimeout(function () { el.classList.add("is-visible"); }, delay);
+          io.unobserve(el);
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.15 });
+
+      steps.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>

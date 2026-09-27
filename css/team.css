@@ -1,0 +1,371 @@
+/* =========================================================
+   Team & Science page — section-specific styles
+   Depends on tokens/primitives in /css/global.css
+   ========================================================= */
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
+.team-hero {
+  padding-block: clamp(3rem, 6vw, 6rem) clamp(3rem, 5vw, 5.5rem);
+  border-block-end: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.team-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .team-hero-inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: clamp(3rem, 5vw, 5rem);
+  }
+}
+
+.team-hero-copy h1 {
+  margin-block: 0.5rem 1.25rem;
+  max-width: 18ch;
+}
+html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
+
+.team-hero-copy .lead {
+  max-width: 54ch;
+}
+
+.team-hero-visual {
+  width: 100%;
+  max-width: 620px;
+  margin-inline: auto;
+  aspect-ratio: 13 / 8;
+  position: relative;
+}
+
+.team-hero-graph {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.team-wave {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: teamDraw 2s var(--ease) forwards;
+}
+
+@keyframes teamDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-wave { stroke-dashoffset: 0; animation: none; }
+}
+
+/* =========================================================
+   2. TEAM SECTION
+   ========================================================= */
+.team-section {
+  background: var(--bg);
+}
+
+.team-section .section-head {
+  max-width: 720px;
+  margin-block-end: clamp(2.5rem, 5vw, 4rem);
+}
+
+.team-section h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 22ch;
+}
+
+/* Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  counter-reset: team;
+}
+
+@media (min-width: 720px) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: clamp(1.75rem, 4vw, 3rem);
+    row-gap: clamp(3rem, 5vw, 4rem);
+  }
+}
+
+/* Member card */
+.team-member {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--line);
+}
+
+.team-member__index {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+/* Photo area */
+.team-member__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+
+.team-member__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s var(--ease);
+}
+
+.team-member:hover .team-member__image img {
+  transform: scale(1.02);
+}
+
+/* Placeholder visual — used only until a real image is dropped in */
+.team-member__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--ink-soft);
+  padding: 1.5rem;
+  background:
+    linear-gradient(180deg, rgba(38, 56, 74, 0.02), rgba(38, 56, 74, 0.05));
+  position: relative;
+}
+
+/* fine grid pattern behind the placeholder glyph */
+.team-member__placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(11, 23, 38, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 23, 38, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.team-member__placeholder svg {
+  max-width: 60%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.team-member__placeholder-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  position: relative;
+  z-index: 1;
+}
+
+html[lang="fa"] .team-member__placeholder-label {
+  letter-spacing: 0.06em;
+  text-transform: none;
+  font-size: 0.78rem;
+}
+
+/* Body */
+.team-member__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.team-member__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-block-end: 0.35rem;
+}
+html[lang="fa"] .team-member__label {
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-size: 0.82rem;
+}
+
+.team-member__name {
+  font-size: clamp(1.15rem, 1.9vw, 1.35rem);
+  font-weight: 600;
+  color: var(--ink-strong);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  transition: color 0.25s var(--ease);
+}
+
+.team-member:hover .team-member__name {
+  color: var(--ink);
+}
+
+.team-member__role {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.team-member__bio {
+  margin-block-start: 0.75rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 44ch;
+}
+
+/* Reserve vertical space in the bio so cards stay visually even before content */
+.team-member__bio {
+  min-height: 3em;
+}
+
+/* Underline motif on hover, respects RTL */
+.team-member::after {
+  content: "";
+  position: absolute;
+  inset-block-start: -1px;
+  inset-inline-start: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.4s var(--ease);
+}
+.team-member:hover::after { width: 100%; }
+
+/* =========================================================
+   3. SCIENCE & COLLABORATION
+   ========================================================= */
+.team-science {
+  background: var(--bg-elevated);
+  border-block: 1px solid var(--line);
+}
+
+.team-science-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .team-science-inner {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: clamp(3rem, 6vw, 6rem);
+  }
+}
+
+.team-science-copy h2 {
+  margin-block: 0.5rem 1.25rem;
+  max-width: 22ch;
+}
+
+.team-science-copy .lead {
+  max-width: 56ch;
+}
+
+.team-science-diagram {
+  width: 100%;
+  max-width: 380px;
+  margin-inline: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.team-science-diagram svg { width: 100%; height: 100%; }
+
+/* =========================================================
+   4. SCIENTIFIC FOUNDATION
+   ========================================================= */
+.team-foundation .team-foundation-inner {
+  max-width: 720px;
+}
+
+.team-foundation h2 {
+  margin-block: 0.5rem 1.25rem;
+  max-width: 22ch;
+}
+
+.team-foundation .lead {
+  margin-block-end: 1.75rem;
+  max-width: 56ch;
+}
+
+/* =========================================================
+   5. FINAL CTA
+   ========================================================= */
+.team-cta {
+  border-block-start: 1px solid var(--line);
+}
+
+.team-cta-inner {
+  max-width: 760px;
+  margin-inline: auto;
+  padding: clamp(2.5rem, 5vw, 3.75rem) clamp(1.75rem, 4vw, 3rem);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-cta-inner::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent), transparent);
+}
+html[dir="rtl"] .team-cta-inner::before {
+  background: linear-gradient(to left, var(--accent), transparent);
+}
+
+.team-cta-inner h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 22ch;
+}
+
+.team-cta-inner .lead { margin-block-end: 2rem; }
+
+.team-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* =========================================================
+   Persian typography refinements (page-local)
+   ========================================================= */
+html[lang="fa"] .team-member__name,
+html[lang="fa"] .team-section h2,
+html[lang="fa"] .team-science-copy h2,
+html[lang="fa"] .team-foundation h2,
+html[lang="fa"] .team-cta-inner h2 { letter-spacing: 0; }
+
+html[lang="fa"] .team-member { line-height: 1.75; }
+html[lang="fa"] .team-member__bio { line-height: 1.85; }

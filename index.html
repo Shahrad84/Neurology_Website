@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">Voice-Based Screening for Neurological Disorders</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.description" content="A non-invasive, voice-based screening technology for neurological disorders, with Parkinson's disease as the first validated application." />
+
+  <!-- Open Graph placeholders -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content" data-i18n="meta.ogTitle" content="Voice-Based Screening for Neurological Disorders" />
+  <meta property="og:description" data-i18n-attr="content" data-i18n="meta.ogDescription" content="Non-invasive voice-based screening technology for neurological disorders." />
+  <meta property="og:image" content="/assets/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 12" width="32" height="12" fill="none">
+            <path d="M0 6h3l2-4 3 8 3-10 3 12 3-8 2 2h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Vocalis</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/" data-i18n="nav.home" aria-current="page">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="fa" aria-pressed="false">FA</button>
+          <button type="button" class="lang-btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav aria-label="Mobile">
+        <ul>
+          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="home.hero.eyebrow">Voice-Based Screening Technology</p>
+          <h1 id="hero-title" data-i18n="home.hero.title">
+            Voice-Based Screening for Neurological Disorders
+          </h1>
+          <p class="lead" data-i18n="home.hero.description">
+            A non-invasive technology that analyzes the voice as a signal — designed for
+            early screening, not diagnosis. Parkinson's disease is our first validated application.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/technology.html" data-i18n="home.hero.ctaPrimary">
+              Explore Technology
+            </a>
+            <a class="btn btn-ghost" href="/contact.html" data-i18n="home.hero.ctaSecondary">
+              Contact Us
+            </a>
+          </div>
+
+          <p class="hero-note" data-i18n="home.hero.note">
+            Screening supports awareness and early conversation — it does not replace a clinical diagnosis.
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <svg class="waveform" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet" role="img">
+            <defs>
+              <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%"  stop-color="#26384A" stop-opacity="0.15" />
+                <stop offset="50%" stop-color="#3DD6C6" stop-opacity="1" />
+                <stop offset="100%" stop-color="#26384A" stop-opacity="0.15" />
+              </linearGradient>
+            </defs>
+
+            <!-- baseline -->
+            <line x1="0" y1="200" x2="600" y2="200" stroke="#0B1726" stroke-opacity="0.08" stroke-dasharray="2 6" />
+
+            <!-- primary signal -->
+            <path class="wave wave-1"
+              d="M0,200 C40,200 60,80 100,80 C140,80 150,320 200,320 C250,320 260,120 310,120 C360,120 380,280 430,280 C470,280 490,160 530,160 C560,160 580,200 600,200"
+              fill="none" stroke="url(#waveGrad)" stroke-width="1.6" stroke-linecap="round"/>
+
+            <!-- secondary echoes -->
+            <path class="wave wave-2"
+              d="M0,200 C50,200 70,130 120,130 C170,130 180,270 240,270 C300,270 320,150 380,150 C440,150 460,240 510,240 C550,240 575,200 600,200"
+              fill="none" stroke="#0B1726" stroke-opacity="0.18" stroke-width="1" stroke-linecap="round"/>
+
+            <path class="wave wave-3"
+              d="M0,200 C60,200 80,170 140,170 C200,170 210,230 270,230 C330,230 350,180 410,180 C470,180 490,215 550,215 C575,215 590,200 600,200"
+              fill="none" stroke="#0B1726" stroke-opacity="0.10" stroke-width="1" stroke-linecap="round"/>
+
+            <!-- sample nodes -->
+            <circle cx="100" cy="80"  r="2.5" fill="#3DD6C6" />
+            <circle cx="310" cy="120" r="2.5" fill="#3DD6C6" />
+            <circle cx="530" cy="160" r="2.5" fill="#3DD6C6" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. THE IDEA -->
+    <section class="idea reveal" aria-labelledby="idea-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="home.idea.eyebrow">The Idea</p>
+          <h2 id="idea-title" data-i18n="home.idea.title">
+            What if your voice could provide a measurable signal?
+          </h2>
+          <p class="lead narrow" data-i18n="home.idea.description">
+            Small variations in voice — pitch, rhythm, timing, stability — can carry
+            information about neurological function. We turn those variations into a
+            structured, quantitative signal.
+          </p>
+        </div>
+
+        <ol class="flow" aria-label="Voice to screening flow">
+          <li class="flow-step">
+            <span class="flow-index">01</span>
+            <span class="flow-label" data-i18n="home.idea.step1">Voice</span>
+          </li>
+          <li class="flow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 12" width="40" height="12">
+              <path d="M0 6h34M28 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </li>
+          <li class="flow-step">
+            <span class="flow-index">02</span>
+            <span class="flow-label" data-i18n="home.idea.step2">Analysis</span>
+          </li>
+          <li class="flow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 12" width="40" height="12">
+              <path d="M0 6h34M28 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </li>
+          <li class="flow-step">
+            <span class="flow-index">03</span>
+            <span class="flow-label" data-i18n="home.idea.step3">Screening</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 3. FIRST VALIDATED APPLICATION -->
+    <section class="application reveal" aria-labelledby="application-title">
+      <div class="container application-inner">
+        <div class="application-copy">
+          <p class="eyebrow" data-i18n="home.application.eyebrow">Our First Validated Application</p>
+          <h2 id="application-title" data-i18n="home.application.title">Parkinson's Disease</h2>
+          <p class="lead" data-i18n="home.application.description">
+            Parkinson's disease is the first application where our voice-based screening
+            approach has been validated. The technology is designed to flag vocal patterns
+            associated with the condition — supporting earlier awareness and clinical
+            conversation, not replacing a diagnosis.
+          </p>
+          <a class="link-arrow" href="/applications.html" data-i18n="home.application.cta">
+            Explore the Application
+          </a>
+        </div>
+
+        <div class="application-visual" aria-hidden="true">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet">
+            <rect x="0" y="0" width="400" height="300" fill="none"/>
+            <!-- spectral bars -->
+            <g fill="#26384A" fill-opacity="0.22">
+              <rect x="30"  y="180" width="6" height="60"  rx="2"/>
+              <rect x="46"  y="150" width="6" height="90"  rx="2"/>
+              <rect x="62"  y="120" width="6" height="120" rx="2"/>
+              <rect x="78"  y="140" width="6" height="100" rx="2"/>
+              <rect x="94"  y="100" width="6" height="140" rx="2"/>
+              <rect x="110" y="130" width="6" height="110" rx="2"/>
+              <rect x="126" y="90"  width="6" height="150" rx="2"/>
+              <rect x="142" y="160" width="6" height="80"  rx="2"/>
+            </g>
+            <g fill="#3DD6C6">
+              <rect x="170" y="70"  width="6" height="170" rx="2"/>
+              <rect x="186" y="40"  width="6" height="200" rx="2"/>
+              <rect x="202" y="110" width="6" height="130" rx="2"/>
+              <rect x="218" y="60"  width="6" height="180" rx="2"/>
+            </g>
+            <g fill="#26384A" fill-opacity="0.22">
+              <rect x="246" y="140" width="6" height="100" rx="2"/>
+              <rect x="262" y="120" width="6" height="120" rx="2"/>
+              <rect x="278" y="150" width="6" height="90"  rx="2"/>
+              <rect x="294" y="130" width="6" height="110" rx="2"/>
+              <rect x="310" y="170" width="6" height="70"  rx="2"/>
+              <rect x="326" y="150" width="6" height="90"  rx="2"/>
+              <rect x="342" y="180" width="6" height="60"  rx="2"/>
+              <rect x="358" y="160" width="6" height="80"  rx="2"/>
+            </g>
+            <line x1="20" y1="250" x2="380" y2="250" stroke="#0B1726" stroke-opacity="0.12" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SCIENCE / TRUST -->
+    <section class="science reveal" aria-labelledby="science-title">
+      <div class="container">
+        <div class="science-inner">
+          <div class="science-copy">
+            <p class="eyebrow" data-i18n="home.science.eyebrow">Science &amp; Trust</p>
+            <h2 id="science-title" data-i18n="home.science.title">Built on Scientific Research</h2>
+            <p class="lead" data-i18n="home.science.description">
+              The technology is being developed through structured scientific and clinical
+              research. Peer-reviewed evidence, validation metrics and clinical collaboration
+              details will be published here as they become available.
+            </p>
+            <a class="link-arrow" href="/technology.html" data-i18n="home.science.cta">
+              Explore the Science
+            </a>
+          </div>
+
+          <div class="science-panel" role="list" aria-label="Research pillars">
+            <div class="pillar" role="listitem">
+              <span class="pillar-index">A</span>
+              <h3 class="pillar-title" data-i18n="home.science.pillar1Title">Scientific Foundation</h3>
+              <p class="pillar-text" data-i18n="home.science.pillar1Text">
+                Developed with a research-first approach.
+              </p>
+            </div>
+            <div class="pillar" role="listitem">
+              <span class="pillar-index">B</span>
+              <h3 class="pillar-title" data-i18n="home.science.pillar2Title">Clinical Validation</h3>
+              <p class="pillar-text" data-i18n="home.science.pillar2Text">
+                Validated in clinical settings — details to be published.
+              </p>
+            </div>
+            <div class="pillar" role="listitem">
+              <span class="pillar-index">C</span>
+              <h3 class="pillar-title" data-i18n="home.science.pillar3Title">Transparency</h3>
+              <p class="pillar-text" data-i18n="home.science.pillar3Text">
+                Evidence, methods and limitations will be shared openly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FINAL CTA -->
+    <section class="final-cta reveal" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-inner">
+          <h2 id="cta-title" data-i18n="home.cta.title">
+            Building the future of neurological screening.
+          </h2>
+          <p class="lead" data-i18n="home.cta.description">
+            We're working with clinicians, researchers and partners to bring voice-based
+            screening into everyday practice.
+          </p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="/contact.html" data-i18n="home.cta.button">
+              Talk to Us
+            </a>
+            <a class="btn btn-ghost" href="/contact.html#investors" data-i18n="home.cta.buttonSecondary">
+              For Investors
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Vocalis</span>
+        <p class="footer-tag" data-i18n="footer.tagline">
+          Voice-based screening for neurological disorders.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-legal">
+        <p data-i18n="footer.disclaimer">
+          This technology is intended for screening purposes and does not provide a medical diagnosis.
+        </p>
+        <p class="footer-copy">
+          © <span id="year"></span> Vocalis. <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

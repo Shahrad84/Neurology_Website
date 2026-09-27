@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.technologyTitle">The Technology — Voice-Based Neurological Screening</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.technologyDescription"
+        content="How voice-based screening works: from voice capture and signal processing to computational analysis and screening output. Built on scientific research." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content" data-i18n="meta.technologyTitle"
+        content="The Technology — Voice-Based Neurological Screening" />
+  <meta property="og:description" data-i18n-attr="content" data-i18n="meta.technologyDescription"
+        content="How voice-based screening works: from voice capture and signal processing to computational analysis and screening output." />
+  <meta property="og:image" content="/assets/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/technology.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 12" width="32" height="12" fill="none">
+            <path d="M0 6h3l2-4 3 8 3-10 3 12 3-8 2 2h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Vocalis</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology" aria-current="page">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="fa" aria-pressed="false">FA</button>
+          <button type="button" class="lang-btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav aria-label="Mobile">
+        <ul>
+          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology" aria-current="page">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. HERO -->
+    <section class="tech-hero" aria-labelledby="tech-hero-title">
+      <div class="container tech-hero-inner">
+        <div class="tech-hero-copy">
+          <p class="eyebrow" data-i18n="technology.hero.eyebrow">The Technology</p>
+          <h1 id="tech-hero-title" data-i18n="technology.hero.title">
+            Turning Voice Into a Signal for Neurological Screening
+          </h1>
+          <p class="lead" data-i18n="technology.hero.description">
+            Our technology analyzes acoustic and temporal characteristics of the voice
+            using computational methods, identifying patterns that may be relevant to
+            neurological screening. It is designed to support screening — not to
+            provide a diagnosis.
+          </p>
+
+          <div class="tech-hero-actions">
+            <a class="btn btn-primary" href="#how-it-works" data-i18n="technology.hero.ctaPrimary">
+              See How It Works
+            </a>
+            <a class="btn btn-ghost" href="/contact.html" data-i18n="technology.hero.ctaSecondary">
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+        <div class="tech-hero-visual" aria-hidden="true">
+          <svg class="pipeline" viewBox="0 0 640 420" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="pipelineGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%"   stop-color="#26384A" stop-opacity="0.10" />
+                <stop offset="50%"  stop-color="#3DD6C6" stop-opacity="1" />
+                <stop offset="100%" stop-color="#26384A" stop-opacity="0.10" />
+              </linearGradient>
+            </defs>
+
+            <!-- Stage 1: raw voice -->
+            <g class="stage" data-stage="1">
+              <line x1="40" y1="210" x2="160" y2="210" stroke="#0B1726" stroke-opacity="0.12" stroke-dasharray="2 5" />
+              <path class="pipe pipe-1"
+                d="M40,210 C55,210 60,170 75,170 C90,170 95,250 110,250 C125,250 130,190 145,190 C155,190 158,210 160,210"
+                fill="none" stroke="url(#pipelineGrad)" stroke-width="1.5" stroke-linecap="round" />
+              <circle cx="75"  cy="170" r="2" fill="#3DD6C6" />
+              <circle cx="110" cy="250" r="2" fill="#3DD6C6" />
+              <text x="100" y="290" text-anchor="middle"
+                    font-family="Inter, sans-serif" font-size="10"
+                    fill="#66727F" letter-spacing="2">VOICE</text>
+            </g>
+
+            <!-- Stage 2: signal -->
+            <g class="stage" data-stage="2">
+              <line x1="200" y1="210" x2="320" y2="210" stroke="#0B1726" stroke-opacity="0.12" stroke-dasharray="2 5" />
+              <path class="pipe pipe-2"
+                d="M200,210 L200,180 L215,180 L215,240 L230,240 L230,160 L245,160 L245,260 L260,260 L260,190 L275,190 L275,230 L290,230 L290,200 L305,200 L305,220 L320,220"
+                fill="none" stroke="#26384A" stroke-opacity="0.55" stroke-width="1.2" stroke-linejoin="round" />
+              <text x="260" y="290" text-anchor="middle"
+                    font-family="Inter, sans-serif" font-size="10"
+                    fill="#66727F" letter-spacing="2">SIGNAL</text>
+            </g>
+
+            <!-- Stage 3: analysis -->
+            <g class="stage" data-stage="3">
+              <line x1="360" y1="210" x2="480" y2="210" stroke="#0B1726" stroke-opacity="0.12" stroke-dasharray="2 5" />
+              <g fill="#26384A" fill-opacity="0.20">
+                <rect x="362" y="180" width="4" height="60" rx="1" />
+                <rect x="374" y="160" width="4" height="100" rx="1" />
+                <rect x="386" y="140" width="4" height="140" rx="1" />
+                <rect x="398" y="170" width="4" height="80" rx="1" />
+                <rect x="410" y="150" width="4" height="120" rx="1" />
+              </g>
+              <g fill="#3DD6C6">
+                <rect x="430" y="120" width="4" height="180" rx="1" />
+                <rect x="442" y="90"  width="4" height="240" rx="1" />
+                <rect x="454" y="140" width="4" height="140" rx="1" />
+                <rect x="466" y="110" width="4" height="200" rx="1" />
+              </g>
+              <text x="420" y="290" text-anchor="middle"
+                    font-family="Inter, sans-serif" font-size="10"
+                    fill="#66727F" letter-spacing="2">ANALYSIS</text>
+            </g>
+
+            <!-- Stage 4: screening -->
+            <g class="stage" data-stage="4">
+              <line x1="520" y1="210" x2="600" y2="210" stroke="#0B1726" stroke-opacity="0.12" stroke-dasharray="2 5" />
+              <circle cx="560" cy="210" r="46" fill="none" stroke="#26384A" stroke-opacity="0.18" />
+              <circle cx="560" cy="210" r="30" fill="none" stroke="#26384A" stroke-opacity="0.28" />
+              <circle cx="560" cy="210" r="6"  fill="#3DD6C6" />
+              <path d="M536,210 a24,24 0 0 1 48,0" fill="none" stroke="#3DD6C6" stroke-width="1.5" stroke-linecap="round" />
+              <text x="560" y="290" text-anchor="middle"
+                    font-family="Inter, sans-serif" font-size="10"
+                    fill="#66727F" letter-spacing="2">SCREENING</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. WHY VOICE -->
+    <section class="why-voice reveal" aria-labelledby="why-voice-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="technology.whyVoice.eyebrow">Why Voice</p>
+          <h2 id="why-voice-title" data-i18n="technology.whyVoice.title">
+            Voice carries measurable information
+          </h2>
+          <p class="lead" data-i18n="technology.whyVoice.description">
+            Speech and voice contain acoustic and temporal characteristics — such as
+            pitch, rhythm and stability over time — that can be described computationally.
+            These characteristics are the raw material our technology is designed to analyze.
+          </p>
+        </div>
+
+        <ol class="why-flow" aria-label="From voice to measurable features">
+          <li class="why-node">
+            <span class="why-glyph" aria-hidden="true">
+              <svg viewBox="0 0 40 24" width="40" height="24">
+                <path d="M0,12 C6,12 8,2 14,2 C20,2 22,22 28,22 C34,22 36,12 40,12"
+                      fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="why-label" data-i18n="technology.whyVoice.node1">Voice</span>
+          </li>
+          <li class="why-link" aria-hidden="true"></li>
+          <li class="why-node">
+            <span class="why-glyph" aria-hidden="true">
+              <svg viewBox="0 0 40 24" width="40" height="24">
+                <path d="M0,16 C4,16 6,8 10,8 C14,8 16,20 20,20 C24,20 26,6 30,6 C34,6 36,16 40,16"
+                      fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="why-label" data-i18n="technology.whyVoice.node2">Acoustic patterns</span>
+          </li>
+          <li class="why-link" aria-hidden="true"></li>
+          <li class="why-node">
+            <span class="why-glyph" aria-hidden="true">
+              <svg viewBox="0 0 40 24" width="40" height="24">
+                <g fill="currentColor">
+                  <rect x="2"  y="14" width="3" height="8" rx="1"/>
+                  <rect x="10" y="6"  width="3" height="16" rx="1"/>
+                  <rect x="18" y="10" width="3" height="12" rx="1"/>
+                  <rect x="26" y="4"  width="3" height="18" rx="1"/>
+                  <rect x="34" y="12" width="3" height="10" rx="1"/>
+                </g>
+              </svg>
+            </span>
+            <span class="why-label" data-i18n="technology.whyVoice.node3">Temporal patterns</span>
+          </li>
+          <li class="why-link" aria-hidden="true"></li>
+          <li class="why-node">
+            <span class="why-glyph" aria-hidden="true">
+              <svg viewBox="0 0 40 24" width="40" height="24">
+                <circle cx="8"  cy="12" r="2.5" fill="currentColor"/>
+                <circle cx="20" cy="12" r="2.5" fill="currentColor"/>
+                <circle cx="32" cy="12" r="2.5" fill="currentColor"/>
+                <line x1="10.5" y1="12" x2="17.5" y2="12" stroke="currentColor" stroke-width="1"/>
+                <line x1="22.5" y1="12" x2="29.5" y2="12" stroke="currentColor" stroke-width="1"/>
+              </svg>
+            </span>
+            <span class="why-label" data-i18n="technology.whyVoice.node4">Measurable features</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 3. HOW IT WORKS -->
+    <section class="how-it-works reveal" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="technology.howItWorks.eyebrow">Process</p>
+          <h2 id="how-title" data-i18n="technology.howItWorks.title">
+            How it works
+          </h2>
+          <p class="lead narrow" data-i18n="technology.howItWorks.description">
+            Four steps carry the voice from capture to screening output — each one
+            prepares the signal for the next.
+          </p>
+        </div>
+
+        <ol class="steps" aria-label="Technology pipeline">
+          <li class="step" data-step="1">
+            <div class="step-index">01</div>
+            <div class="step-body">
+              <h3 class="step-title" data-i18n="technology.howItWorks.steps.capture.title">
+                Voice Capture
+              </h3>
+              <p class="step-text" data-i18n="technology.howItWorks.steps.capture.description">
+                The user provides a voice sample through a supported interface.
+              </p>
+            </div>
+            <div class="step-glyph" aria-hidden="true">
+              <svg viewBox="0 0 80 40" width="80" height="40">
+                <path class="step-wave"
+                      d="M2,20 C10,20 12,6 20,6 C28,6 30,34 38,34 C46,34 48,4 56,4 C64,4 66,30 74,30"
+                      fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </li>
+
+          <li class="step" data-step="2">
+            <div class="step-index">02</div>
+            <div class="step-body">
+              <h3 class="step-title" data-i18n="technology.howItWorks.steps.processing.title">
+                Signal Processing
+              </h3>
+              <p class="step-text" data-i18n="technology.howItWorks.steps.processing.description">
+                The captured voice is prepared and represented as a signal suitable for analysis.
+              </p>
+            </div>
+            <div class="step-glyph" aria-hidden="true">
+              <svg viewBox="0 0 80 40" width="80" height="40">
+                <path class="step-wave"
+                      d="M2,20 L12,20 L12,10 L22,10 L22,30 L32,30 L32,4 L42,4 L42,36 L52,36 L52,14 L62,14 L62,26 L74,26"
+                      fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </li>
+
+          <li class="step" data-step="3">
+            <div class="step-index">03</div>
+            <div class="step-body">
+              <h3 class="step-title" data-i18n="technology.howItWorks.steps.analysis.title">
+                Computational Analysis
+              </h3>
+              <p class="step-text" data-i18n="technology.howItWorks.steps.analysis.description">
+                Relevant patterns in the signal are evaluated using our computational models.
+              </p>
+            </div>
+            <div class="step-glyph" aria-hidden="true">
+              <svg viewBox="0 0 80 40" width="80" height="40">
+                <g fill="currentColor" opacity="0.75">
+                  <rect x="6"  y="24" width="3" height="12" rx="1"/>
+                  <rect x="14" y="16" width="3" height="20" rx="1"/>
+                  <rect x="22" y="20" width="3" height="16" rx="1"/>
+                  <rect x="30" y="10" width="3" height="26" rx="1"/>
+                  <rect x="38" y="6"  width="3" height="30" rx="1"/>
+                  <rect x="46" y="14" width="3" height="22" rx="1"/>
+                  <rect x="54" y="18" width="3" height="18" rx="1"/>
+                  <rect x="62" y="22" width="3" height="14" rx="1"/>
+                  <rect x="70" y="26" width="3" height="10" rx="1"/>
+                </g>
+              </svg>
+            </div>
+          </li>
+
+          <li class="step" data-step="4">
+            <div class="step-index">04</div>
+            <div class="step-body">
+              <h3 class="step-title" data-i18n="technology.howItWorks.steps.screening.title">
+                Screening Output
+              </h3>
+              <p class="step-text" data-i18n="technology.howItWorks.steps.screening.description">
+                The system produces an output intended to support neurological screening —
+                not a diagnosis.
+              </p>
+            </div>
+            <div class="step-glyph" aria-hidden="true">
+              <svg viewBox="0 0 80 40" width="80" height="40">
+                <circle cx="40" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+                <circle cx="40" cy="20" r="8"  fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+                <circle cx="40" cy="20" r="2.5" fill="currentColor"/>
+              </svg>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. FROM SIGNAL TO INSIGHT -->
+    <section class="signal-insight reveal" aria-labelledby="signal-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="technology.signalToInsight.eyebrow">Transformation</p>
+          <h2 id="signal-title" data-i18n="technology.signalToInsight.title">
+            From signal to insight
+          </h2>
+          <p class="lead narrow" data-i18n="technology.signalToInsight.description">
+            A raw recording becomes useful information only after it is represented,
+            characterized and evaluated. The diagram below shows this transformation
+            conceptually — the details of our internal methods are not disclosed.
+          </p>
+        </div>
+
+        <ol class="transform" aria-label="From raw voice to screening result">
+          <li class="transform-stage" data-tstage="1">
+            <div class="transform-viz" aria-hidden="true">
+              <svg viewBox="0 0 140 60" width="140" height="60">
+                <path class="tr-wave"
+                      d="M4,30 C18,30 22,10 34,10 C46,10 50,50 62,50 C74,50 78,12 90,12 C102,12 106,46 118,46 C128,46 132,30 136,30"
+                      fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="transform-label" data-i18n="technology.signalToInsight.stage1">Raw Voice</p>
+          </li>
+
+          <li class="transform-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 12" width="40" height="12">
+              <path d="M0 6h34M28 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </li>
+
+          <li class="transform-stage" data-tstage="2">
+            <div class="transform-viz" aria-hidden="true">
+              <svg viewBox="0 0 140 60" width="140" height="60">
+                <path class="tr-wave"
+                      d="M4,30 L18,30 L18,18 L32,18 L32,42 L46,42 L46,10 L60,10 L60,50 L74,50 L74,20 L88,20 L88,36 L102,36 L102,26 L118,26 L118,34 L136,34"
+                      fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="transform-label" data-i18n="technology.signalToInsight.stage2">Signal Representation</p>
+          </li>
+
+          <li class="transform-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 12" width="40" height="12">
+              <path d="M0 6h34M28 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </li>
+
+          <li class="transform-stage" data-tstage="3">
+            <div class="transform-viz" aria-hidden="true">
+              <svg viewBox="0 0 140 60" width="140" height="60">
+                <g fill="currentColor" opacity="0.75">
+                  <rect x="6"  y="34" width="4" height="20" rx="1"/>
+                  <rect x="18" y="22" width="4" height="32" rx="1"/>
+                  <rect x="30" y="14" width="4" height="40" rx="1"/>
+                  <rect x="42" y="8"  width="4" height="46" rx="1"/>
+                  <rect x="54" y="18" width="4" height="36" rx="1"/>
+                  <rect x="66" y="10" width="4" height="44" rx="1"/>
+                  <rect x="78" y="26" width="4" height="28" rx="1"/>
+                  <rect x="90" y="16" width="4" height="38" rx="1"/>
+                  <rect x="102" y="30" width="4" height="24" rx="1"/>
+                  <rect x="114" y="20" width="4" height="34" rx="1"/>
+                  <rect x="126" y="28" width="4" height="26" rx="1"/>
+                </g>
+              </svg>
+            </div>
+            <p class="transform-label" data-i18n="technology.signalToInsight.stage3">Feature &amp; Pattern Analysis</p>
+          </li>
+
+          <li class="transform-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 12" width="40" height="12">
+              <path d="M0 6h34M28 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </li>
+
+          <li class="transform-stage" data-tstage="4">
+            <div class="transform-viz" aria-hidden="true">
+              <svg viewBox="0 0 140 60" width="140" height="60">
+                <g fill="none" stroke="currentColor" stroke-width="1.1">
+                  <circle cx="26" cy="14" r="5"/>
+                  <circle cx="26" cy="30" r="5"/>
+                  <circle cx="26" cy="46" r="5"/>
+                  <circle cx="70" cy="14" r="5"/>
+                  <circle cx="70" cy="30" r="5"/>
+                  <circle cx="70" cy="46" r="5"/>
+                  <circle cx="114" cy="30" r="5"/>
+                </g>
+                <g stroke="currentColor" stroke-width="0.9" opacity="0.5">
+                  <line x1="31" y1="14" x2="65" y2="14"/>
+                  <line x1="31" y1="14" x2="65" y2="30"/>
+                  <line x1="31" y1="30" x2="65" y2="14"/>
+                  <line x1="31" y1="30" x2="65" y2="30"/>
+                  <line x1="31" y1="30" x2="65" y2="46"/>
+                  <line x1="31" y1="46" x2="65" y2="30"/>
+                  <line x1="31" y1="46" x2="65" y2="46"/>
+                  <line x1="75" y1="14" x2="109" y2="30"/>
+                  <line x1="75" y1="30" x2="109" y2="30"/>
+                  <line x1="75" y1="46" x2="109" y2="30"/>
+                </g>
+                <circle cx="114" cy="30" r="5" fill="currentColor"/>
+              </svg>
+            </div>
+            <p class="transform-label" data-i18n="technology.signalToInsight.stage4">Model Processing</p>
+          </li>
+
+          <li class="transform-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 12" width="40" height="12">
+              <path d="M0 6h34M28 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </li>
+
+          <li class="transform-stage transform-stage--final" data-tstage="5">
+            <div class="transform-viz" aria-hidden="true">
+              <svg viewBox="0 0 140 60" width="140" height="60">
+                <circle cx="70" cy="30" r="22" fill="none" stroke="currentColor" stroke-width="0.9" opacity="0.35"/>
+                <circle cx="70" cy="30" r="14" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.6"/>
+                <circle cx="70" cy="30" r="3"  fill="#3DD6C6"/>
+                <path d="M56,30 a14,14 0 0 1 28,0" fill="none" stroke="#3DD6C6" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="transform-label" data-i18n="technology.signalToInsight.stage5">Screening Result</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 5. SCIENTIFIC FOUNDATION -->
+    <section class="evidence reveal" aria-labelledby="evidence-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="technology.science.eyebrow">Scientific Foundation</p>
+          <h2 id="evidence-title" data-i18n="technology.science.title">
+            Built on Scientific Evidence
+          </h2>
+          <p class="lead narrow" data-i18n="technology.science.description">
+            The technology is being developed and evaluated through structured scientific
+            and clinical research. Specific figures, studies and collaborators are not
+            published here yet — they will be added as they become available.
+          </p>
+        </div>
+
+        <ul class="evidence-grid" role="list">
+          <li class="evidence-item">
+            <span class="evidence-tag" data-i18n="technology.science.items.researchTag">Research</span>
+            <h3 class="evidence-title" data-i18n="technology.science.items.researchTitle">
+              Scientific Research
+            </h3>
+            <p class="evidence-text" data-i18n="technology.science.items.researchText">
+              Development follows a research-first methodology grounded in voice and
+              signal analysis.
+            </p>
+            <span class="evidence-status" data-i18n="technology.science.statusPending">
+              Details to be published
+            </span>
+          </li>
+
+          <li class="evidence-item">
+            <span class="evidence-tag" data-i18n="technology.science.items.clinicalTag">Clinical Evaluation</span>
+            <h3 class="evidence-title" data-i18n="technology.science.items.clinicalTitle">
+              Clinical Evaluation
+            </h3>
+            <p class="evidence-text" data-i18n="technology.science.items.clinicalText">
+              The approach has been evaluated in clinical contexts. Performance metrics
+              will be shared here.
+            </p>
+            <span class="evidence-status" data-i18n="technology.science.statusPending">
+              Details to be published
+            </span>
+          </li>
+
+          <li class="evidence-item">
+            <span class="evidence-tag" data-i18n="technology.science.items.collabTag">Collaboration</span>
+            <h3 class="evidence-title" data-i18n="technology.science.items.collabTitle">
+              Scientific Collaboration
+            </h3>
+            <p class="evidence-text" data-i18n="technology.science.items.collabText">
+              We work with clinical and research partners. Collaborator information will
+              be listed here.
+            </p>
+            <span class="evidence-status" data-i18n="technology.science.statusPending">
+              Details to be published
+            </span>
+          </li>
+
+          <li class="evidence-item">
+            <span class="evidence-tag" data-i18n="technology.science.items.validationTag">Validation</span>
+            <h3 class="evidence-title" data-i18n="technology.science.items.validationTitle">
+              Validation
+            </h3>
+            <p class="evidence-text" data-i18n="technology.science.items.validationText">
+              Validation work is ongoing. Outcomes and evidence will be published
+              transparently.
+            </p>
+            <span class="evidence-status" data-i18n="technology.science.statusPending">
+              Details to be published
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6. SCREENING ≠ DIAGNOSIS -->
+    <section class="not-diagnosis reveal" aria-labelledby="not-diag-title">
+      <div class="container">
+        <div class="not-diag-inner">
+          <p class="eyebrow" data-i18n="technology.screeningNotice.eyebrow">Important Distinction</p>
+          <h2 id="not-diag-title" data-i18n="technology.screeningNotice.title">
+            Screening Is Not Diagnosis
+          </h2>
+          <p class="lead" data-i18n="technology.screeningNotice.description">
+            This technology is intended to support neurological screening. It does not
+            replace professional medical evaluation, clinical assessment or a definitive
+            diagnosis. A screening result is a signal for further conversation — not a
+            conclusion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FINAL CTA -->
+    <section class="tech-cta reveal" aria-labelledby="tech-cta-title">
+      <div class="container">
+        <div class="tech-cta-inner">
+          <p class="eyebrow" data-i18n="technology.cta.eyebrow">Next</p>
+          <h2 id="tech-cta-title" data-i18n="technology.cta.title">
+            Explore the Applications
+          </h2>
+          <p class="lead" data-i18n="technology.cta.description">
+            Parkinson's disease is currently the first validated application of our
+            voice-based screening technology.
+          </p>
+          <div class="tech-cta-actions">
+            <a class="btn btn-primary" href="/applications.html" data-i18n="technology.cta.primary">
+              Explore Applications
+            </a>
+            <a class="btn btn-ghost" href="/contact.html" data-i18n="technology.cta.secondary">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Vocalis</span>
+        <p class="footer-tag" data-i18n="footer.tagline">
+          Voice-based screening for neurological disorders.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-legal">
+        <p data-i18n="footer.disclaimer">
+          This technology is intended for screening purposes and does not provide a medical diagnosis.
+        </p>
+        <p class="footer-copy">
+          © <span id="year"></span> Vocalis. <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js" defer></script>
+  <script src="/js/main.js" defer></script>
+
+  <!-- Scoped: staggered step reveal for [data-step] nodes in the pipeline -->
+  <script>
+    (function () {
+      "use strict";
+      var steps = document.querySelectorAll("[data-step]");
+      if (!steps.length) return;
+
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce || !("IntersectionObserver" in window)) {
+        steps.forEach(function (el) { el.classList.add("is-visible"); });
+        return;
+      }
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          var i = parseInt(el.dataset.step, 10) || 1;
+          // Stagger by index, cap at 4 for readability
+          var delay = Math.min(i - 1, 3) * 120;
+          setTimeout(function () { el.classList.add("is-visible"); }, delay);
+          io.unobserve(el);
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.15 });
+
+      steps.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
