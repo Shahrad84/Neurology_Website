@@ -140,18 +140,6 @@
       }
     },
 
-    "signalToInsight": {
-      "eyebrow": "Transformation",
-      "title": "From signal to insight",
-      "description": "A raw recording becomes useful information only after it is represented, characterized and evaluated. The diagram below shows this transformation conceptually — the details of our internal methods are not disclosed.",
-      "currentApplicationNote": "Parkinson's disease screening is the current validated application.",
-      "stage1": "Raw Voice",
-      "stage2": "Signal Representation",
-      "stage3": "Feature & Pattern Analysis",
-      "stage4": "Model Processing",
-      "stage5": "Screening Result"
-    },
-
     "science": {
       "eyebrow": "Science & Evidence",
       "title": "Built on Scientific Evidence",
@@ -222,19 +210,6 @@
       "chain2": "Measurable acoustic & signal characteristics",
       "chain3": "Computational analysis",
       "chain4": "Screening-related patterns"
-    },
-
-    "workflow": {
-      "eyebrow": "How It Is Applied",
-      "title": "A four-step screening pathway",
-      "description": "The same underlying approach that powers our Parkinson's screening pathway. The Technology page explains each step in more detail.",
-      "steps": {
-        "capture": "Record Your Voice",
-        "processing": "Signal Processing",
-        "analysis": "Computational Analysis",
-        "screening": "Screening Support"
-      },
-      "cta": "Explore the Technology"
     },
 
     "future": {

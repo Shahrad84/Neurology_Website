@@ -3,7 +3,31 @@
    Relies on tokens and primitives from /css/global.css
    ========================================================= */
 
-/* ---------- HERO ---------- */
+/* Small arrowed link that can appear inside .section-head */
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-start: 1.25rem;
+  font-weight: 500;
+  color: var(--ink-strong);
+  border-block-end: 1px solid var(--line-strong);
+  padding-block-end: 0.2rem;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.section-link::after {
+  content: "→";
+  display: inline-block;
+  transition: transform 0.25s var(--ease);
+}
+html[dir="rtl"] .section-link::after { content: "←"; }
+.section-link:hover { color: var(--accent); border-color: var(--accent); }
+.section-link:hover::after { transform: translateX(4px); }
+html[dir="rtl"] .section-link:hover::after { transform: translateX(-4px); }
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
 .tech-hero {
   padding-block: clamp(3rem, 6vw, 6rem) clamp(3rem, 5vw, 5.5rem);
   border-block-end: 1px solid var(--line);
@@ -86,7 +110,9 @@ html[lang="fa"] .tech-hero-copy h1 { max-width: 22ch; }
   .pipeline .stage { opacity: 1; animation: none; }
 }
 
-/* ---------- WHY VOICE ---------- */
+/* =========================================================
+   2. WHY VOICE
+   ========================================================= */
 .why-voice .section-head {
   max-width: 680px;
   margin-block-end: clamp(2.5rem, 5vw, 4rem);
@@ -162,7 +188,9 @@ html[lang="fa"] .tech-hero-copy h1 { max-width: 22ch; }
   }
 }
 
-/* ---------- HOW IT WORKS ---------- */
+/* =========================================================
+   3. HOW IT WORKS
+   ========================================================= */
 .how-it-works {
   background: var(--bg-elevated);
   border-block: 1px solid var(--line);
@@ -278,148 +306,9 @@ html[lang="fa"] .tech-hero-copy h1 { max-width: 22ch; }
   .step-wave { stroke-dashoffset: 0; transition: none; }
 }
 
-/* ---------- SIGNAL TO INSIGHT ---------- */
-.signal-insight .section-head {
-  max-width: 720px;
-  margin-block-end: clamp(2.5rem, 5vw, 4rem);
-}
-
-.signal-insight h2 { margin-block-end: 1rem; }
-
-/* Small inline note under a section head — used to scope claims about the
-   current validated application without introducing a new section. */
-.step-note {
-  margin-block-start: 1.25rem;
-  font-size: 0.85rem;
-  line-height: 1.6;
-  color: var(--muted);
-  padding-inline-start: 0.9rem;
-  border-inline-start: 2px solid var(--accent);
-  max-width: 52ch;
-}
-
-/* Section-level link (small arrowed link that appears inside .section-head) */
-.section-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-block-start: 1.25rem;
-  font-weight: 500;
-  color: var(--ink-strong);
-  border-block-end: 1px solid var(--line-strong);
-  padding-block-end: 0.2rem;
-  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
-}
-.section-link::after {
-  content: "→";
-  display: inline-block;
-  transition: transform 0.25s var(--ease);
-}
-html[dir="rtl"] .section-link::after { content: "←"; }
-.section-link:hover { color: var(--accent); border-color: var(--accent); }
-.section-link:hover::after { transform: translateX(4px); }
-html[dir="rtl"] .section-link:hover::after { transform: translateX(-4px); }
-
-.transform {
-  display: flex;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  padding-block-start: clamp(1rem, 2vw, 1.5rem);
-  border-block-start: 1px solid var(--line);
-}
-
-.transform-stage {
-  flex: 1 1 140px;
-  min-width: 140px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.75rem;
-  padding-block: 1.25rem;
-}
-
-.transform-viz {
-  color: var(--ink-soft);
-  width: 100%;
-  max-width: 160px;
-  aspect-ratio: 14 / 6;
-  display: flex;
-  align-items: center;
-}
-
-.transform-viz svg {
-  width: 100%;
-  height: auto;
-}
-
-.transform-stage--final .transform-viz { color: var(--ink-strong); }
-
-.tr-wave {
-  stroke-dasharray: 500;
-  stroke-dashoffset: 500;
-  transition: stroke-dashoffset 1.6s var(--ease);
-}
-.reveal.is-visible .tr-wave { stroke-dashoffset: 0; }
-
-.transform-label {
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-strong);
-  line-height: 1.35;
-}
-html[lang="fa"] .transform-label {
-  text-transform: none;
-  letter-spacing: 0.02em;
-  font-size: 0.9rem;
-}
-
-.transform-arrow {
-  align-self: center;
-  color: var(--muted);
-  opacity: 0.55;
-  display: inline-flex;
-}
-html[dir="rtl"] .transform-arrow svg { transform: scaleX(-1); }
-
-@media (max-width: 760px) {
-  .transform {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .transform-stage {
-    padding-block: 1rem;
-    border-inline-start: 1px solid var(--line);
-    padding-inline-start: 1.25rem;
-    margin-inline-start: 0.5rem;
-    position: relative;
-  }
-  .transform-stage::before {
-    content: "";
-    position: absolute;
-    inset-block-start: 1.65rem;
-    inset-inline-start: -3.5px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-  }
-  .transform-arrow {
-    transform: rotate(90deg);
-    align-self: flex-start;
-    margin-inline-start: 1.5rem;
-    margin-block: -0.25rem;
-  }
-  html[dir="rtl"] .transform-arrow { transform: rotate(90deg) scaleX(-1); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .tr-wave { stroke-dashoffset: 0; transition: none; }
-}
-
-/* ---------- EVIDENCE ---------- */
+/* =========================================================
+   4. EVIDENCE
+   ========================================================= */
 .evidence {
   background: var(--bg-elevated);
   border-block: 1px solid var(--line);
@@ -514,7 +403,9 @@ html[lang="fa"] .evidence-tag {
   flex: 0 0 auto;
 }
 
-/* ---------- NOT DIAGNOSIS ---------- */
+/* =========================================================
+   5. NOT DIAGNOSIS
+   ========================================================= */
 .not-diagnosis {
   padding-block: clamp(4rem, 8vw, 7rem);
 }
@@ -536,7 +427,9 @@ html[lang="fa"] .evidence-tag {
   color: var(--ink-soft);
 }
 
-/* ---------- FINAL CTA ---------- */
+/* =========================================================
+   6. FINAL CTA
+   ========================================================= */
 .tech-cta {
   border-block-start: 1px solid var(--line);
 }
@@ -579,7 +472,9 @@ html[dir="rtl"] .tech-cta-inner::before {
   gap: 0.75rem;
 }
 
-/* ---------- Persian refinements ---------- */
+/* =========================================================
+   Persian typography refinements (page-local)
+   ========================================================= */
 html[lang="fa"] .step-title,
 html[lang="fa"] .evidence-title { letter-spacing: 0; }
 html[lang="fa"] .step { line-height: 1.85; }

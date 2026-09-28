@@ -140,18 +140,6 @@
       }
     },
 
-    "signalToInsight": {
-      "eyebrow": "Transformasi",
-      "title": "Dari sinyal menjadi wawasan",
-      "description": "Rekaman mentah baru menjadi informasi yang berguna setelah direpresentasikan, dikarakterisasi, dan dievaluasi. Diagram di bawah ini menggambarkan transformasi tersebut secara konseptual — detail metode internal kami tidak diungkapkan.",
-      "currentApplicationNote": "Skrining penyakit Parkinson adalah aplikasi tervalidasi saat ini.",
-      "stage1": "Suara Mentah",
-      "stage2": "Representasi Sinyal",
-      "stage3": "Analisis Fitur & Pola",
-      "stage4": "Pemrosesan Model",
-      "stage5": "Hasil Skrining"
-    },
-
     "science": {
       "eyebrow": "Sains & Bukti",
       "title": "Dibangun di Atas Bukti Ilmiah",
@@ -222,19 +210,6 @@
       "chain2": "Karakteristik akustik & sinyal yang terukur",
       "chain3": "Analisis komputasional",
       "chain4": "Pola terkait skrining"
-    },
-
-    "workflow": {
-      "eyebrow": "Cara Penerapan",
-      "title": "Jalur skrining empat langkah",
-      "description": "Pendekatan dasar yang sama yang mendukung jalur skrining Parkinson kami. Halaman Teknologi menjelaskan setiap langkah secara lebih rinci.",
-      "steps": {
-        "capture": "Rekam Suara Anda",
-        "processing": "Pemrosesan Sinyal",
-        "analysis": "Analisis Komputasional",
-        "screening": "Dukungan Skrining"
-      },
-      "cta": "Jelajahi Teknologi"
     },
 
     "future": {
