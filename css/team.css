@@ -3,6 +3,28 @@
    Depends on tokens/primitives in /css/global.css
    ========================================================= */
 
+/* Small arrowed link that can appear inside .section-head */
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-start: 1.25rem;
+  font-weight: 500;
+  color: var(--ink-strong);
+  border-block-end: 1px solid var(--line-strong);
+  padding-block-end: 0.2rem;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.section-link::after {
+  content: "→";
+  display: inline-block;
+  transition: transform 0.25s var(--ease);
+}
+html[dir="rtl"] .section-link::after { content: "←"; }
+.section-link:hover { color: var(--accent); border-color: var(--accent); }
+.section-link:hover::after { transform: translateX(4px); }
+html[dir="rtl"] .section-link:hover::after { transform: translateX(-4px); }
+
 /* =========================================================
    1. HERO
    ========================================================= */
@@ -33,7 +55,7 @@
 html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
 
 .team-hero-copy .lead {
-  max-width: 54ch;
+  max-width: 56ch;
 }
 
 .team-hero-visual {
@@ -81,7 +103,6 @@ html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
   max-width: 22ch;
 }
 
-/* Grid */
 .team-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -97,7 +118,6 @@ html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
   }
 }
 
-/* Member card */
 .team-member {
   display: flex;
   flex-direction: column;
@@ -116,7 +136,6 @@ html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
   line-height: 1;
 }
 
-/* Photo area */
 .team-member__image {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -140,7 +159,6 @@ html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
   transform: scale(1.02);
 }
 
-/* Placeholder visual — used only until a real image is dropped in */
 .team-member__placeholder {
   width: 100%;
   height: 100%;
@@ -156,7 +174,6 @@ html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
   position: relative;
 }
 
-/* fine grid pattern behind the placeholder glyph */
 .team-member__placeholder::before {
   content: "";
   position: absolute;
@@ -191,7 +208,6 @@ html[lang="fa"] .team-member__placeholder-label {
   font-size: 0.78rem;
 }
 
-/* Body */
 .team-member__body {
   display: flex;
   flex-direction: column;
@@ -221,9 +237,7 @@ html[lang="fa"] .team-member__label {
   transition: color 0.25s var(--ease);
 }
 
-.team-member:hover .team-member__name {
-  color: var(--ink);
-}
+.team-member:hover .team-member__name { color: var(--ink); }
 
 .team-member__role {
   font-size: 0.92rem;
@@ -237,14 +251,9 @@ html[lang="fa"] .team-member__label {
   color: var(--muted);
   line-height: 1.6;
   max-width: 44ch;
-}
-
-/* Reserve vertical space in the bio so cards stay visually even before content */
-.team-member__bio {
   min-height: 3em;
 }
 
-/* Underline motif on hover, respects RTL */
 .team-member::after {
   content: "";
   position: absolute;
@@ -258,11 +267,43 @@ html[lang="fa"] .team-member__label {
 .team-member:hover::after { width: 100%; }
 
 /* =========================================================
-   3. SCIENCE & COLLABORATION
+   3. EXPERTISE AREAS
+   Reuses the global .science-panel / .pillar pattern.
    ========================================================= */
-.team-science {
+.team-capabilities {
   background: var(--bg-elevated);
   border-block: 1px solid var(--line);
+}
+
+.team-capabilities .section-head {
+  max-width: 720px;
+  margin-block-end: clamp(2.5rem, 5vw, 4rem);
+}
+
+.team-capabilities h2 { margin-block-end: 1rem; }
+
+.team-capabilities-panel {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .team-capabilities-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .team-capabilities-panel {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =========================================================
+   4. SCIENCE & COLLABORATION
+   ========================================================= */
+.team-science {
+  background: var(--bg);
+  border-block-end: 1px solid var(--line);
 }
 
 .team-science-inner {
@@ -298,7 +339,7 @@ html[lang="fa"] .team-member__label {
 .team-science-diagram svg { width: 100%; height: 100%; }
 
 /* =========================================================
-   4. SCIENTIFIC FOUNDATION
+   5. SCIENTIFIC FOUNDATION
    ========================================================= */
 .team-foundation .team-foundation-inner {
   max-width: 720px;
@@ -315,7 +356,7 @@ html[lang="fa"] .team-member__label {
 }
 
 /* =========================================================
-   5. FINAL CTA
+   6. FINAL CTA
    ========================================================= */
 .team-cta {
   border-block-start: 1px solid var(--line);
@@ -365,7 +406,23 @@ html[lang="fa"] .team-member__name,
 html[lang="fa"] .team-section h2,
 html[lang="fa"] .team-science-copy h2,
 html[lang="fa"] .team-foundation h2,
-html[lang="fa"] .team-cta-inner h2 { letter-spacing: 0; }
+html[lang="fa"] .team-cta-inner h2,
+html[lang="fa"] .team-capabilities h2 { letter-spacing: 0; }
 
 html[lang="fa"] .team-member { line-height: 1.75; }
 html[lang="fa"] .team-member__bio { line-height: 1.85; }
+
+/* =========================================================
+   Navigation responsiveness for seven items
+   (Applies only between 900px and 1100px where the header
+   would otherwise wrap. Above 1100px the default spacing
+   from global.css applies unchanged.)
+   ========================================================= */
+@media (min-width: 900px) and (max-width: 1100px) {
+  .nav-list {
+    gap: 1.25rem;
+  }
+  .nav-list a {
+    font-size: 0.86rem;
+  }
+}

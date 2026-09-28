@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.scienceTitle">Science &amp; Evidence — Neuronous</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.scienceDescription"
+        content="The scientific foundation, validation approach and research references behind Neuronous voice-based neurological screening technology." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content" data-i18n="meta.scienceTitle"
+        content="Science &amp; Evidence — Neuronous" />
+  <meta property="og:description" data-i18n-attr="content" data-i18n="meta.scienceDescription"
+        content="Scientific foundation, validation approach and research references behind Neuronous." />
+  <meta property="og:image" content="/assets/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/science.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="/index.html" aria-label="Neuronous">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 12" width="32" height="12" fill="none">
+            <path d="M0 6h3l2-4 3 8 3-10 3 12 3-8 2 2h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Neuronous</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science" aria-current="page">Science</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="fa" aria-pressed="false">FA</button>
+          <button type="button" class="lang-btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav aria-label="Mobile">
+        <ul>
+          <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science" aria-current="page">Science</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. SCIENCE HERO -->
+    <section class="sci-hero" aria-labelledby="sci-hero-title">
+      <div class="container sci-hero-inner">
+        <div class="sci-hero-copy">
+          <p class="eyebrow" data-i18n="science.hero.eyebrow">Science &amp; Evidence</p>
+          <h1 id="sci-hero-title" data-i18n="science.hero.title">
+            Research behind the technology
+          </h1>
+          <p class="lead" data-i18n="science.hero.description">
+            Neuronous is grounded in research on voice signals and their relevance
+            to neurological screening. This page documents the scientific foundation
+            and validation approach behind the technology.
+          </p>
+
+          <div class="sci-hero-actions">
+            <a class="btn btn-ghost" href="/technology.html" data-i18n="science.hero.ctaSecondary">
+              Explore the Technology
+            </a>
+            <a class="btn btn-ghost" href="#publications" data-i18n="science.hero.ctaTertiary">
+              Publications &amp; References
+            </a>
+          </div>
+        </div>
+
+        <div class="sci-hero-visual" aria-hidden="true">
+          <svg class="sci-signal" viewBox="0 0 560 340" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="sciGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%"   stop-color="#26384A" stop-opacity="0.10" />
+                <stop offset="50%"  stop-color="#3DD6C6" stop-opacity="1" />
+                <stop offset="100%" stop-color="#26384A" stop-opacity="0.10" />
+              </linearGradient>
+            </defs>
+
+            <!-- fine reference grid -->
+            <g stroke="#0B1726" stroke-opacity="0.05">
+              <line x1="60" y1="60"  x2="60"  y2="280" />
+              <line x1="160" y1="60" x2="160" y2="280" />
+              <line x1="260" y1="60" x2="260" y2="280" />
+              <line x1="360" y1="60" x2="360" y2="280" />
+              <line x1="460" y1="60" x2="460" y2="280" />
+              <line x1="60" y1="100" x2="500" y2="100" />
+              <line x1="60" y1="170" x2="500" y2="170" />
+              <line x1="60" y1="240" x2="500" y2="240" />
+            </g>
+
+            <!-- baseline -->
+            <line x1="60" y1="170" x2="500" y2="170"
+                  stroke="#0B1726" stroke-opacity="0.10" stroke-dasharray="2 6" />
+
+            <!-- primary signal -->
+            <path class="sci-wave sci-wave-1"
+              d="M60,170 C90,170 100,90 130,90 C160,90 170,250 200,250 C230,250 240,70 270,70 C300,70 310,260 340,260 C370,260 380,110 410,110 C440,110 450,210 480,210 C495,210 500,170 500,170"
+              fill="none" stroke="url(#sciGrad)" stroke-width="1.6" stroke-linecap="round" />
+
+            <!-- echo -->
+            <path class="sci-wave sci-wave-2"
+              d="M60,170 C100,170 120,130 160,130 C200,130 220,220 260,220 C300,220 320,120 360,120 C400,120 420,200 460,200 C490,200 500,170 500,170"
+              fill="none" stroke="#0B1726" stroke-opacity="0.14" stroke-width="1" stroke-linecap="round" />
+
+            <!-- anchor nodes -->
+            <circle cx="130" cy="90"  r="2.5" fill="#3DD6C6" />
+            <circle cx="270" cy="70"  r="2.5" fill="#3DD6C6" />
+            <circle cx="410" cy="110" r="2.5" fill="#3DD6C6" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. RESEARCH OVERVIEW -->
+    <section class="sci-overview reveal" aria-labelledby="sci-overview-title">
+      <div class="container">
+        <div class="sci-overview-inner">
+          <div class="sci-overview-copy">
+            <p class="eyebrow" data-i18n="science.overview.eyebrow">Research Overview</p>
+            <h2 id="sci-overview-title" data-i18n="science.overview.title">
+              Voice as a measurable research signal
+            </h2>
+            <p class="lead" data-i18n="science.overview.description">
+              Voice and speech contain measurable acoustic and temporal characteristics.
+              Research investigates whether these characteristics carry information
+              relevant to neurological function — the foundation of our screening
+              approach.
+            </p>
+            <p class="sci-overview-note" data-i18n="science.overview.note">
+              The Technology page explains how the underlying system works. This page
+              documents the scientific foundation and evidence behind it.
+            </p>
+          </div>
+
+          <ol class="sci-chain" aria-label="From voice to neurological screening">
+            <li class="sci-chain-node">
+              <span class="sci-chain-index">01</span>
+              <span class="sci-chain-label" data-i18n="science.overview.chain1">Voice</span>
+            </li>
+            <li class="sci-chain-node">
+              <span class="sci-chain-index">02</span>
+              <span class="sci-chain-label" data-i18n="science.overview.chain2">
+                Measurable signal
+              </span>
+            </li>
+            <li class="sci-chain-node">
+              <span class="sci-chain-index">03</span>
+              <span class="sci-chain-label" data-i18n="science.overview.chain3">
+                Computational analysis
+              </span>
+            </li>
+            <li class="sci-chain-node sci-chain-node--accent">
+              <span class="sci-chain-index">04</span>
+              <span class="sci-chain-label" data-i18n="science.overview.chain4">
+                Neurological screening
+              </span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. VALIDATION (dark anchor) -->
+    <section class="sci-validation reveal" aria-labelledby="sci-validation-title">
+      <div class="container sci-validation-inner">
+        <div class="sci-validation-copy">
+          <p class="eyebrow eyebrow--accent" data-i18n="science.validation.eyebrow">Validation</p>
+          <h2 id="sci-validation-title" data-i18n="science.validation.title">
+            Validation status
+          </h2>
+          <p class="lead lead--onDark" data-i18n="science.validation.description">
+            Parkinson's disease screening is the current validated application.
+            Detailed validation information is being prepared and will be published
+            here when available.
+          </p>
+          <p class="sci-validation-note" data-i18n="science.validation.note">
+            We publish only verified results. Until then, this section remains a
+            structured placeholder — not a summary of unconfirmed outcomes.
+          </p>
+        </div>
+
+        <div class="sci-validation-meta" role="list" aria-label="Validation summary">
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="science.validation.metaStudyKey">Study</span>
+            <span class="meta-val" data-i18n="science.validation.metaPending">To be published</span>
+          </div>
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="science.validation.metaPopulationKey">Population</span>
+            <span class="meta-val" data-i18n="science.validation.metaPending">To be published</span>
+          </div>
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="science.validation.metaMethodKey">Method</span>
+            <span class="meta-val" data-i18n="science.validation.metaPending">To be published</span>
+          </div>
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="science.validation.metaFindingKey">Key finding</span>
+            <span class="meta-val" data-i18n="science.validation.metaPending">To be published</span>
+          </div>
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="science.validation.metaSourceKey">Source</span>
+            <span class="meta-val" data-i18n="science.validation.metaPending">To be published</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PUBLICATIONS & RESEARCH -->
+    <section class="sci-publications reveal" id="publications" aria-labelledby="sci-pub-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="science.publications.eyebrow">Publications</p>
+          <h2 id="sci-pub-title" data-i18n="science.publications.title">
+            Publications &amp; Research
+          </h2>
+          <p class="lead narrow" data-i18n="science.publications.description">
+            Peer-reviewed publications and research work related to our approach will
+            be listed here. The layout below is prepared to receive real entries with
+            title, authors, source and year.
+          </p>
+        </div>
+
+        <ol class="sci-doc-list" aria-label="Scientific publications">
+          <li class="sci-doc" data-doc="1">
+            <div class="sci-doc-index">01</div>
+            <div class="sci-doc-body">
+              <h3 class="sci-doc-title" data-i18n="science.publications.items.item1.title">
+                Publication entry
+              </h3>
+              <p class="sci-doc-meta" data-i18n="science.publications.items.item1.meta">
+                Authors · Source · Year
+              </p>
+              <p class="sci-doc-text" data-i18n="science.publications.items.item1.text">
+                A short summary of the publication and its relevance to the technology
+                will appear here.
+              </p>
+            </div>
+            <span class="sci-doc-status" data-i18n="science.publications.statusPending">
+              To be published
+            </span>
+          </li>
+
+          <li class="sci-doc" data-doc="2">
+            <div class="sci-doc-index">02</div>
+            <div class="sci-doc-body">
+              <h3 class="sci-doc-title" data-i18n="science.publications.items.item2.title">
+                Publication entry
+              </h3>
+              <p class="sci-doc-meta" data-i18n="science.publications.items.item2.meta">
+                Authors · Source · Year
+              </p>
+              <p class="sci-doc-text" data-i18n="science.publications.items.item2.text">
+                A short summary of the publication and its relevance to the technology
+                will appear here.
+              </p>
+            </div>
+            <span class="sci-doc-status" data-i18n="science.publications.statusPending">
+              To be published
+            </span>
+          </li>
+        </ol>
+
+        <p class="sci-doc-footnote" data-i18n="science.publications.footnote">
+          No publications are listed until they are verified and publicly available.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. RESEARCH DATA & FINDINGS -->
+    <section class="sci-findings reveal" aria-labelledby="sci-findings-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="science.findings.eyebrow">Findings</p>
+          <h2 id="sci-findings-title" data-i18n="science.findings.title">
+            Research data &amp; findings
+          </h2>
+          <p class="lead narrow" data-i18n="science.findings.description">
+            Key observations and measured outcomes will be presented here as they
+            become available. We do not publish provisional numbers — the layout
+            below is prepared to receive verified findings.
+          </p>
+        </div>
+
+        <ul class="evidence-grid" role="list" aria-label="Research findings">
+          <li class="evidence-item">
+            <span class="evidence-tag" data-i18n="science.findings.items.finding1Tag">Finding</span>
+            <h3 class="evidence-title" data-i18n="science.findings.items.finding1Title">
+              Voice characteristics
+            </h3>
+            <p class="evidence-text" data-i18n="science.findings.items.finding1Text">
+              Measured vocal characteristics and their relevance to neurological
+              screening will be summarized here.
+            </p>
+            <span class="evidence-status" data-i18n="science.findings.statusPending">
+              To be published
+            </span>
+          </li>
+
+          <li class="evidence-item">
+            <span class="evidence-tag" data-i18n="science.findings.items.finding2Tag">Finding</span>
+            <h3 class="evidence-title" data-i18n="science.findings.items.finding2Title">
+              Speech patterns
+            </h3>
+            <p class="evidence-text" data-i18n="science.findings.items.finding2Text">
+              Observed temporal and structural patterns in speech and their relation
+              to the screening approach will be documented here.
+            </p>
+            <span class="evidence-status" data-i18n="science.findings.statusPending">
+              To be published
+            </span>
+          </li>
+
+          <li class="evidence-item">
+            <span class="evidence-tag" data-i18n="science.findings.items.finding3Tag">Finding</span>
+            <h3 class="evidence-title" data-i18n="science.findings.items.finding3Title">
+              Computational results
+            </h3>
+            <p class="evidence-text" data-i18n="science.findings.items.finding3Text">
+              Computational analysis results relevant to screening will be summarized
+              here once verified.
+            </p>
+            <span class="evidence-status" data-i18n="science.findings.statusPending">
+              To be published
+            </span>
+          </li>
+
+          <li class="evidence-item">
+            <span class="evidence-tag" data-i18n="science.findings.items.finding4Tag">Finding</span>
+            <h3 class="evidence-title" data-i18n="science.findings.items.finding4Title">
+              Screening assessment
+            </h3>
+            <p class="evidence-text" data-i18n="science.findings.items.finding4Text">
+              Performance characteristics of the screening approach will be documented
+              here when available — not before.
+            </p>
+            <span class="evidence-status" data-i18n="science.findings.statusPending">
+              To be published
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6. REFERENCES -->
+    <section class="sci-references reveal" aria-labelledby="sci-ref-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="science.references.eyebrow">References</p>
+          <h2 id="sci-ref-title" data-i18n="science.references.title">
+            Scientific sources
+          </h2>
+          <p class="lead narrow" data-i18n="science.references.description">
+            Supporting literature, methodological references and external research
+            will be listed here as the scientific record develops.
+          </p>
+        </div>
+
+        <ol class="sci-doc-list sci-doc-list--references" aria-label="Scientific references">
+          <li class="sci-doc" data-doc="1">
+            <div class="sci-doc-index">01</div>
+            <div class="sci-doc-body">
+              <h3 class="sci-doc-title" data-i18n="science.references.items.ref1.title">
+                Reference entry
+              </h3>
+              <p class="sci-doc-meta" data-i18n="science.references.items.ref1.meta">
+                Authors · Source · Year
+              </p>
+            </div>
+            <span class="sci-doc-status" data-i18n="science.references.statusPending">
+              To be added
+            </span>
+          </li>
+
+          <li class="sci-doc" data-doc="2">
+            <div class="sci-doc-index">02</div>
+            <div class="sci-doc-body">
+              <h3 class="sci-doc-title" data-i18n="science.references.items.ref2.title">
+                Reference entry
+              </h3>
+              <p class="sci-doc-meta" data-i18n="science.references.items.ref2.meta">
+                Authors · Source · Year
+              </p>
+            </div>
+            <span class="sci-doc-status" data-i18n="science.references.statusPending">
+              To be added
+            </span>
+          </li>
+
+          <li class="sci-doc" data-doc="3">
+            <div class="sci-doc-index">03</div>
+            <div class="sci-doc-body">
+              <h3 class="sci-doc-title" data-i18n="science.references.items.ref3.title">
+                Reference entry
+              </h3>
+              <p class="sci-doc-meta" data-i18n="science.references.items.ref3.meta">
+                Authors · Source · Year
+              </p>
+            </div>
+            <span class="sci-doc-status" data-i18n="science.references.statusPending">
+              To be added
+            </span>
+          </li>
+        </ol>
+
+        <p class="sci-doc-footnote" data-i18n="science.references.footnote">
+          References are added only when they are directly relevant and verifiable.
+        </p>
+      </div>
+    </section>
+
+    <!-- 7. SCREENING ≠ DIAGNOSIS -->
+    <section class="not-diagnosis reveal" aria-labelledby="sci-not-diag-title">
+      <div class="container">
+        <div class="not-diag-inner">
+          <p class="eyebrow" data-i18n="science.screeningNotice.eyebrow">Important Distinction</p>
+          <h2 id="sci-not-diag-title" data-i18n="science.screeningNotice.title">
+            Screening Is Not Diagnosis
+          </h2>
+          <p class="lead" data-i18n="science.screeningNotice.description">
+            The scientific evidence behind a screening approach does not turn that
+            approach into a diagnosis. This technology is intended to support
+            neurological screening and does not replace professional medical
+            evaluation, clinical assessment or a definitive diagnosis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FINAL CTA -->
+    <section class="sci-cta reveal" aria-labelledby="sci-cta-title">
+      <div class="container">
+        <div class="sci-cta-inner">
+          <p class="eyebrow" data-i18n="science.cta.eyebrow">Continue</p>
+          <h2 id="sci-cta-title" data-i18n="science.cta.title">
+            Ready to start a screening?
+          </h2>
+          <p class="lead" data-i18n="science.cta.description">
+            Parkinson's disease is currently the first validated application of our
+            voice-based screening technology.
+          </p>
+          <div class="sci-cta-actions">
+            <!-- Placeholder — the external screening platform is not yet available. -->
+            <a
+              class="btn btn-primary"
+              href="#"
+              data-screening-link
+              data-i18n="science.cta.primary"
+            >
+              Start Screening
+            </a>
+            <a class="btn btn-ghost" href="/applications.html" data-i18n="science.cta.secondary">
+              Explore Applications
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Neuronous</span>
+        <p class="footer-tag" data-i18n="footer.tagline">
+          Voice-based technology for neurological screening.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science">Science</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-legal">
+        <p data-i18n="footer.disclaimer">
+          This technology is intended for screening purposes and does not provide a medical diagnosis.
+        </p>
+        <p class="footer-copy">
+          © <span id="year"></span> Neuronous. <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

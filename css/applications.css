@@ -10,6 +10,28 @@
   color: rgba(247, 248, 246, 0.72);
 }
 
+/* Section-level small link (arrowed) that can appear inside .section-head */
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-start: 1.25rem;
+  font-weight: 500;
+  color: var(--ink-strong);
+  border-block-end: 1px solid var(--line-strong);
+  padding-block-end: 0.2rem;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.section-link::after {
+  content: "→";
+  display: inline-block;
+  transition: transform 0.25s var(--ease);
+}
+html[dir="rtl"] .section-link::after { content: "←"; }
+.section-link:hover { color: var(--accent); border-color: var(--accent); }
+.section-link:hover::after { transform: translateX(4px); }
+html[dir="rtl"] .section-link:hover::after { transform: translateX(-4px); }
+
 /* =========================================================
    1. HERO
    ========================================================= */
@@ -92,7 +114,6 @@ html[lang="fa"] .apps-hero-copy h1 { max-width: 24ch; }
   overflow: hidden;
 }
 
-/* subtle signal trace behind the dark section */
 .apps-current::before {
   content: "";
   position: absolute;
@@ -149,7 +170,6 @@ html[lang="fa"] .apps-hero-copy h1 { max-width: 24ch; }
   max-width: 52ch;
 }
 
-/* Metadata list */
 .apps-current-meta {
   display: grid;
   gap: 0;
@@ -187,7 +207,7 @@ html[lang="fa"] .meta-key {
 }
 
 /* =========================================================
-   3. WHY VOICE / WHY PARKINSON'S
+   3. WHY VOICE / ROLE OF THE TECHNOLOGY
    ========================================================= */
 .apps-why .apps-why-inner {
   display: grid;
@@ -209,6 +229,18 @@ html[lang="fa"] .meta-key {
 }
 
 .apps-why .lead {
+  max-width: 52ch;
+}
+
+/* Short paragraph clarifying the technology's role — visually distinct
+   from the main .lead but not a new section. */
+.apps-why-role {
+  margin-block-start: 1.5rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--accent);
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
   max-width: 52ch;
 }
 
@@ -407,7 +439,6 @@ html[lang="fa"] .meta-key {
   position: relative;
 }
 
-/* Current card — slightly stronger weight, still not "dark" (that is reserved for section 2) */
 .future-card--current {
   background: var(--bg-elevated);
   border-color: var(--line-strong);
@@ -501,7 +532,28 @@ html[lang="fa"] .future-card-tag {
 }
 
 /* =========================================================
-   6. FINAL CTA
+   6. SCIENCE / EVIDENCE CONNECTION
+   ========================================================= */
+.apps-science {
+  background: var(--bg-elevated);
+  border-block: 1px solid var(--line);
+}
+
+.apps-science-inner {
+  max-width: 720px;
+}
+
+.apps-science h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 22ch;
+}
+
+.apps-science .lead {
+  max-width: 58ch;
+}
+
+/* =========================================================
+   7. FINAL CTA
    ========================================================= */
 .apps-cta {
   border-block-start: 1px solid var(--line);
@@ -533,7 +585,7 @@ html[dir="rtl"] .apps-cta-inner::before {
 
 .apps-cta-inner h2 {
   margin-block: 0.5rem 1rem;
-  max-width: 24ch;
+  max-width: 22ch;
 }
 
 .apps-cta-inner .lead { margin-block-end: 2rem; }
@@ -549,6 +601,22 @@ html[dir="rtl"] .apps-cta-inner::before {
    ========================================================= */
 html[lang="fa"] .app-step-title,
 html[lang="fa"] .future-card-title,
-html[lang="fa"] .apps-current h2 { letter-spacing: 0; }
+html[lang="fa"] .apps-current h2,
+html[lang="fa"] .apps-science h2 { letter-spacing: 0; }
 
 html[lang="fa"] .app-step { line-height: 1.85; }
+
+/* =========================================================
+   Navigation responsiveness for seven items
+   (Applies only between 900px and 1100px where the header
+   would otherwise wrap. Above 1100px the default spacing
+   from global.css applies unchanged.)
+   ========================================================= */
+@media (min-width: 900px) and (max-width: 1100px) {
+  .nav-list {
+    gap: 1.25rem;
+  }
+  .nav-list a {
+    font-size: 0.86rem;
+  }
+}

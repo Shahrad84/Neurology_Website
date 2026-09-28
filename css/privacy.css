@@ -1,0 +1,459 @@
+/* =========================================================
+   Privacy page — section-specific styles
+   Depends on tokens/primitives in /css/global.css
+   ========================================================= */
+
+/* ---------- Shared helpers ---------- */
+.eyebrow--accent { color: var(--accent); }
+
+.lead--onDark {
+  color: rgba(247, 248, 246, 0.72);
+}
+
+/* =========================================================
+   1. HERO (deliberately shorter than page heroes elsewhere,
+   since this page is functional, not promotional)
+   ========================================================= */
+.privacy-hero {
+  padding-block: clamp(2.5rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3.5rem);
+  border-block-end: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.privacy-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .privacy-hero-inner {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: clamp(3rem, 5vw, 4.5rem);
+  }
+}
+
+.privacy-hero-copy h1 {
+  margin-block: 0.5rem 1rem;
+  max-width: 20ch;
+}
+html[lang="fa"] .privacy-hero-copy h1 { max-width: 24ch; }
+
+.privacy-hero-copy .lead {
+  margin-block-end: 1.25rem;
+  max-width: 54ch;
+}
+
+.privacy-hero-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+  padding-inline-start: 0.9rem;
+  border-inline-start: 2px solid var(--accent);
+  max-width: 52ch;
+}
+
+.privacy-hero-visual {
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+  aspect-ratio: 13 / 8;
+  position: relative;
+}
+
+.privacy-graph {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.privacy-wave {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: privacyDraw 2s var(--ease) forwards;
+}
+
+@keyframes privacyDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .privacy-wave { stroke-dashoffset: 0; animation: none; }
+}
+
+/* =========================================================
+   Shared section rhythm for the policy body
+   ========================================================= */
+.privacy-section .section-head {
+  max-width: 720px;
+  margin-block-end: clamp(2.25rem, 4vw, 3.5rem);
+}
+
+.privacy-section h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 24ch;
+}
+
+.privacy-section--alt {
+  background: var(--bg-elevated);
+  border-block: 1px solid var(--line);
+}
+
+/* Long-form prose block inside a section (readable measure) */
+.privacy-body {
+  max-width: 68ch;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.privacy-body p {
+  color: var(--ink-soft);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* =========================================================
+   3. VOICE DATA — three-up block grid
+   ========================================================= */
+.privacy-voice-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+@media (min-width: 720px) {
+  .privacy-voice-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.policy-block {
+  padding: 1.75rem clamp(1.25rem, 2.5vw, 1.75rem);
+  background: var(--bg);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1rem;
+  row-gap: 0.35rem;
+  align-items: baseline;
+}
+
+.privacy-section--alt .policy-block { background: var(--bg-elevated); }
+
+.policy-block-index {
+  grid-row: 1 / 3;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  padding-block-start: 0.35rem;
+}
+
+.policy-block-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.policy-block-text {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* =========================================================
+   4. DATA COLLECTION & USAGE — two-column split
+   ========================================================= */
+.privacy-data-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+@media (min-width: 720px) {
+  .privacy-data-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.privacy-data-col-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-block-end: 1rem;
+  padding-block-end: 0.75rem;
+  border-block-end: 1px solid var(--line);
+}
+html[lang="fa"] .privacy-data-col-title {
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-size: 0.84rem;
+}
+
+.privacy-list {
+  display: grid;
+  gap: 0;
+}
+
+.privacy-list li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.35rem;
+  padding-block: 1.1rem;
+  border-block-end: 1px solid var(--line);
+}
+.privacy-list li:first-child { padding-block-start: 0; }
+.privacy-list li:last-child  { border-block-end: 0; padding-block-end: 0; }
+
+.privacy-list-key {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+  letter-spacing: -0.005em;
+}
+
+.privacy-list-val {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Small footnote under a section */
+.privacy-footnote {
+  margin-block-start: clamp(1.75rem, 3vw, 2.5rem);
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--line-strong);
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 68ch;
+}
+
+/* =========================================================
+   5. STORAGE, RETENTION & SECURITY — dark anchor
+   (mirrors the anchor pattern used on Applications & Science)
+   ========================================================= */
+.privacy-anchor {
+  background: var(--ink-strong);
+  color: #F7F8F6;
+  border-block: 1px solid rgba(247, 248, 246, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.privacy-anchor::before {
+  content: "";
+  position: absolute;
+  inset-block-end: -60px;
+  inset-inline-start: -5%;
+  width: 110%;
+  height: 160px;
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(61, 214, 198, 0.06) 0 2px,
+      transparent 2px 12px
+    );
+  mask-image: linear-gradient(to top, rgba(0,0,0,1), transparent 90%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), transparent 90%);
+  pointer-events: none;
+}
+
+.privacy-anchor-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .privacy-anchor-inner {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: clamp(3rem, 5vw, 5rem);
+  }
+}
+
+.privacy-anchor h2 {
+  color: #fff;
+  margin-block: 0.5rem 1.25rem;
+  font-size: clamp(1.8rem, 3.6vw, 2.5rem);
+  letter-spacing: -0.025em;
+  max-width: 24ch;
+}
+
+.privacy-anchor-copy .lead {
+  max-width: 56ch;
+}
+
+.privacy-anchor-note {
+  margin-block-start: 1.75rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--accent);
+  color: rgba(247, 248, 246, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+.privacy-anchor-meta {
+  display: grid;
+  gap: 0;
+  border-block-start: 1px solid rgba(247, 248, 246, 0.14);
+}
+
+.privacy-anchor-meta .meta-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.7fr) 1fr;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-block-end: 1px solid rgba(247, 248, 246, 0.10);
+}
+
+.privacy-anchor-meta .meta-key {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 248, 246, 0.55);
+  align-self: center;
+}
+
+.privacy-anchor-meta .meta-val {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #F7F8F6;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+html[lang="fa"] .privacy-anchor-meta .meta-key {
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-size: 0.82rem;
+}
+
+/* =========================================================
+   6. USER RIGHTS
+   ========================================================= */
+.privacy-rights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+@media (min-width: 720px) {
+  .privacy-rights-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================================================
+   7. SCREENING ≠ DIAGNOSIS
+   (Reuses the same pattern as Technology & Science.)
+   ========================================================= */
+.not-diagnosis {
+  padding-block: clamp(3rem, 6vw, 5.5rem);
+}
+
+.not-diag-inner {
+  max-width: 820px;
+  padding-inline-start: clamp(1.25rem, 3vw, 2rem);
+  border-inline-start: 2px solid var(--accent);
+}
+
+.not-diag-inner h2 {
+  margin-block: 0.5rem 1.25rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.35rem);
+  max-width: 24ch;
+}
+
+.not-diag-inner .lead {
+  max-width: 62ch;
+  color: var(--ink-soft);
+}
+
+/* =========================================================
+   8. FINAL CTA
+   ========================================================= */
+.privacy-cta {
+  border-block-start: 1px solid var(--line);
+}
+
+.privacy-cta-inner {
+  max-width: 760px;
+  margin-inline: auto;
+  padding: clamp(2.5rem, 5vw, 3.75rem) clamp(1.75rem, 4vw, 3rem);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.privacy-cta-inner::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent), transparent);
+}
+html[dir="rtl"] .privacy-cta-inner::before {
+  background: linear-gradient(to left, var(--accent), transparent);
+}
+
+.privacy-cta-inner h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 22ch;
+}
+
+.privacy-cta-inner .lead { margin-block-end: 2rem; }
+
+.privacy-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* =========================================================
+   Persian typography refinements (page-local)
+   ========================================================= */
+html[lang="fa"] .privacy-anchor h2,
+html[lang="fa"] .privacy-section h2,
+html[lang="fa"] .policy-block-title { letter-spacing: 0; }
+
+html[lang="fa"] .privacy-body p,
+html[lang="fa"] .policy-block-text,
+html[lang="fa"] .privacy-list-val { line-height: 1.85; }
+
+/* =========================================================
+   Navigation responsiveness for seven items
+   (Applies only between 900px and 1100px where the header
+   would otherwise wrap. Above 1100px the default spacing
+   from global.css applies unchanged.)
+   ========================================================= */
+@media (min-width: 900px) and (max-width: 1100px) {
+  .nav-list {
+    gap: 1.25rem;
+  }
+  .nav-list a {
+    font-size: 0.86rem;
+  }
+}

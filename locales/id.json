@@ -1,66 +1,86 @@
 {
   "meta": {
-    "title": "Skrining Berbasis Suara untuk Gangguan Neurologis",
-    "description": "Teknologi skrining berbasis suara yang non-invasif untuk gangguan neurologis, dengan penyakit Parkinson sebagai aplikasi pertama yang tervalidasi.",
-    "ogTitle": "Skrining Berbasis Suara untuk Gangguan Neurologis",
-    "ogDescription": "Teknologi skrining berbasis suara yang non-invasif untuk gangguan neurologis.",
-    "technologyTitle": "Teknologi — Skrining Neurologis Berbasis Suara",
-    "technologyDescription": "Cara kerja skrining berbasis suara: dari perekaman suara dan pemrosesan sinyal hingga analisis komputasional dan keluaran skrining. Dibangun di atas riset ilmiah.",
-    "applicationsTitle": "Aplikasi — Skrining Neurologis Berbasis Suara",
-    "applicationsDescription": "Penyakit Parkinson adalah aplikasi pertama yang tervalidasi dari teknologi skrining neurologis berbasis suara kami, dengan riset neurologis yang lebih luas sebagai arah masa depan.",
-    "teamTitle": "Tim & Sains — Skrining Neurologis Berbasis Suara",
-    "teamDescription": "Orang-orang dan perspektif ilmiah di balik teknologi skrining neurologis berbasis suara kami.",
-    "contactTitle": "Kontak — Skrining Neurologis Berbasis Suara",
-    "contactDescription": "Hubungi tim di balik teknologi skrining neurologis berbasis suara kami — untuk riset, klinis, kemitraan, atau pertanyaan investasi."
+    "title": "Neuronous — Skrining Neurologis Berbasis Suara",
+    "description": "Neuronous mengembangkan teknologi berbasis suara untuk skrining neurologis, dengan penyakit Parkinson sebagai aplikasi pertama yang tervalidasi.",
+    "ogTitle": "Neuronous — Skrining Neurologis Berbasis Suara",
+    "ogDescription": "Teknologi berbasis suara untuk skrining neurologis. Skrining, bukan diagnosis.",
+    "technologyTitle": "Teknologi — Neuronous",
+    "technologyDescription": "Cara kerja skrining berbasis suara di Neuronous: perekaman suara, pemrosesan sinyal, ekstraksi fitur, analisis komputasional berbantuan AI, dan keluaran skrining. Skrining — bukan diagnosis.",
+    "applicationsTitle": "Aplikasi — Neuronous",
+    "applicationsDescription": "Skrining penyakit Parkinson adalah aplikasi tervalidasi saat ini dari teknologi skrining neurologis berbasis suara Neuronous, dengan riset neurologis yang lebih luas sebagai arah masa depan.",
+    "scienceTitle": "Sains & Bukti — Neuronous",
+    "scienceDescription": "Landasan ilmiah, pendekatan validasi, dan referensi riset di balik teknologi skrining neurologis berbasis suara Neuronous.",
+    "teamTitle": "Tim & Sains — Neuronous",
+    "teamDescription": "Keahlian ilmiah, teknis, dan riset di balik teknologi skrining neurologis berbasis suara Neuronous.",
+    "privacyTitle": "Privasi & Perlindungan Data — Neuronous",
+    "privacyDescription": "Bagaimana Neuronous menangani privasi, data suara, dan tanggung jawab terhadap informasi dalam konteks skrining neurologis.",
+    "contactTitle": "Kontak — Neuronous",
+    "contactDescription": "Hubungi Neuronous — untuk pertanyaan umum, riset, kemitraan, kesehatan, atau percakapan investasi."
   },
 
   "a11y": {
     "skip": "Lompat ke konten"
   },
 
+  "brand": {
+    "tagline": "Kecerdasan neuro untuk kesehatan yang lebih baik"
+  },
+
   "nav": {
     "home": "Beranda",
     "technology": "Teknologi",
     "applications": "Aplikasi",
+    "science": "Sains",
     "team": "Tim",
+    "privacy": "Privasi",
     "contact": "Kontak"
   },
 
   "home": {
     "hero": {
-      "eyebrow": "Teknologi Skrining Berbasis Suara",
-      "title": "Skrining Berbasis Suara untuk Gangguan Neurologis",
-      "description": "Teknologi non-invasif yang menganalisis suara sebagai sinyal — dirancang untuk skrining awal, bukan diagnosis. Penyakit Parkinson adalah aplikasi pertama kami yang tervalidasi.",
-      "ctaPrimary": "Jelajahi Teknologi",
+      "title": "Skrining neurologis berbasis suara",
+      "description": "Neuronous mengembangkan teknologi berbasis suara untuk skrining neurologis. Sampel suara singkat dianalisis secara komputasional untuk mengidentifikasi pola yang relevan dengan skrining — dirancang untuk mendukung kesadaran awal, bukan untuk memberikan diagnosis.",
+      "ctaPrimary": "Mulai Skrining",
       "ctaSecondary": "Hubungi Kami",
       "note": "Skrining mendukung kesadaran dan langkah awal — bukan pengganti diagnosis klinis."
     },
 
-    "idea": {
-      "eyebrow": "Gagasan Inti",
-      "title": "Bagaimana jika suara Anda dapat memberi sinyal yang terukur?",
-      "description": "Variasi kecil dalam suara — nada, ritme, waktu, dan stabilitas — dapat membawa informasi tentang fungsi neurologis. Kami mengubah variasi tersebut menjadi sinyal terstruktur yang kuantitatif.",
-      "step1": "Suara",
-      "step2": "Analisis",
-      "step3": "Skrining"
+    "problem": {
+      "eyebrow": "Masalah",
+      "title": "Skrining neurologis yang mudah diakses itu penting",
+      "description": "Identifikasi dini indikator neurologis potensial dapat mendukung tindak lanjut yang tepat waktu. Namun penilaian neurologis sering kali bergantung pada lingkungan dan keahlian klinis khusus yang tidak selalu mudah diakses.",
+      "earlyTitle": "Skrining dini",
+      "earlyText": "Identifikasi dini indikator neurologis potensial dapat mendukung tindak lanjut dan evaluasi yang tepat waktu.",
+      "accessTitle": "Tantangan akses",
+      "accessText": "Penilaian neurologis dapat memerlukan keahlian klinis dan lingkungan khusus yang tidak selalu tersedia dengan mudah.",
+      "voiceTitle": "Mengapa suara",
+      "voiceText": "Suara mengandung karakteristik akustik dan temporal terukur yang dapat dianalisis secara komputasional dan dipelajari kaitannya dengan kondisi neurologis."
     },
 
-    "application": {
-      "eyebrow": "Aplikasi Pertama Kami yang Tervalidasi",
-      "title": "Penyakit Parkinson",
-      "description": "Penyakit Parkinson adalah aplikasi pertama di mana pendekatan skrining berbasis suara kami telah tervalidasi. Teknologi ini dirancang untuk mengidentifikasi pola vokal yang terkait dengan kondisi tersebut — mendukung kesadaran lebih awal dan percakapan klinis, bukan menggantikan diagnosis.",
-      "cta": "Jelajahi Aplikasi Ini"
+    "howItWorks": {
+      "eyebrow": "Cara Kerja",
+      "title": "Tiga langkah, dari suara hingga dukungan skrining",
+      "step1": "Rekam Suara Anda",
+      "step2": "Analisis Suara",
+      "step3": "Terima Hasil Skrining Anda"
+    },
+
+    "technology": {
+      "eyebrow": "Teknologi Kami",
+      "title": "Sinyal dari suara, dianalisis untuk skrining",
+      "description": "Sinyal yang berasal dari suara dapat diproses dan dianalisis untuk mengidentifikasi pola yang relevan dengan skrining neurologis. Penyakit Parkinson adalah aplikasi pertama di mana pendekatan ini telah tervalidasi.",
+      "cta": "Jelajahi Teknologi"
     },
 
     "science": {
-      "eyebrow": "Sains & Kepercayaan",
-      "title": "Dibangun di Atas Riset Ilmiah",
-      "description": "Teknologi ini dikembangkan melalui riset ilmiah dan klinis yang terstruktur. Bukti yang ditinjau sejawat, metrik validasi, dan detail kolaborasi klinis akan dipublikasikan di sini begitu tersedia.",
-      "cta": "Jelajahi Sainsnya",
+      "eyebrow": "Sains & Bukti",
+      "title": "Berpijak pada riset",
+      "description": "Pendekatan kami berpijak pada riset, validasi, dan pengembangan ilmiah yang berkelanjutan. Bukti yang ditinjau sejawat dan detail kolaborasi klinis akan dipublikasikan begitu tersedia.",
+      "cta": "Jelajahi Sains",
       "pillar1Title": "Landasan Ilmiah",
       "pillar1Text": "Dikembangkan dengan pendekatan yang mengutamakan riset.",
-      "pillar2Title": "Validasi Klinis",
-      "pillar2Text": "Tervalidasi dalam lingkungan klinis — detail akan segera dipublikasikan.",
+      "pillar2Title": "Validasi",
+      "pillar2Text": "Pekerjaan validasi sedang berlangsung — detail akan segera dipublikasikan.",
       "pillar3Title": "Transparansi",
       "pillar3Text": "Bukti, metode, dan keterbatasan akan dibagikan secara terbuka."
     },
@@ -68,8 +88,8 @@
     "cta": {
       "title": "Membangun masa depan skrining neurologis.",
       "description": "Kami bekerja sama dengan klinisi, peneliti, dan mitra untuk membawa skrining berbasis suara ke dalam praktik sehari-hari.",
-      "button": "Bicara dengan Kami",
-      "buttonSecondary": "Untuk Investor"
+      "button": "Mulai Skrining Anda",
+      "buttonSecondary": "Jelajahi Aplikasi"
     }
   },
 
@@ -77,15 +97,15 @@
     "hero": {
       "eyebrow": "Teknologi",
       "title": "Mengubah Suara Menjadi Sinyal untuk Skrining Neurologis",
-      "description": "Teknologi kami menganalisis karakteristik akustik dan temporal suara dengan metode komputasional untuk mengidentifikasi pola yang mungkin relevan bagi skrining neurologis. Teknologi ini dirancang untuk mendukung skrining — bukan untuk memberikan diagnosis.",
-      "ctaPrimary": "Lihat Cara Kerjanya",
-      "ctaSecondary": "Hubungi Kami"
+      "description": "Neuronous menganalisis karakteristik akustik dan temporal suara dengan metode komputasional untuk mengidentifikasi pola yang mungkin relevan bagi skrining neurologis. Teknologi ini dirancang untuk mendukung skrining — bukan untuk memberikan diagnosis.",
+      "ctaPrimary": "Mulai Skrining",
+      "ctaSecondary": "Lihat Cara Kerjanya"
     },
 
     "whyVoice": {
       "eyebrow": "Mengapa Suara",
       "title": "Suara membawa informasi yang dapat diukur",
-      "description": "Ucapan dan suara memiliki karakteristik akustik dan temporal — seperti nada, ritme, dan stabilitas dari waktu ke waktu — yang dapat dijelaskan secara komputasional. Karakteristik inilah yang menjadi bahan dasar analisis teknologi kami.",
+      "description": "Ucapan dan suara memiliki karakteristik akustik dan temporal — seperti nada, ritme, dan stabilitas dari waktu ke waktu — yang dapat dijelaskan secara komputasional. Perubahan neurologis dapat memengaruhi karakteristik ini, itulah sebabnya suara diteliti sebagai sinyal terukur untuk skrining.",
       "node1": "Suara",
       "node2": "Pola akustik",
       "node3": "Pola temporal",
@@ -95,23 +115,27 @@
     "howItWorks": {
       "eyebrow": "Proses",
       "title": "Bagaimana cara kerjanya",
-      "description": "Empat langkah membawa suara dari perekaman hingga keluaran skrining — masing-masing mempersiapkan sinyal untuk langkah berikutnya.",
+      "description": "Lima langkah membawa suara dari perekaman hingga keluaran skrining — pemrosesan sinyal, ekstraksi fitur, dan analisis berbantuan AI masing-masing mempersiapkan informasi untuk tahap berikutnya.",
       "steps": {
         "capture": {
           "title": "Perekaman Suara",
-          "description": "Pengguna memberikan sampel suara melalui antarmuka yang didukung."
+          "description": "Pengguna memberikan sampel suara melalui antarmuka skrining yang didukung."
         },
         "processing": {
           "title": "Pemrosesan Sinyal",
           "description": "Suara yang direkam dipersiapkan dan direpresentasikan sebagai sinyal yang layak dianalisis."
         },
+        "features": {
+          "title": "Ekstraksi Fitur",
+          "description": "Karakteristik terukur dari suara dan sinyal ucapan diekstraksi untuk dianalisis."
+        },
         "analysis": {
-          "title": "Analisis Komputasional",
-          "description": "Pola-pola relevan dalam sinyal dievaluasi menggunakan model komputasional kami."
+          "title": "Analisis AI / Komputasional",
+          "description": "Metode komputasional menganalisis fitur yang diekstraksi dan mengidentifikasi pola yang mungkin relevan bagi skrining neurologis."
         },
         "screening": {
           "title": "Keluaran Skrining",
-          "description": "Sistem menghasilkan keluaran yang dimaksudkan untuk mendukung skrining neurologis — bukan diagnosis."
+          "description": "Sistem menghasilkan keluaran skrining yang dimaksudkan untuk mendukung skrining neurologis — bukan diagnosis."
         }
       }
     },
@@ -120,6 +144,7 @@
       "eyebrow": "Transformasi",
       "title": "Dari sinyal menjadi wawasan",
       "description": "Rekaman mentah baru menjadi informasi yang berguna setelah direpresentasikan, dikarakterisasi, dan dievaluasi. Diagram di bawah ini menggambarkan transformasi tersebut secara konseptual — detail metode internal kami tidak diungkapkan.",
+      "currentApplicationNote": "Skrining penyakit Parkinson adalah aplikasi tervalidasi saat ini.",
       "stage1": "Suara Mentah",
       "stage2": "Representasi Sinyal",
       "stage3": "Analisis Fitur & Pola",
@@ -128,9 +153,10 @@
     },
 
     "science": {
-      "eyebrow": "Landasan Ilmiah",
+      "eyebrow": "Sains & Bukti",
       "title": "Dibangun di Atas Bukti Ilmiah",
       "description": "Teknologi ini dikembangkan dan dievaluasi melalui riset ilmiah dan klinis yang terstruktur. Angka, studi, dan kolaborator spesifik belum dipublikasikan di sini — akan ditambahkan begitu tersedia.",
+      "cta": "Jelajahi Sains",
       "statusPending": "Detail akan segera dipublikasikan",
       "items": {
         "researchTag": "Riset",
@@ -156,19 +182,19 @@
 
     "cta": {
       "eyebrow": "Selanjutnya",
-      "title": "Jelajahi Aplikasinya",
+      "title": "Siap memulai skrining?",
       "description": "Penyakit Parkinson saat ini merupakan aplikasi pertama yang tervalidasi dari teknologi skrining berbasis suara kami.",
-      "primary": "Jelajahi Aplikasi",
-      "secondary": "Hubungi Kami"
+      "primary": "Mulai Skrining",
+      "secondary": "Jelajahi Aplikasi"
     }
   },
 
   "applications": {
     "hero": {
       "eyebrow": "Aplikasi",
-      "title": "Aplikasi Skrining Neurologis Berbasis Suara",
-      "description": "Teknologi ini awalnya berfokus pada skrining penyakit Parkinson — aplikasi pertama yang tervalidasi — dengan potensi mendukung riset neurologis yang lebih luas di masa depan.",
-      "ctaPrimary": "Lihat Aplikasi Saat Ini",
+      "title": "Skrining Berbasis Suara untuk Kesehatan Neurologis",
+      "description": "Neuronous menerapkan teknologi berbasis suara untuk skrining neurologis. Penyakit Parkinson adalah aplikasi tervalidasi saat ini, dengan potensi mendukung riset neurologis yang lebih luas di masa depan.",
+      "ctaPrimary": "Mulai Skrining",
       "ctaSecondary": "Arah Masa Depan"
     },
 
@@ -191,6 +217,7 @@
       "eyebrow": "Mengapa Suara",
       "title": "Suara sebagai sinyal yang dapat diukur",
       "description": "Ucapan dan suara mengandung karakteristik akustik dan temporal yang dapat dipelajari peneliti dalam kaitannya dengan fungsi neurologis. Perubahan pada karakteristik ini dapat membawa informasi yang relevan untuk skrining — inilah yang dirancang untuk dianalisis oleh pendekatan kami.",
+      "role": "Teknologi ini merekam informasi suara, menganalisis karakteristik suara yang terukur menggunakan metode komputasional, dan menghasilkan keluaran skrining — ini bukan sistem diagnostik.",
       "chain1": "Suara",
       "chain2": "Karakteristik akustik & sinyal yang terukur",
       "chain3": "Analisis komputasional",
@@ -202,7 +229,7 @@
       "title": "Jalur skrining empat langkah",
       "description": "Pendekatan dasar yang sama yang mendukung jalur skrining Parkinson kami. Halaman Teknologi menjelaskan setiap langkah secara lebih rinci.",
       "steps": {
-        "capture": "Perekaman Suara",
+        "capture": "Rekam Suara Anda",
         "processing": "Pemrosesan Sinyal",
         "analysis": "Analisis Komputasional",
         "screening": "Dukungan Skrining"
@@ -225,12 +252,130 @@
       "footnote": "Kami tidak menyajikan aplikasi masa depan mana pun sebagai kemampuan yang tervalidasi kecuali telah didukung oleh bukti ilmiah dan klinis yang sesuai."
     },
 
+    "science": {
+      "eyebrow": "Sains & Bukti",
+      "title": "Berpijak pada riset",
+      "description": "Teknologi ini dikembangkan dan dievaluasi melalui riset ilmiah dan klinis yang terstruktur. Bukti, metode, dan keterbatasan yang terperinci didokumentasikan di halaman Sains.",
+      "cta": "Jelajahi Sains"
+    },
+
+    "cta": {
+      "eyebrow": "Selanjutnya",
+      "title": "Siap memulai skrining?",
+      "description": "Penyakit Parkinson saat ini merupakan aplikasi pertama yang tervalidasi dari teknologi skrining berbasis suara kami.",
+      "primary": "Mulai Skrining",
+      "secondary": "Jelajahi Teknologi"
+    }
+  },
+
+  "science": {
+    "hero": {
+      "eyebrow": "Sains & Bukti",
+      "title": "Riset di balik teknologi",
+      "description": "Neuronous berpijak pada riset tentang sinyal suara dan relevansinya bagi skrining neurologis. Halaman ini mendokumentasikan landasan ilmiah dan pendekatan validasi di balik teknologi.",
+      "ctaSecondary": "Jelajahi Teknologi",
+      "ctaTertiary": "Publikasi & Referensi"
+    },
+
+    "overview": {
+      "eyebrow": "Ikhtisar Riset",
+      "title": "Suara sebagai sinyal riset yang dapat diukur",
+      "description": "Suara dan ucapan mengandung karakteristik akustik dan temporal yang dapat diukur. Riset menyelidiki apakah karakteristik ini membawa informasi yang relevan dengan fungsi neurologis — dasar dari pendekatan skrining kami.",
+      "note": "Halaman Teknologi menjelaskan cara kerja sistemnya. Halaman ini mendokumentasikan landasan ilmiah dan bukti di baliknya.",
+      "chain1": "Suara",
+      "chain2": "Sinyal terukur",
+      "chain3": "Analisis komputasional",
+      "chain4": "Skrining neurologis"
+    },
+
+    "validation": {
+      "eyebrow": "Validasi",
+      "title": "Status validasi",
+      "description": "Skrining penyakit Parkinson adalah aplikasi tervalidasi saat ini. Informasi validasi terperinci sedang disiapkan dan akan dipublikasikan di sini ketika tersedia.",
+      "note": "Kami hanya mempublikasikan hasil yang terverifikasi. Sampai saat itu, bagian ini merupakan placeholder terstruktur — bukan ringkasan hasil yang belum terkonfirmasi.",
+      "metaStudyKey": "Studi",
+      "metaPopulationKey": "Populasi",
+      "metaMethodKey": "Metode",
+      "metaFindingKey": "Temuan utama",
+      "metaSourceKey": "Sumber",
+      "metaPending": "Akan dipublikasikan"
+    },
+
+    "publications": {
+      "eyebrow": "Publikasi",
+      "title": "Publikasi & Riset",
+      "description": "Publikasi yang ditinjau sejawat dan karya riset terkait pendekatan kami akan dicantumkan di sini. Tata letak di bawah ini siap menerima entri nyata dengan judul, penulis, sumber, dan tahun.",
+      "statusPending": "Akan dipublikasikan",
+      "footnote": "Tidak ada publikasi yang dicantumkan sampai terverifikasi dan tersedia untuk umum.",
+      "items": {
+        "item1": {
+          "title": "Entri publikasi",
+          "meta": "Penulis · Sumber · Tahun",
+          "text": "Ringkasan singkat publikasi dan relevansinya bagi teknologi akan muncul di sini."
+        },
+        "item2": {
+          "title": "Entri publikasi",
+          "meta": "Penulis · Sumber · Tahun",
+          "text": "Ringkasan singkat publikasi dan relevansinya bagi teknologi akan muncul di sini."
+        }
+      }
+    },
+
+    "findings": {
+      "eyebrow": "Temuan",
+      "title": "Data & temuan riset",
+      "description": "Pengamatan utama dan hasil terukur akan disajikan di sini begitu tersedia. Kami tidak mempublikasikan angka sementara — tata letak di bawah ini siap menerima temuan yang terverifikasi.",
+      "statusPending": "Akan dipublikasikan",
+      "items": {
+        "finding1Tag": "Temuan",
+        "finding1Title": "Karakteristik suara",
+        "finding1Text": "Karakteristik vokal terukur dan relevansinya bagi skrining neurologis akan diringkas di sini.",
+        "finding2Tag": "Temuan",
+        "finding2Title": "Pola ucapan",
+        "finding2Text": "Pola temporal dan struktural yang diamati dalam ucapan dan kaitannya dengan pendekatan skrining akan didokumentasikan di sini.",
+        "finding3Tag": "Temuan",
+        "finding3Title": "Hasil komputasional",
+        "finding3Text": "Hasil analisis komputasional yang relevan untuk skrining akan diringkas di sini setelah terverifikasi.",
+        "finding4Tag": "Temuan",
+        "finding4Title": "Penilaian skrining",
+        "finding4Text": "Karakteristik performa pendekatan skrining akan didokumentasikan di sini ketika tersedia — bukan sebelum itu."
+      }
+    },
+
+    "references": {
+      "eyebrow": "Referensi",
+      "title": "Sumber ilmiah",
+      "description": "Literatur pendukung, referensi metodologis, dan riset eksternal akan dicantumkan di sini seiring perkembangan catatan ilmiah.",
+      "statusPending": "Akan ditambahkan",
+      "footnote": "Referensi hanya ditambahkan ketika secara langsung relevan dan dapat diverifikasi.",
+      "items": {
+        "ref1": {
+          "title": "Entri referensi",
+          "meta": "Penulis · Sumber · Tahun"
+        },
+        "ref2": {
+          "title": "Entri referensi",
+          "meta": "Penulis · Sumber · Tahun"
+        },
+        "ref3": {
+          "title": "Entri referensi",
+          "meta": "Penulis · Sumber · Tahun"
+        }
+      }
+    },
+
+    "screeningNotice": {
+      "eyebrow": "Perbedaan Penting",
+      "title": "Skrining Bukan Diagnosis",
+      "description": "Bukti ilmiah di balik pendekatan skrining tidak mengubahnya menjadi diagnosis. Teknologi ini dimaksudkan untuk mendukung skrining neurologis dan tidak menggantikan evaluasi medis profesional, penilaian klinis, atau diagnosis definitif."
+    },
+
     "cta": {
       "eyebrow": "Lanjutkan",
-      "title": "Jelajahi cara kerja teknologinya",
-      "description": "Untuk peneliti, klinisi, dan mitra yang tertarik pada landasan ilmiah dan teknis di balik pendekatan skrining kami.",
-      "technology": "Jelajahi Teknologi",
-      "contact": "Bicara dengan Kami"
+      "title": "Siap memulai skrining?",
+      "description": "Penyakit Parkinson saat ini merupakan aplikasi pertama yang tervalidasi dari teknologi skrining berbasis suara kami.",
+      "primary": "Mulai Skrining",
+      "secondary": "Jelajahi Aplikasi"
     }
   },
 
@@ -238,7 +383,7 @@
     "hero": {
       "eyebrow": "Tim & Sains",
       "title": "Orang-Orang di Balik Teknologi",
-      "description": "Teknologi skrining yang bermakna dibangun di persimpangan beberapa disiplin — teknologi, analisis sinyal, neurosains, dan riset klinis. Orang-orang di balik proyek ini datang dari arah-arah tersebut dengan fokus bersama pada ketelitian ilmiah."
+      "description": "Neuronous dibangun di atas keahlian ilmiah dan teknis — memadukan analisis suara dan sinyal dengan riset neurologis dan perspektif klinis. Orang-orang di balik proyek ini datang dari arah-arah tersebut dengan fokus bersama pada ketelitian ilmiah."
     },
 
     "members": {
@@ -275,25 +420,136 @@
       }
     },
 
+    "capabilities": {
+      "eyebrow": "Keahlian",
+      "title": "Latar belakang ilmiah & profesional",
+      "description": "Tim ini menyatukan keahlian dari disiplin-disiplin yang diperlukan untuk membangun teknologi skrining yang berpijak pada sains. Informasi latar belakang terperinci sedang disiapkan dan akan dipublikasikan di sini.",
+      "items": {
+        "scienceTitle": "Riset ilmiah",
+        "scienceText": "Latar belakang riset dalam suara, analisis sinyal, dan fungsi neurologis.",
+        "techTitle": "Teknologi & rekayasa",
+        "techText": "Rekayasa sistem yang merekam, memproses, dan menganalisis sinyal suara.",
+        "aiTitle": "AI & analisis komputasional",
+        "aiText": "Pengembangan metode komputasional yang digunakan untuk mengidentifikasi pola relevan.",
+        "clinicalTitle": "Perspektif klinis & validasi",
+        "clinicalText": "Perspektif ilmiah dan klinis yang memandu evaluasi dan desain skrining."
+      }
+    },
+
     "science": {
       "eyebrow": "Sains & Kolaborasi",
       "title": "Dibangun di persimpangan disiplin",
-      "description": "Mengembangkan teknologi skrining yang bermakna memerlukan lebih dari satu jenis keahlian. Ini mempertemukan orang-orang yang bekerja di sisi teknis analisis sinyal dan suara dengan mereka yang memahami riset neurologis dan praktik klinis. Kemajuan bergantung pada tersambungnya perspektif-perspektif ini — bukan pada pemisahannya."
+      "description": "Mengembangkan teknologi skrining yang bermakna memerlukan lebih dari satu jenis keahlian. Ini mempertemukan orang-orang yang bekerja di sisi teknis analisis sinyal dan suara dengan mereka yang memahami riset neurologis dan praktik klinis. Kemajuan bergantung pada tersambungnya perspektif-perspektif ini — bukan pada pemisahannya.",
+      "cta": "Jelajahi Sains Kami"
     },
 
     "foundation": {
       "eyebrow": "Landasan Ilmiah",
       "title": "Berpijak pada riset",
-      "description": "Validasi ilmiah adalah bagian inti dari cara teknologi ini dikembangkan. Halaman Teknologi menjelaskan pendekatan dasarnya dan bukti yang mendukungnya.",
+      "description": "Validasi ilmiah adalah bagian inti dari cara teknologi ini dikembangkan. Halaman Teknologi dan Sains mendokumentasikan pendekatan dasarnya dan bukti yang mendukungnya.",
       "link": "Jelajahi Teknologi"
     },
 
     "cta": {
-      "eyebrow": "Hubungi Kami",
-      "title": "Tertarik bekerja sama dengan kami?",
-      "description": "Kami menyambut percakapan dengan peneliti, klinisi, mitra, dan investor.",
+      "eyebrow": "Selanjutnya",
+      "title": "Siap memulai skrining?",
+      "description": "Penyakit Parkinson saat ini merupakan aplikasi pertama yang tervalidasi dari teknologi skrining berbasis suara kami.",
+      "primary": "Mulai Skrining",
+      "secondary": "Jelajahi Aplikasi"
+    }
+  },
+
+  "privacy": {
+    "hero": {
+      "eyebrow": "Privasi",
+      "title": "Privasi & Perlindungan Data",
+      "description": "Privasi menjadi inti dari cara Neuronous menangani skrining berbasis suara. Halaman ini menjelaskan — dengan bahasa yang sederhana — bagaimana kami memandang data, apa yang terlibat dalam proses skrining, dan prinsip-prinsip yang memandu kerja kami.",
+      "note": "Halaman ini menjelaskan prinsip dan struktur, bukan kebijakan hukum yang sudah final. Detail operasional spesifik akan dipublikasikan setelah dikonfirmasi."
+    },
+
+    "intro": {
+      "eyebrow": "Pengantar",
+      "title": "Mengapa privasi penting bagi Neuronous",
+      "description": "Teknologi skrining bekerja dengan informasi yang bersifat personal. Karena pendekatan kami dibangun di atas suara, kami memandang penanganan yang bertanggung jawab atas informasi tersebut sebagai syarat awal bagi teknologi — bukan sebagai hal tambahan.",
+      "body1": "Suara adalah salah satu sinyal paling personal yang dapat dibagikan seseorang. Suara membawa identitas, ekspresi, dan konteks. Karena itu, setiap teknologi skrining yang bekerja dengan suara memiliki kewajiban untuk memperlakukan data tersebut dengan hati-hati dan bersikap transparan tentang apa yang dilakukannya dengan data itu.",
+      "body2": "Halaman ini menjelaskan prinsip-prinsip yang memandu pendekatan kami terhadap privasi dan perlindungan data. Ditulis agar mudah dibaca, bukan bergaya legalistik, dan mencerminkan pemahaman kami saat ini tentang tanggung jawab membangun teknologi skrining berbasis suara."
+    },
+
+    "voice": {
+      "eyebrow": "Data Suara",
+      "title": "Suara dan audio dalam proses skrining",
+      "description": "Proses skrining dibangun di sekitar suara. Memahami apa artinya itu — dan peran data suara di dalamnya — adalah bagian dari memahami cara kerja teknologi ini.",
+      "whatTitle": "Apa itu data suara",
+      "whatText": "Data suara merujuk pada rekaman atau representasi turunan dari suara seseorang yang diambil selama proses skrining. Sinyal-sinyal ini merupakan masukan bagi langkah analisis.",
+      "roleTitle": "Perannya dalam analisis",
+      "roleText": "Sinyal suara diproses secara komputasional agar karakteristik terukurnya dapat dianalisis. Hasil analisis tersebut berkontribusi pada keluaran skrining — ini bukan diagnosis medis.",
+      "sensitivityTitle": "Mengapa bersifat sensitif",
+      "sensitivityText": "Suara dapat membawa informasi di luar kata-kata yang diucapkan. Karena itu, data suara diperlakukan sebagai informasi sensitif dan ditangani dengan kehati-hatian yang sama seperti data pribadi lain."
+    },
+
+    "data": {
+      "eyebrow": "Data",
+      "title": "Pengumpulan dan penggunaan data",
+      "description": "Kategori di bawah ini menjelaskan jenis informasi yang mungkin terlibat dalam penggunaan teknologi skrining, serta tujuan yang hendak dilayani.",
+      "collectionTitle": "Apa yang mungkin dikumpulkan",
+      "usageTitle": "Bagaimana mungkin digunakan",
+      "items": {
+        "voiceKey": "Data suara",
+        "voiceVal": "Rekaman suara atau sinyal suara turunan yang diambil selama skrining.",
+        "userKey": "Informasi yang diberikan pengguna",
+        "userVal": "Informasi dasar yang diberikan langsung oleh pengguna sebagai bagian dari proses.",
+        "techKey": "Informasi teknis",
+        "techVal": "Informasi teknis yang diperlukan untuk menjalankan dan meningkatkan layanan.",
+        "screeningKey": "Skrining",
+        "screeningVal": "Menyediakan pengalaman skrining dan menghasilkan keluaran skrining.",
+        "analysisKey": "Analisis",
+        "analysisVal": "Melakukan analisis suara yang mendukung skrining.",
+        "researchKey": "Riset",
+        "researchVal": "Meningkatkan teknologi dan mendukung pengembangan ilmiah."
+      },
+      "footnote": "Kategori di atas menjelaskan cakupan teknologi. Detail operasional spesifik — seperti bidang data yang tepat, subprosesor, atau retensi — akan didokumentasikan di sini setelah difinalkan."
+    },
+
+    "storage": {
+      "eyebrow": "Penyimpanan & Keamanan",
+      "title": "Penyimpanan, retensi & keamanan",
+      "description": "Detail operasional tentang tempat penyimpanan data, berapa lama data disimpan, dan bagaimana data dilindungi masih dalam tahap finalisasi. Kami tidak mempublikasikan spesifik yang belum terkonfirmasi.",
+      "note": "Sampai detail ini difinalkan, bagian ini tetap merupakan placeholder terstruktur — bukan ringkasan dari asumsi.",
+      "metaStorageKey": "Lokasi penyimpanan",
+      "metaRetentionKey": "Periode retensi",
+      "metaDeletionKey": "Penghapusan",
+      "metaAccessKey": "Kontrol akses",
+      "metaTransitKey": "Transmisi aman",
+      "metaPending": "Akan disediakan"
+    },
+
+    "rights": {
+      "eyebrow": "Pilihan Anda",
+      "title": "Hak pengguna & pilihan privasi",
+      "description": "Individu yang berinteraksi dengan teknologi ini harus dapat memahami apa yang terjadi dengan datanya dan mengajukan pertanyaan tentangnya. Hak dan prosedur spesifik akan didokumentasikan di sini setelah difinalkan.",
+      "items": {
+        "accessTitle": "Akses & pemahaman",
+        "accessText": "Memahami informasi apa yang terlibat dalam interaksi skrining dan bagaimana informasi tersebut ditangani.",
+        "questionsTitle": "Mengajukan pertanyaan",
+        "questionsText": "Menyampaikan pertanyaan atau kekhawatiran terkait privasi tentang bagaimana data digunakan.",
+        "controlTitle": "Kendali atas partisipasi",
+        "controlText": "Memilih apakah akan berpartisipasi dalam interaksi skrining, dan diberi tahu tentang apa yang dicakup partisipasi tersebut."
+      },
+      "footnote": "Deskripsi formal tentang hak pengguna dan proses untuk menjalankannya akan dipublikasikan bersama dokumentasi privasi yang telah difinalkan."
+    },
+
+    "screeningNotice": {
+      "eyebrow": "Perbedaan Penting",
+      "title": "Skrining Bukan Diagnosis",
+      "description": "Neuronous menyediakan teknologi skrining. Hasil skrining bukan diagnosis medis dan tidak menggantikan evaluasi oleh klinisi yang berkualifikasi. Setiap keputusan medis harus dibuat dengan konsultasi bersama profesional kesehatan."
+    },
+
+    "cta": {
+      "eyebrow": "Pertanyaan",
+      "title": "Ada pertanyaan tentang privasi?",
+      "description": "Jika Anda memiliki pertanyaan tentang privasi, penanganan data, atau proses skrining, silakan menghubungi kami. Kami menyambut percakapan tersebut.",
       "contact": "Hubungi Kami",
-      "applications": "Jelajahi Aplikasi"
+      "secondary": "Jelajahi Sains"
     }
   },
 
@@ -301,8 +557,8 @@
     "hero": {
       "eyebrow": "Kontak",
       "title": "Mari memulai percakapan",
-      "description": "Untuk pertanyaan riset, klinis, kemitraan, atau investasi — kami menyambut percakapan langsung.",
-      "audience": "Investor · Riset · Kemitraan"
+      "description": "Punya pertanyaan, permintaan riset, peluang kemitraan, atau hanya ingin mempelajari Neuronous lebih lanjut? Hubungi kami — kami menyambut percakapan langsung.",
+      "audience": "Investor · Riset · Kemitraan · Kesehatan"
     },
 
     "info": {
@@ -321,6 +577,15 @@
       "namePlaceholder": "Nama lengkap Anda",
       "email": "Email",
       "emailPlaceholder": "you@example.com",
+      "reason": "Alasan menghubungi",
+      "reasonOptions": {
+        "general": "Pertanyaan umum",
+        "research": "Riset",
+        "partner": "Kemitraan",
+        "health": "Kesehatan",
+        "invest": "Investasi",
+        "other": "Lainnya"
+      },
       "subject": "Subjek",
       "subjectPlaceholder": "Bagaimana kami dapat membantu?",
       "message": "Pesan",
@@ -329,14 +594,36 @@
       "note": "Kami akan merespons melalui alamat email yang Anda berikan."
     },
 
-    "closing": {
-      "title": "Ada pertanyaan atau ingin menjajaki kolaborasi?",
-      "description": "Hubungi kami langsung di"
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Pertanyaan umum",
+      "description": "Beberapa pertanyaan yang sering kami terima. Untuk detail terkait privasi, silakan merujuk ke halaman Privasi.",
+      "items": {
+        "howTitle": "Bagaimana skrining bekerja?",
+        "howText": "Sampel suara direkam dan dianalisis secara komputasional untuk mengidentifikasi pola yang relevan dengan skrining neurologis. Keluarannya adalah hasil skrining — bukan diagnosis medis.",
+        "durationTitle": "Berapa lama skrining berlangsung?",
+        "durationText": "Proses skrining dirancang agar cepat dan non-invasif. Informasi waktu spesifik akan diberikan setelah platform skrining tersedia.",
+        "resultTitle": "Bagaimana saya menerima hasilnya?",
+        "resultText": "Keluaran skrining dihasilkan sebagai bagian dari proses. Detail tentang cara hasil disampaikan akan diberikan bersama platform skrining.",
+        "voiceTitle": "Bagaimana data suara saya digunakan?",
+        "voiceText": "Data suara digunakan untuk melakukan analisis yang mendukung skrining. Detail lebih lanjut tersedia di halaman Privasi kami.",
+        "voiceLink": "Pelajari lebih lanjut di Privasi",
+        "diagnosisTitle": "Apakah skrining ini diagnosis?",
+        "diagnosisText": "Tidak. Hasil skrining bukan pengganti diagnosis medis atau nasihat medis profesional. Setiap keputusan medis harus dibuat dengan konsultasi bersama profesional kesehatan yang berkualifikasi."
+      }
+    },
+
+    "cta": {
+      "eyebrow": "Selanjutnya",
+      "title": "Siap memulai skrining?",
+      "description": "Penyakit Parkinson saat ini merupakan aplikasi pertama yang tervalidasi dari teknologi skrining berbasis suara kami.",
+      "primary": "Mulai Skrining",
+      "secondary": "Jelajahi Aplikasi"
     }
   },
 
   "footer": {
-    "tagline": "Skrining berbasis suara untuk gangguan neurologis.",
+    "tagline": "Teknologi berbasis suara untuk skrining neurologis.",
     "disclaimer": "Teknologi ini ditujukan untuk keperluan skrining dan tidak memberikan diagnosis medis.",
     "rights": "Seluruh hak dilindungi."
   }

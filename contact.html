@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title data-i18n="meta.contactTitle">Contact — Voice-Based Neurological Screening</title>
+  <title data-i18n="meta.contactTitle">Contact — Neuronous</title>
   <meta name="description" data-i18n-attr="content" data-i18n="meta.contactDescription"
-        content="Get in touch with the team behind our voice-based neurological screening technology — for research, clinical, partnership or investment enquiries." />
+        content="Get in touch with Neuronous — for general enquiries, research, partnership, healthcare, or investment conversations." />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" data-i18n-attr="content" data-i18n="meta.contactTitle"
-        content="Contact — Voice-Based Neurological Screening" />
+        content="Contact — Neuronous" />
   <meta property="og:description" data-i18n-attr="content" data-i18n="meta.contactDescription"
-        content="Get in touch with the team behind our voice-based neurological screening technology." />
+        content="Get in touch with Neuronous." />
   <meta property="og:image" content="/assets/og-cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -32,21 +32,23 @@
 
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Home">
+      <a class="brand" href="/index.html" aria-label="Neuronous">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 32 12" width="32" height="12" fill="none">
             <path d="M0 6h3l2-4 3 8 3-10 3 12 3-8 2 2h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
-        <span class="brand-name">Vocalis</span>
+        <span class="brand-name">Neuronous</span>
       </a>
 
       <nav class="primary-nav" aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
           <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
           <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science">Science</a></li>
           <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
           <li><a href="/contact.html" data-i18n="nav.contact" aria-current="page">Contact</a></li>
         </ul>
       </nav>
@@ -74,10 +76,12 @@
     <div class="mobile-menu" id="mobileMenu" hidden>
       <nav aria-label="Mobile">
         <ul>
-          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
           <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
           <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science">Science</a></li>
           <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
           <li><a href="/contact.html" data-i18n="nav.contact" aria-current="page">Contact</a></li>
         </ul>
       </nav>
@@ -86,7 +90,7 @@
 
   <main id="main">
 
-    <!-- 1. HERO / INTRO -->
+    <!-- 1. HERO -->
     <section class="contact-hero" aria-labelledby="contact-hero-title">
       <div class="container contact-hero-inner">
         <div class="contact-hero-copy">
@@ -95,11 +99,12 @@
             Let's start a conversation
           </h1>
           <p class="lead" data-i18n="contact.hero.description">
-            For research, clinical, partnership or investment enquiries — we welcome
-            direct conversations.
+            Have a question, research inquiry, partnership opportunity, or simply
+            want to learn more about Neuronous? Get in touch — we welcome direct
+            conversations.
           </p>
           <p class="contact-hero-audience" data-i18n="contact.hero.audience">
-            Investors · Research · Partnerships
+            Investors · Research · Partnerships · Healthcare
           </p>
         </div>
 
@@ -113,21 +118,17 @@
               </linearGradient>
             </defs>
 
-            <!-- baseline -->
             <line x1="30" y1="130" x2="450" y2="130"
                   stroke="#0B1726" stroke-opacity="0.08" stroke-dasharray="2 6" />
 
-            <!-- primary signal -->
             <path class="contact-wave contact-wave-1"
               d="M30,130 C60,130 70,70 100,70 C130,70 140,200 170,200 C200,200 210,50 240,50 C270,50 280,210 310,210 C340,210 350,90 380,90 C410,90 420,160 450,160"
               fill="none" stroke="url(#contactGrad)" stroke-width="1.6" stroke-linecap="round" />
 
-            <!-- echo -->
             <path class="contact-wave contact-wave-2"
               d="M30,130 C70,130 90,100 130,100 C170,100 190,180 230,180 C270,180 290,80 330,80 C370,80 390,160 430,160 C445,160 450,130 450,130"
               fill="none" stroke="#0B1726" stroke-opacity="0.14" stroke-width="1" stroke-linecap="round" />
 
-            <!-- node -->
             <circle cx="240" cy="50" r="2.5" fill="#3DD6C6" />
             <circle cx="310" cy="210" r="2.5" fill="#3DD6C6" />
           </svg>
@@ -163,8 +164,8 @@
           </dl>
 
           <p class="contact-info-note" data-i18n="contact.info.note">
-            For investment and partnership enquiries, please use the form or reach out
-            directly by email.
+            For investment and partnership enquiries, please use the form or reach
+            out directly by email.
           </p>
         </aside>
 
@@ -208,6 +209,24 @@
             />
           </div>
 
+          <div class="form-field form-field--select">
+            <label for="contact-reason" data-i18n="contact.form.reason">Reason for contact</label>
+            <select
+              id="contact-reason"
+              name="reason"
+              required
+              data-i18n-attr="aria-label"
+              data-i18n="contact.form.reason"
+            >
+              <option value="general"  data-i18n="contact.form.reasonOptions.general">General inquiry</option>
+              <option value="research" data-i18n="contact.form.reasonOptions.research">Research</option>
+              <option value="partner"  data-i18n="contact.form.reasonOptions.partner">Partnership</option>
+              <option value="health"   data-i18n="contact.form.reasonOptions.health">Healthcare</option>
+              <option value="invest"   data-i18n="contact.form.reasonOptions.invest">Investment</option>
+              <option value="other"    data-i18n="contact.form.reasonOptions.other">Other</option>
+            </select>
+          </div>
+
           <div class="form-field">
             <label for="contact-subject" data-i18n="contact.form.subject">Subject</label>
             <input
@@ -249,20 +268,137 @@
       </div>
     </section>
 
-    <!-- 3. CLOSING CTA -->
+    <!-- 3. SHORT FAQ -->
+    <section class="contact-faq reveal" aria-labelledby="contact-faq-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="contact.faq.eyebrow">FAQ</p>
+          <h2 id="contact-faq-title" data-i18n="contact.faq.title">
+            Common questions
+          </h2>
+          <p class="lead narrow" data-i18n="contact.faq.description">
+            A short set of questions we are frequently asked. For privacy-related
+            details, please refer to the Privacy page.
+          </p>
+        </div>
+
+        <ul class="faq-list" role="list">
+
+          <li class="faq-item">
+            <details>
+              <summary class="faq-question">
+                <span data-i18n="contact.faq.items.howTitle">How does the screening work?</span>
+                <span class="faq-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p data-i18n="contact.faq.items.howText">
+                  A voice sample is recorded and analyzed computationally to identify
+                  patterns relevant to neurological screening. The output is a
+                  screening result — not a medical diagnosis.
+                </p>
+              </div>
+            </details>
+          </li>
+
+          <li class="faq-item">
+            <details>
+              <summary class="faq-question">
+                <span data-i18n="contact.faq.items.durationTitle">How long does the screening take?</span>
+                <span class="faq-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p data-i18n="contact.faq.items.durationText">
+                  The screening process is designed to be quick and non-invasive.
+                  Specific timing information will be provided once the screening
+                  platform is available.
+                </p>
+              </div>
+            </details>
+          </li>
+
+          <li class="faq-item">
+            <details>
+              <summary class="faq-question">
+                <span data-i18n="contact.faq.items.resultTitle">How do I receive my result?</span>
+                <span class="faq-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p data-i18n="contact.faq.items.resultText">
+                  A screening output is produced as part of the process. Details on
+                  how the result is delivered will be provided together with the
+                  screening platform.
+                </p>
+              </div>
+            </details>
+          </li>
+
+          <li class="faq-item">
+            <details>
+              <summary class="faq-question">
+                <span data-i18n="contact.faq.items.voiceTitle">How is my voice data used?</span>
+                <span class="faq-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  <span data-i18n="contact.faq.items.voiceText">
+                    Voice data is used to perform the analysis that supports screening.
+                    More detail is available in our Privacy page.
+                  </span>
+                  <a class="section-link" href="/privacy.html" data-i18n="contact.faq.items.voiceLink">
+                    Learn more in Privacy
+                  </a>
+                </p>
+              </div>
+            </details>
+          </li>
+
+          <li class="faq-item">
+            <details>
+              <summary class="faq-question">
+                <span data-i18n="contact.faq.items.diagnosisTitle">Is the screening a diagnosis?</span>
+                <span class="faq-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p data-i18n="contact.faq.items.diagnosisText">
+                  No. The screening result is not a substitute for a medical diagnosis
+                  or professional medical advice. Any medical decision should be made
+                  in consultation with a qualified healthcare professional.
+                </p>
+              </div>
+            </details>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. CLOSING CTA -->
     <section class="contact-closing reveal" aria-labelledby="contact-closing-title">
-      <div class="container contact-closing-inner">
-        <h2 id="contact-closing-title" class="contact-closing-title"
-            data-i18n="contact.closing.title">
-          Have a question or want to explore a collaboration?
-        </h2>
-        <p class="contact-closing-line"
-           data-i18n="contact.closing.description">
-          Reach out directly at
-          <a class="contact-closing-link" href="mailto:hello@example.com">
-            <span data-i18n="contact.info.emailValue">[Email Address]</span>
-          </a>
-        </p>
+      <div class="container">
+        <div class="contact-closing-inner">
+          <p class="eyebrow" data-i18n="contact.cta.eyebrow">Next</p>
+          <h2 id="contact-closing-title" data-i18n="contact.cta.title">
+            Ready to start a screening?
+          </h2>
+          <p class="lead" data-i18n="contact.cta.description">
+            Parkinson's disease is currently the first validated application of our
+            voice-based screening technology.
+          </p>
+          <div class="contact-cta-actions">
+            <!-- Placeholder — the external screening platform is not yet available. -->
+            <a
+              class="btn btn-primary"
+              href="#"
+              data-screening-link
+              data-i18n="contact.cta.primary"
+            >
+              Start Screening
+            </a>
+            <a class="btn btn-ghost" href="/applications.html" data-i18n="contact.cta.secondary">
+              Explore Applications
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -271,9 +407,9 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="brand-name">Vocalis</span>
+        <span class="brand-name">Neuronous</span>
         <p class="footer-tag" data-i18n="footer.tagline">
-          Voice-based screening for neurological disorders.
+          Voice-based technology for neurological screening.
         </p>
       </div>
 
@@ -281,7 +417,9 @@
         <ul>
           <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
           <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science">Science</a></li>
           <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
           <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
@@ -291,7 +429,7 @@
           This technology is intended for screening purposes and does not provide a medical diagnosis.
         </p>
         <p class="footer-copy">
-          © <span id="year"></span> Vocalis. <span data-i18n="footer.rights">All rights reserved.</span>
+          © <span id="year"></span> Neuronous. <span data-i18n="footer.rights">All rights reserved.</span>
         </p>
       </div>
     </div>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.privacyTitle">Privacy &amp; Data Protection — Neuronous</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.privacyDescription"
+        content="How Neuronous approaches privacy, voice data and the responsible handling of information in the context of neurological screening." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content" data-i18n="meta.privacyTitle"
+        content="Privacy &amp; Data Protection — Neuronous" />
+  <meta property="og:description" data-i18n-attr="content" data-i18n="meta.privacyDescription"
+        content="How Neuronous approaches privacy, voice data and the responsible handling of information." />
+  <meta property="og:image" content="/assets/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/privacy.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="/index.html" aria-label="Neuronous">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 12" width="32" height="12" fill="none">
+            <path d="M0 6h3l2-4 3 8 3-10 3 12 3-8 2 2h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Neuronous</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science">Science</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy" aria-current="page">Privacy</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="fa" aria-pressed="false">FA</button>
+          <button type="button" class="lang-btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav aria-label="Mobile">
+        <ul>
+          <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science">Science</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy" aria-current="page">Privacy</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. HERO -->
+    <section class="privacy-hero" aria-labelledby="privacy-hero-title">
+      <div class="container privacy-hero-inner">
+        <div class="privacy-hero-copy">
+          <p class="eyebrow" data-i18n="privacy.hero.eyebrow">Privacy</p>
+          <h1 id="privacy-hero-title" data-i18n="privacy.hero.title">
+            Privacy &amp; Data Protection
+          </h1>
+          <p class="lead" data-i18n="privacy.hero.description">
+            Privacy is central to how Neuronous approaches voice-based screening.
+            This page explains — in plain terms — how we think about data, what is
+            involved in the screening process, and the principles that guide our work.
+          </p>
+          <p class="privacy-hero-note" data-i18n="privacy.hero.note">
+            This page describes principles and structure, not a finalized legal
+            policy. Specific operational details will be published as they are
+            confirmed.
+          </p>
+        </div>
+
+        <div class="privacy-hero-visual" aria-hidden="true">
+          <svg class="privacy-graph" viewBox="0 0 520 320" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="privacyGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%"   stop-color="#26384A" stop-opacity="0.10" />
+                <stop offset="50%"  stop-color="#3DD6C6" stop-opacity="1" />
+                <stop offset="100%" stop-color="#26384A" stop-opacity="0.10" />
+              </linearGradient>
+            </defs>
+
+            <g stroke="#0B1726" stroke-opacity="0.06">
+              <line x1="40"  y1="40"  x2="40"  y2="280" />
+              <line x1="140" y1="40"  x2="140" y2="280" />
+              <line x1="240" y1="40"  x2="240" y2="280" />
+              <line x1="340" y1="40"  x2="340" y2="280" />
+              <line x1="440" y1="40"  x2="440" y2="280" />
+              <line x1="40"  y1="80"  x2="480" y2="80" />
+              <line x1="40"  y1="160" x2="480" y2="160" />
+              <line x1="40"  y1="240" x2="480" y2="240" />
+            </g>
+
+            <path class="privacy-wave"
+              d="M40,160 C70,160 80,90 110,90 C140,90 150,230 180,230 C210,230 220,70 250,70 C280,70 290,250 320,250 C350,250 360,110 390,110 C420,110 430,200 460,200 C475,200 485,160 480,160"
+              fill="none" stroke="url(#privacyGrad)" stroke-width="1.6" stroke-linecap="round" />
+
+            <!-- lock motif: subtle, geometric, in the site's visual language -->
+            <g transform="translate(240 140)" fill="none" stroke="#26384A" stroke-opacity="0.35" stroke-width="1.2">
+              <rect x="-18" y="-4" width="36" height="28" rx="2" />
+              <path d="M-10,-4 v-8 a10,10 0 0 1 20,0 v8" />
+              <circle cx="0" cy="10" r="2" fill="#3DD6C6" stroke="none" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. INTRODUCTION -->
+    <section class="privacy-section reveal" aria-labelledby="privacy-intro-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="privacy.intro.eyebrow">Introduction</p>
+          <h2 id="privacy-intro-title" data-i18n="privacy.intro.title">
+            Why privacy matters to Neuronous
+          </h2>
+          <p class="lead narrow" data-i18n="privacy.intro.description">
+            Screening technologies work with information that is personal. Because our
+            approach is built on voice, we take the responsible handling of that
+            information as a starting condition for the technology — not as an
+            afterthought.
+          </p>
+        </div>
+
+        <div class="privacy-body">
+          <p data-i18n="privacy.intro.body1">
+            Voice is one of the most personal signals a person can share. It carries
+            identity, expression and context. Any screening technology that works with
+            voice therefore has an obligation to treat that data with care, and to be
+            transparent about what it does with it.
+          </p>
+          <p data-i18n="privacy.intro.body2">
+            This page describes the principles that guide our approach to privacy and
+            data protection. It is written to be readable rather than legalistic, and
+            it reflects our current understanding of the responsibilities involved in
+            building a voice-based screening technology.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. VOICE DATA -->
+    <section class="privacy-section privacy-section--alt reveal" aria-labelledby="privacy-voice-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="privacy.voice.eyebrow">Voice Data</p>
+          <h2 id="privacy-voice-title" data-i18n="privacy.voice.title">
+            Voice and audio in the screening process
+          </h2>
+          <p class="lead narrow" data-i18n="privacy.voice.description">
+            The screening process is built around voice. Understanding what that
+            means — and what role voice data plays — is part of understanding how
+            the technology works.
+          </p>
+        </div>
+
+        <div class="privacy-voice-grid">
+          <div class="policy-block">
+            <span class="policy-block-index" aria-hidden="true">01</span>
+            <h3 class="policy-block-title" data-i18n="privacy.voice.whatTitle">
+              What voice data is
+            </h3>
+            <p class="policy-block-text" data-i18n="privacy.voice.whatText">
+              Voice data refers to recordings or derived representations of a person's
+              voice that are captured during the screening process. These signals are
+              the input to the analysis step.
+            </p>
+          </div>
+
+          <div class="policy-block">
+            <span class="policy-block-index" aria-hidden="true">02</span>
+            <h3 class="policy-block-title" data-i18n="privacy.voice.roleTitle">
+              Its role in analysis
+            </h3>
+            <p class="policy-block-text" data-i18n="privacy.voice.roleText">
+              The voice signal is processed computationally so that measurable
+              characteristics can be analyzed. The result of that analysis contributes
+              to a screening output — it is not a medical diagnosis.
+            </p>
+          </div>
+
+          <div class="policy-block">
+            <span class="policy-block-index" aria-hidden="true">03</span>
+            <h3 class="policy-block-title" data-i18n="privacy.voice.sensitivityTitle">
+              Why it is sensitive
+            </h3>
+            <p class="policy-block-text" data-i18n="privacy.voice.sensitivityText">
+              Voice can carry information beyond the words being spoken. For this
+              reason, voice data is treated as sensitive information and handled with
+              the same care as other personal data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. DATA COLLECTION & USAGE -->
+    <section class="privacy-section reveal" aria-labelledby="privacy-data-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="privacy.data.eyebrow">Data</p>
+          <h2 id="privacy-data-title" data-i18n="privacy.data.title">
+            Data collection and use
+          </h2>
+          <p class="lead narrow" data-i18n="privacy.data.description">
+            The categories below describe the types of information that may be
+            involved in using the screening technology, and the purposes they are
+            intended to serve.
+          </p>
+        </div>
+
+        <div class="privacy-data-columns">
+          <div class="privacy-data-col">
+            <p class="privacy-data-col-title" data-i18n="privacy.data.collectionTitle">
+              What may be collected
+            </p>
+            <ul class="privacy-list" role="list">
+              <li>
+                <span class="privacy-list-key" data-i18n="privacy.data.items.voiceKey">Voice data</span>
+                <span class="privacy-list-val" data-i18n="privacy.data.items.voiceVal">
+                  Voice recordings or derived voice signals captured during screening.
+                </span>
+              </li>
+              <li>
+                <span class="privacy-list-key" data-i18n="privacy.data.items.userKey">User-provided information</span>
+                <span class="privacy-list-val" data-i18n="privacy.data.items.userVal">
+                  Basic information provided directly by the user as part of the process.
+                </span>
+              </li>
+              <li>
+                <span class="privacy-list-key" data-i18n="privacy.data.items.techKey">Technical information</span>
+                <span class="privacy-list-val" data-i18n="privacy.data.items.techVal">
+                  Technical information needed to operate and improve the service.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="privacy-data-col">
+            <p class="privacy-data-col-title" data-i18n="privacy.data.usageTitle">
+              How it may be used
+            </p>
+            <ul class="privacy-list" role="list">
+              <li>
+                <span class="privacy-list-key" data-i18n="privacy.data.items.screeningKey">Screening</span>
+                <span class="privacy-list-val" data-i18n="privacy.data.items.screeningVal">
+                  Providing the screening experience and producing a screening output.
+                </span>
+              </li>
+              <li>
+                <span class="privacy-list-key" data-i18n="privacy.data.items.analysisKey">Analysis</span>
+                <span class="privacy-list-val" data-i18n="privacy.data.items.analysisVal">
+                  Performing the voice analysis that supports screening.
+                </span>
+              </li>
+              <li>
+                <span class="privacy-list-key" data-i18n="privacy.data.items.researchKey">Research</span>
+                <span class="privacy-list-val" data-i18n="privacy.data.items.researchVal">
+                  Improving the technology and supporting scientific development.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="privacy-footnote" data-i18n="privacy.data.footnote">
+          The categories above describe the scope of the technology. Specific
+          operational details — such as exact data fields, sub-processors or
+          retention — will be documented here as they are finalized.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. STORAGE, RETENTION & SECURITY -->
+    <section class="privacy-anchor reveal" aria-labelledby="privacy-storage-title">
+      <div class="container privacy-anchor-inner">
+        <div class="privacy-anchor-copy">
+          <p class="eyebrow eyebrow--accent" data-i18n="privacy.storage.eyebrow">
+            Storage &amp; Security
+          </p>
+          <h2 id="privacy-storage-title" data-i18n="privacy.storage.title">
+            Storage, retention &amp; security
+          </h2>
+          <p class="lead lead--onDark" data-i18n="privacy.storage.description">
+            The operational details that govern where data is stored, how long it is
+            retained and how it is protected are still being finalized. We do not
+            publish unconfirmed specifics.
+          </p>
+          <p class="privacy-anchor-note" data-i18n="privacy.storage.note">
+            Until these details are settled, this section remains a structured
+            placeholder — not a summary of assumptions.
+          </p>
+        </div>
+
+        <div class="privacy-anchor-meta" role="list" aria-label="Storage and security details">
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="privacy.storage.metaStorageKey">Storage location</span>
+            <span class="meta-val" data-i18n="privacy.storage.metaPending">To be provided</span>
+          </div>
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="privacy.storage.metaRetentionKey">Retention period</span>
+            <span class="meta-val" data-i18n="privacy.storage.metaPending">To be provided</span>
+          </div>
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="privacy.storage.metaDeletionKey">Deletion</span>
+            <span class="meta-val" data-i18n="privacy.storage.metaPending">To be provided</span>
+          </div>
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="privacy.storage.metaAccessKey">Access control</span>
+            <span class="meta-val" data-i18n="privacy.storage.metaPending">To be provided</span>
+          </div>
+          <div class="meta-row" role="listitem">
+            <span class="meta-key" data-i18n="privacy.storage.metaTransitKey">Secure transmission</span>
+            <span class="meta-val" data-i18n="privacy.storage.metaPending">To be provided</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. USER RIGHTS -->
+    <section class="privacy-section reveal" aria-labelledby="privacy-rights-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="privacy.rights.eyebrow">Your choices</p>
+          <h2 id="privacy-rights-title" data-i18n="privacy.rights.title">
+            User rights &amp; privacy choices
+          </h2>
+          <p class="lead narrow" data-i18n="privacy.rights.description">
+            Individuals interacting with the technology should be able to understand
+            what happens to their data and to ask questions about it. The specific
+            rights and procedures will be documented here as they are finalized.
+          </p>
+        </div>
+
+        <ul class="privacy-rights-grid" role="list">
+          <li class="policy-block">
+            <span class="policy-block-index" aria-hidden="true">A</span>
+            <h3 class="policy-block-title" data-i18n="privacy.rights.items.accessTitle">
+              Access &amp; understanding
+            </h3>
+            <p class="policy-block-text" data-i18n="privacy.rights.items.accessText">
+              Understanding what information is involved in a screening interaction
+              and how it is handled.
+            </p>
+          </li>
+          <li class="policy-block">
+            <span class="policy-block-index" aria-hidden="true">B</span>
+            <h3 class="policy-block-title" data-i18n="privacy.rights.items.questionsTitle">
+              Asking questions
+            </h3>
+            <p class="policy-block-text" data-i18n="privacy.rights.items.questionsText">
+              Reaching out with privacy-related questions or concerns about how data
+              is used.
+            </p>
+          </li>
+          <li class="policy-block">
+            <span class="policy-block-index" aria-hidden="true">C</span>
+            <h3 class="policy-block-title" data-i18n="privacy.rights.items.controlTitle">
+              Control over participation
+            </h3>
+            <p class="policy-block-text" data-i18n="privacy.rights.items.controlText">
+              Choosing whether to take part in a screening interaction, and being
+              informed about what participation involves.
+            </p>
+          </li>
+        </ul>
+
+        <p class="privacy-footnote" data-i18n="privacy.rights.footnote">
+          A formal description of user rights and the process for exercising them will
+          be published together with the finalized privacy documentation.
+        </p>
+      </div>
+    </section>
+
+    <!-- 7. SCREENING ≠ DIAGNOSIS -->
+    <section class="not-diagnosis reveal" aria-labelledby="privacy-not-diag-title">
+      <div class="container">
+        <div class="not-diag-inner">
+          <p class="eyebrow" data-i18n="privacy.screeningNotice.eyebrow">Important Distinction</p>
+          <h2 id="privacy-not-diag-title" data-i18n="privacy.screeningNotice.title">
+            Screening Is Not Diagnosis
+          </h2>
+          <p class="lead" data-i18n="privacy.screeningNotice.description">
+            Neuronous provides a screening technology. A screening result is not a
+            medical diagnosis, and it does not replace evaluation by a qualified
+            clinician. Any medical decision should be made in consultation with a
+            healthcare professional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FINAL CTA -->
+    <section class="privacy-cta reveal" aria-labelledby="privacy-cta-title">
+      <div class="container">
+        <div class="privacy-cta-inner">
+          <p class="eyebrow" data-i18n="privacy.cta.eyebrow">Questions</p>
+          <h2 id="privacy-cta-title" data-i18n="privacy.cta.title">
+            Questions about privacy?
+          </h2>
+          <p class="lead" data-i18n="privacy.cta.description">
+            If you have questions about privacy, data handling or the screening
+            process, please reach out. We welcome the conversation.
+          </p>
+          <div class="privacy-cta-actions">
+            <a class="btn btn-primary" href="/contact.html" data-i18n="privacy.cta.contact">
+              Contact Us
+            </a>
+            <a class="btn btn-ghost" href="/science.html" data-i18n="privacy.cta.secondary">
+              Explore the Science
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Neuronous</span>
+        <p class="footer-tag" data-i18n="footer.tagline">
+          Voice-based technology for neurological screening.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
+          <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science">Science</a></li>
+          <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
+          <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-legal">
+        <p data-i18n="footer.disclaimer">
+          This technology is intended for screening purposes and does not provide a medical diagnosis.
+        </p>
+        <p class="footer-copy">
+          © <span id="year"></span> Neuronous. <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,532 @@
+/* =========================================================
+   Science page — section-specific styles
+   Depends on tokens/primitives in /css/global.css
+   ========================================================= */
+
+/* ---------- Shared helpers ---------- */
+.eyebrow--accent { color: var(--accent); }
+
+.lead--onDark {
+  color: rgba(247, 248, 246, 0.72);
+}
+
+/* Small arrowed link that can appear inside .section-head */
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-start: 1.25rem;
+  font-weight: 500;
+  color: var(--ink-strong);
+  border-block-end: 1px solid var(--line-strong);
+  padding-block-end: 0.2rem;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.section-link::after {
+  content: "→";
+  display: inline-block;
+  transition: transform 0.25s var(--ease);
+}
+html[dir="rtl"] .section-link::after { content: "←"; }
+.section-link:hover { color: var(--accent); border-color: var(--accent); }
+.section-link:hover::after { transform: translateX(4px); }
+html[dir="rtl"] .section-link:hover::after { transform: translateX(-4px); }
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
+.sci-hero {
+  padding-block: clamp(3rem, 6vw, 6rem) clamp(3rem, 5vw, 5.5rem);
+  border-block-end: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.sci-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .sci-hero-inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: clamp(3rem, 5vw, 5rem);
+  }
+}
+
+.sci-hero-copy h1 {
+  margin-block: 0.5rem 1.25rem;
+  max-width: 18ch;
+}
+html[lang="fa"] .sci-hero-copy h1 { max-width: 22ch; }
+
+.sci-hero-copy .lead {
+  margin-block-end: 2rem;
+  max-width: 54ch;
+}
+
+.sci-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.sci-hero-visual {
+  width: 100%;
+  max-width: 620px;
+  margin-inline: auto;
+  aspect-ratio: 56 / 34;
+  position: relative;
+}
+
+.sci-signal {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.sci-wave {
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  animation: sciDraw 2s var(--ease) forwards;
+}
+.sci-wave-2 { animation-delay: 0.25s; }
+
+@keyframes sciDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sci-wave { stroke-dashoffset: 0; animation: none; }
+}
+
+/* =========================================================
+   2. RESEARCH OVERVIEW
+   ========================================================= */
+.sci-overview-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .sci-overview-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(3rem, 6vw, 6rem);
+  }
+}
+
+.sci-overview h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 22ch;
+}
+
+.sci-overview .lead {
+  max-width: 52ch;
+}
+
+.sci-overview-note {
+  margin-block-start: 1.5rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--accent);
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  max-width: 52ch;
+}
+
+/* Chain diagram — same visual language as .why-chain on Applications */
+.sci-chain {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.sci-chain-node {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 1.25rem;
+  border-block-end: 1px solid var(--line);
+}
+.sci-chain-node:last-child { border-block-end: 0; }
+
+.sci-chain-index {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.sci-chain-label {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-weight: 500;
+  color: var(--ink-strong);
+  line-height: 1.4;
+}
+
+.sci-chain-node--accent .sci-chain-label {
+  position: relative;
+  padding-inline-start: 1rem;
+}
+.sci-chain-node--accent .sci-chain-label::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0.6em;
+  inset-inline-start: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* =========================================================
+   3. VALIDATION — dark anchor
+   ========================================================= */
+.sci-validation {
+  background: var(--ink-strong);
+  color: #F7F8F6;
+  border-block: 1px solid rgba(247, 248, 246, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.sci-validation::before {
+  content: "";
+  position: absolute;
+  inset-block-end: -60px;
+  inset-inline-start: -5%;
+  width: 110%;
+  height: 160px;
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(61, 214, 198, 0.06) 0 2px,
+      transparent 2px 12px
+    );
+  mask-image: linear-gradient(to top, rgba(0,0,0,1), transparent 90%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), transparent 90%);
+  pointer-events: none;
+}
+
+.sci-validation-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .sci-validation-inner {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: clamp(3rem, 5vw, 5rem);
+  }
+}
+
+.sci-validation h2 {
+  color: #fff;
+  margin-block: 0.5rem 1.25rem;
+  font-size: clamp(1.8rem, 3.6vw, 2.75rem);
+  letter-spacing: -0.025em;
+  max-width: 22ch;
+}
+
+.sci-validation-copy .lead {
+  max-width: 56ch;
+}
+
+.sci-validation-note {
+  margin-block-start: 1.75rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--accent);
+  color: rgba(247, 248, 246, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+.sci-validation-meta {
+  display: grid;
+  gap: 0;
+  border-block-start: 1px solid rgba(247, 248, 246, 0.14);
+}
+
+.sci-validation-meta .meta-row {
+  display: grid;
+  grid-template-columns: minmax(90px, 0.6fr) 1fr;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-block-end: 1px solid rgba(247, 248, 246, 0.10);
+}
+
+.sci-validation-meta .meta-key {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 248, 246, 0.55);
+  align-self: center;
+}
+
+.sci-validation-meta .meta-val {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #F7F8F6;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+html[lang="fa"] .sci-validation-meta .meta-key {
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-size: 0.82rem;
+}
+
+/* =========================================================
+   4. PUBLICATIONS & 6. REFERENCES — document list
+   ========================================================= */
+.sci-publications .section-head,
+.sci-references .section-head {
+  max-width: 760px;
+  margin-block-end: clamp(2.5rem, 5vw, 4rem);
+}
+
+.sci-publications h2,
+.sci-references h2 { margin-block-end: 1rem; }
+
+.sci-doc-list {
+  display: grid;
+  gap: 0;
+  border-block-start: 1px solid var(--line);
+}
+
+.sci-doc {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1.25rem;
+  row-gap: 0.5rem;
+  padding-block: clamp(1.5rem, 3vw, 2rem);
+  border-block-end: 1px solid var(--line);
+  position: relative;
+  align-items: start;
+}
+
+@media (min-width: 720px) {
+  .sci-doc {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
+    align-items: center;
+    column-gap: 2rem;
+  }
+}
+
+.sci-doc-index {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  padding-block-start: 0.25rem;
+}
+
+@media (min-width: 720px) {
+  .sci-doc-index { padding-block-start: 0; }
+}
+
+.sci-doc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.sci-doc-title {
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  font-weight: 600;
+  color: var(--ink-strong);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.sci-doc-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.sci-doc-text {
+  margin-block-start: 0.35rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 68ch;
+}
+
+.sci-doc-status {
+  grid-column: 2 / 3;
+  justify-self: start;
+  margin-block-start: 0.5rem;
+  padding-block-start: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--muted);
+  font-style: italic;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-block-start: 1px solid var(--line);
+  padding-inline-end: 1rem;
+}
+.sci-doc-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--line-strong);
+  flex: 0 0 auto;
+}
+
+@media (min-width: 720px) {
+  .sci-doc-status {
+    grid-column: auto;
+    justify-self: end;
+    align-self: center;
+    margin-block-start: 0;
+    padding-block-start: 0;
+    border-block-start: 0;
+    padding-inline-end: 0;
+  }
+}
+
+/* References variant: no long text, more compact */
+.sci-doc-list--references .sci-doc-text { display: none; }
+
+.sci-doc-footnote {
+  margin-block-start: clamp(1.75rem, 3vw, 2.5rem);
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--line-strong);
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 68ch;
+}
+
+/* =========================================================
+   5. RESEARCH DATA & FINDINGS
+   ========================================================= */
+.sci-findings {
+  background: var(--bg-elevated);
+  border-block: 1px solid var(--line);
+}
+
+.sci-findings .section-head {
+  max-width: 720px;
+  margin-block-end: clamp(2.5rem, 5vw, 4rem);
+}
+
+.sci-findings h2 { margin-block-end: 1rem; }
+
+/* Reuses global .evidence-grid / .evidence-item / .evidence-tag / etc. */
+
+/* =========================================================
+   7. SCREENING ≠ DIAGNOSIS
+   (Reuses the global .not-diagnosis / .not-diag-inner ruleset
+   already established on the Technology page. This block is
+   declared locally so science.css is self-contained.)
+   ========================================================= */
+.not-diagnosis {
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.not-diag-inner {
+  max-width: 820px;
+  padding-inline-start: clamp(1.25rem, 3vw, 2rem);
+  border-inline-start: 2px solid var(--accent);
+}
+
+.not-diag-inner h2 {
+  margin-block: 0.5rem 1.25rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.35rem);
+  max-width: 24ch;
+}
+
+.not-diag-inner .lead {
+  max-width: 62ch;
+  color: var(--ink-soft);
+}
+
+/* =========================================================
+   8. FINAL CTA
+   ========================================================= */
+.sci-cta {
+  border-block-start: 1px solid var(--line);
+}
+
+.sci-cta-inner {
+  max-width: 760px;
+  margin-inline: auto;
+  padding: clamp(2.5rem, 5vw, 3.75rem) clamp(1.75rem, 4vw, 3rem);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.sci-cta-inner::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent), transparent);
+}
+html[dir="rtl"] .sci-cta-inner::before {
+  background: linear-gradient(to left, var(--accent), transparent);
+}
+
+.sci-cta-inner h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 22ch;
+}
+
+.sci-cta-inner .lead { margin-block-end: 2rem; }
+
+.sci-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* =========================================================
+   Persian typography refinements (page-local)
+   ========================================================= */
+html[lang="fa"] .sci-doc-title,
+html[lang="fa"] .sci-chain-label,
+html[lang="fa"] .sci-validation h2,
+html[lang="fa"] .sci-overview h2 { letter-spacing: 0; }
+
+html[lang="fa"] .sci-doc-text { line-height: 1.85; }
+
+/* =========================================================
+   Navigation responsiveness for seven items
+   (Applies only between 900px and 1100px where the header
+   would otherwise wrap. Above 1100px the default spacing
+   from global.css applies unchanged.)
+   ========================================================= */
+@media (min-width: 900px) and (max-width: 1100px) {
+  .nav-list {
+    gap: 1.25rem;
+  }
+  .nav-list a {
+    font-size: 0.86rem;
+  }
+}

@@ -3,6 +3,28 @@
    Depends on tokens/primitives in /css/global.css
    ========================================================= */
 
+/* Small arrowed link (same pattern used on other pages) */
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--ink-strong);
+  border-block-end: 1px solid var(--line-strong);
+  padding-block-end: 0.2rem;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+  margin-inline-start: 0.35rem;
+}
+.section-link::after {
+  content: "→";
+  display: inline-block;
+  transition: transform 0.25s var(--ease);
+}
+html[dir="rtl"] .section-link::after { content: "←"; }
+.section-link:hover { color: var(--accent); border-color: var(--accent); }
+.section-link:hover::after { transform: translateX(4px); }
+html[dir="rtl"] .section-link:hover::after { transform: translateX(-4px); }
+
 /* =========================================================
    1. HERO
    ========================================================= */
@@ -33,7 +55,7 @@ html[lang="fa"] .contact-hero-copy h1 { max-width: 20ch; }
 
 .contact-hero-copy .lead {
   margin-block-end: 1.25rem;
-  max-width: 46ch;
+  max-width: 52ch;
 }
 
 .contact-hero-audience {
@@ -85,7 +107,7 @@ html[lang="fa"] .contact-hero-audience {
    2. CONTACT INFO + FORM
    ========================================================= */
 .contact-main {
-  padding-block: clamp(2.5rem, 5vw, 4rem) clamp(2.5rem, 5vw, 4rem);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
 }
 
 .contact-main-inner {
@@ -110,9 +132,7 @@ html[lang="fa"] .contact-hero-audience {
 }
 
 @media (max-width: 899px) {
-  .contact-info {
-    padding-inline-start: 1rem;
-  }
+  .contact-info { padding-inline-start: 1rem; }
 }
 
 .contact-info-title {
@@ -194,7 +214,8 @@ html[lang="fa"] .contact-info-title {
 }
 
 .form-field input,
-.form-field textarea {
+.form-field textarea,
+.form-field select {
   width: 100%;
   font: inherit;
   font-size: 0.95rem;
@@ -216,6 +237,26 @@ html[lang="fa"] .contact-info-title {
   padding-block: 0.85rem;
 }
 
+/* Native select: keep the same visual vocabulary, remove default chrome */
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-inline-end: 2.5rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--ink-soft) 50%),
+    linear-gradient(135deg, var(--ink-soft) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(50% + 2px),
+    calc(100% - 14px) calc(50% + 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+html[dir="rtl"] .form-field select {
+  background-position:
+    20px calc(50% + 2px),
+    14px calc(50% + 2px);
+}
+
 .form-field input::placeholder,
 .form-field textarea::placeholder {
   color: var(--muted);
@@ -223,12 +264,14 @@ html[lang="fa"] .contact-info-title {
 }
 
 .form-field input:hover,
-.form-field textarea:hover {
+.form-field textarea:hover,
+.form-field select:hover {
   border-color: var(--ink-soft);
 }
 
 .form-field input:focus,
-.form-field textarea:focus {
+.form-field textarea:focus,
+.form-field select:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(61, 214, 198, 0.18);
@@ -257,47 +300,168 @@ html[lang="fa"] .contact-info-title {
 }
 
 /* =========================================================
-   3. CLOSING CTA
+   3. FAQ
+   ========================================================= */
+.contact-faq {
+  background: var(--bg-elevated);
+  border-block: 1px solid var(--line);
+}
+
+.contact-faq .section-head {
+  max-width: 720px;
+  margin-block-end: clamp(2.25rem, 4vw, 3.5rem);
+}
+
+.contact-faq h2 { margin-block-end: 1rem; }
+
+.faq-list {
+  display: grid;
+  gap: 0;
+  border-block-start: 1px solid var(--line);
+}
+
+.faq-item {
+  border-block-end: 1px solid var(--line);
+}
+
+.faq-item details {
+  border: 0;
+  background: transparent;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding-block: clamp(1rem, 2vw, 1.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: clamp(1rem, 1.4vw, 1.05rem);
+  font-weight: 600;
+  color: var(--ink-strong);
+  letter-spacing: -0.005em;
+  line-height: 1.4;
+  transition: color 0.2s var(--ease);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::marker { content: ""; }
+.faq-item summary:hover { color: var(--ink); }
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.faq-toggle {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  color: var(--muted);
+  transition: transform 0.25s var(--ease), color 0.2s var(--ease);
+}
+.faq-toggle::before,
+.faq-toggle::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}
+.faq-toggle::before { width: 12px; height: 1px; }
+.faq-toggle::after  { width: 1px; height: 12px; transition: opacity 0.2s var(--ease); }
+
+.faq-item details[open] .faq-toggle { color: var(--accent); }
+.faq-item details[open] .faq-toggle::after { opacity: 0; }
+.faq-item details[open] summary { color: var(--ink); }
+
+.faq-answer {
+  padding-block-end: 1.25rem;
+  max-width: 72ch;
+}
+
+.faq-answer p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-toggle { transition: none; }
+  .faq-toggle::after { transition: none; }
+}
+
+/* =========================================================
+   4. CLOSING CTA
    ========================================================= */
 .contact-closing {
   border-block-start: 1px solid var(--line);
-  padding-block: clamp(2rem, 4vw, 3rem);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
 }
 
 .contact-closing-inner {
-  max-width: 720px;
+  max-width: 760px;
+  margin-inline: auto;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
 }
 
-.contact-closing-title {
-  font-size: clamp(1.15rem, 2vw, 1.4rem);
-  font-weight: 600;
-  color: var(--ink-strong);
-  letter-spacing: -0.01em;
-  line-height: 1.4;
-  margin-block-end: 0.5rem;
+.contact-closing-inner::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent), transparent);
+}
+html[dir="rtl"] .contact-closing-inner::before {
+  background: linear-gradient(to left, var(--accent), transparent);
 }
 
-.contact-closing-line {
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.6;
+.contact-closing-inner h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 22ch;
 }
 
-.contact-closing-link {
-  color: var(--ink-strong);
-  font-weight: 500;
-  border-block-end: 1px solid var(--accent);
-  padding-block-end: 1px;
-  transition: color 0.2s var(--ease);
+.contact-closing-inner .lead { margin-block-end: 2rem; }
+
+.contact-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
-.contact-closing-link:hover { color: var(--accent); }
 
 /* =========================================================
    Persian typography refinements (page-local)
    ========================================================= */
-html[lang="fa"] .contact-closing-title { letter-spacing: 0; }
+html[lang="fa"] .faq-item summary,
+html[lang="fa"] .contact-closing-inner h2,
+html[lang="fa"] .contact-faq h2 { letter-spacing: 0; }
+
 html[lang="fa"] .contact-form { line-height: 1.75; }
 html[lang="fa"] .form-field input,
-html[lang="fa"] .form-field textarea {
-  line-height: 1.7;
+html[lang="fa"] .form-field textarea,
+html[lang="fa"] .form-field select { line-height: 1.7; }
+html[lang="fa"] .faq-answer p { line-height: 1.85; }
+
+/* =========================================================
+   Navigation responsiveness for seven items
+   (Applies only between 900px and 1100px where the header
+   would otherwise wrap. Above 1100px the default spacing
+   from global.css applies unchanged.)
+   ========================================================= */
+@media (min-width: 900px) and (max-width: 1100px) {
+  .nav-list {
+    gap: 1.25rem;
+  }
+  .nav-list a {
+    font-size: 0.86rem;
+  }
 }

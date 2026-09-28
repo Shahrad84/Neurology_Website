@@ -1,66 +1,86 @@
 {
   "meta": {
-    "title": "Voice-Based Screening for Neurological Disorders",
-    "description": "A non-invasive, voice-based screening technology for neurological disorders, with Parkinson's disease as the first validated application.",
-    "ogTitle": "Voice-Based Screening for Neurological Disorders",
-    "ogDescription": "Non-invasive voice-based screening technology for neurological disorders.",
-    "technologyTitle": "The Technology — Voice-Based Neurological Screening",
-    "technologyDescription": "How voice-based screening works: from voice capture and signal processing to computational analysis and screening output. Built on scientific research.",
-    "applicationsTitle": "Applications — Voice-Based Neurological Screening",
-    "applicationsDescription": "Parkinson's disease is the first validated application of our voice-based neurological screening technology, with broader neurological research as a future direction.",
-    "teamTitle": "Team & Science — Voice-Based Neurological Screening",
-    "teamDescription": "The people and scientific perspective behind our voice-based neurological screening technology.",
-    "contactTitle": "Contact — Voice-Based Neurological Screening",
-    "contactDescription": "Get in touch with the team behind our voice-based neurological screening technology — for research, clinical, partnership or investment enquiries."
+    "title": "Neuronous — Voice-Based Neurological Screening",
+    "description": "Neuronous develops voice-based technology for neurological screening, with Parkinson's disease as the first validated application.",
+    "ogTitle": "Neuronous — Voice-Based Neurological Screening",
+    "ogDescription": "Voice-based technology for neurological screening. Screening, not diagnosis.",
+    "technologyTitle": "The Technology — Neuronous",
+    "technologyDescription": "How voice-based screening works at Neuronous: voice capture, signal processing, feature extraction, AI-assisted computational analysis, and a screening output. Screening — not diagnosis.",
+    "applicationsTitle": "Applications — Neuronous",
+    "applicationsDescription": "Parkinson's disease screening is the current validated application of Neuronous' voice-based neurological screening technology, with broader neurological research as a future direction.",
+    "scienceTitle": "Science & Evidence — Neuronous",
+    "scienceDescription": "The scientific foundation, validation approach and research references behind Neuronous voice-based neurological screening technology.",
+    "teamTitle": "Team & Science — Neuronous",
+    "teamDescription": "The scientific, technical and research expertise behind Neuronous voice-based neurological screening technology.",
+    "privacyTitle": "Privacy & Data Protection — Neuronous",
+    "privacyDescription": "How Neuronous approaches privacy, voice data and the responsible handling of information in the context of neurological screening.",
+    "contactTitle": "Contact — Neuronous",
+    "contactDescription": "Get in touch with Neuronous — for general enquiries, research, partnership, healthcare, or investment conversations."
   },
 
   "a11y": {
     "skip": "Skip to content"
   },
 
+  "brand": {
+    "tagline": "Neuro intelligence for better health"
+  },
+
   "nav": {
     "home": "Home",
     "technology": "Technology",
     "applications": "Applications",
+    "science": "Science",
     "team": "Team",
+    "privacy": "Privacy",
     "contact": "Contact"
   },
 
   "home": {
     "hero": {
-      "eyebrow": "Voice-Based Screening Technology",
-      "title": "Voice-Based Screening for Neurological Disorders",
-      "description": "A non-invasive technology that analyzes the voice as a signal — designed for early screening, not diagnosis. Parkinson's disease is our first validated application.",
-      "ctaPrimary": "Explore Technology",
+      "title": "Voice-based screening for neurological disorders",
+      "description": "Neuronous develops voice-based technology for neurological screening. A short voice sample is analyzed computationally to identify patterns relevant to screening — designed to support early awareness, not to provide a diagnosis.",
+      "ctaPrimary": "Start Screening",
       "ctaSecondary": "Contact Us",
       "note": "Screening supports awareness and early conversation — it does not replace a clinical diagnosis."
     },
 
-    "idea": {
-      "eyebrow": "The Idea",
-      "title": "What if your voice could provide a measurable signal?",
-      "description": "Small variations in voice — pitch, rhythm, timing, stability — can carry information about neurological function. We turn those variations into a structured, quantitative signal.",
-      "step1": "Voice",
-      "step2": "Analysis",
-      "step3": "Screening"
+    "problem": {
+      "eyebrow": "The Problem",
+      "title": "Accessible neurological screening matters",
+      "description": "Earlier identification of potential neurological indicators can support timely follow-up. Yet neurological assessment often depends on specialized clinical settings and expertise that may not always be easily accessible.",
+      "earlyTitle": "Early screening",
+      "earlyText": "Earlier identification of potential neurological indicators can support timely follow-up and evaluation.",
+      "accessTitle": "Access challenges",
+      "accessText": "Neurological assessment can require clinical expertise and specialized settings, which may not always be readily available.",
+      "voiceTitle": "Why voice",
+      "voiceText": "Voice contains measurable acoustic and temporal characteristics that can be computationally analyzed and studied in relation to neurological conditions."
     },
 
-    "application": {
-      "eyebrow": "Our First Validated Application",
-      "title": "Parkinson's Disease",
-      "description": "Parkinson's disease is the first application where our voice-based screening approach has been validated. The technology is designed to flag vocal patterns associated with the condition — supporting earlier awareness and clinical conversation, not replacing a diagnosis.",
-      "cta": "Explore the Application"
+    "howItWorks": {
+      "eyebrow": "How It Works",
+      "title": "Three steps, from voice to screening support",
+      "step1": "Record Your Voice",
+      "step2": "Voice Analysis",
+      "step3": "Receive Your Screening Result"
+    },
+
+    "technology": {
+      "eyebrow": "Our Technology",
+      "title": "Voice-derived signals, analyzed for screening",
+      "description": "Voice-derived signals can be processed and analyzed to identify patterns relevant to neurological screening. Parkinson's disease is the first application where this approach has been validated.",
+      "cta": "Explore Technology"
     },
 
     "science": {
-      "eyebrow": "Science & Trust",
-      "title": "Built on Scientific Research",
-      "description": "The technology is being developed through structured scientific and clinical research. Peer-reviewed evidence, validation metrics and clinical collaboration details will be published here as they become available.",
-      "cta": "Explore the Science",
+      "eyebrow": "Science & Evidence",
+      "title": "Grounded in research",
+      "description": "Our approach is grounded in research, validation, and ongoing scientific development. Peer-reviewed evidence and clinical collaboration details will be published as they become available.",
+      "cta": "Explore Science",
       "pillar1Title": "Scientific Foundation",
       "pillar1Text": "Developed with a research-first approach.",
-      "pillar2Title": "Clinical Validation",
-      "pillar2Text": "Validated in clinical settings — details to be published.",
+      "pillar2Title": "Validation",
+      "pillar2Text": "Validation work is ongoing — details to be published.",
       "pillar3Title": "Transparency",
       "pillar3Text": "Evidence, methods and limitations will be shared openly."
     },
@@ -68,8 +88,8 @@
     "cta": {
       "title": "Building the future of neurological screening.",
       "description": "We're working with clinicians, researchers and partners to bring voice-based screening into everyday practice.",
-      "button": "Talk to Us",
-      "buttonSecondary": "For Investors"
+      "button": "Start Your Screening",
+      "buttonSecondary": "Explore Applications"
     }
   },
 
@@ -77,15 +97,15 @@
     "hero": {
       "eyebrow": "The Technology",
       "title": "Turning Voice Into a Signal for Neurological Screening",
-      "description": "Our technology analyzes acoustic and temporal characteristics of the voice using computational methods, identifying patterns that may be relevant to neurological screening. It is designed to support screening — not to provide a diagnosis.",
-      "ctaPrimary": "See How It Works",
-      "ctaSecondary": "Contact Us"
+      "description": "Neuronous analyzes acoustic and temporal characteristics of the voice using computational methods to identify patterns that may be relevant to neurological screening. It is designed to support screening — not to provide a diagnosis.",
+      "ctaPrimary": "Start Screening",
+      "ctaSecondary": "See How It Works"
     },
 
     "whyVoice": {
       "eyebrow": "Why Voice",
       "title": "Voice carries measurable information",
-      "description": "Speech and voice contain acoustic and temporal characteristics — such as pitch, rhythm and stability over time — that can be described computationally. These characteristics are the raw material our technology is designed to analyze.",
+      "description": "Speech and voice contain acoustic and temporal characteristics — such as pitch, rhythm and stability over time — that can be described computationally. Neurological changes can influence these characteristics, which is why voice is being studied as a measurable signal for screening.",
       "node1": "Voice",
       "node2": "Acoustic patterns",
       "node3": "Temporal patterns",
@@ -95,23 +115,27 @@
     "howItWorks": {
       "eyebrow": "Process",
       "title": "How it works",
-      "description": "Four steps carry the voice from capture to screening output — each one prepares the signal for the next.",
+      "description": "Five steps carry the voice from capture to screening output — signal processing, feature extraction, and AI-assisted analysis each prepare the information for the next stage.",
       "steps": {
         "capture": {
           "title": "Voice Capture",
-          "description": "The user provides a voice sample through a supported interface."
+          "description": "The user provides a voice sample through a supported screening interface."
         },
         "processing": {
           "title": "Signal Processing",
           "description": "The captured voice is prepared and represented as a signal suitable for analysis."
         },
+        "features": {
+          "title": "Feature Extraction",
+          "description": "Measurable characteristics of the voice and speech signal are extracted for analysis."
+        },
         "analysis": {
-          "title": "Computational Analysis",
-          "description": "Relevant patterns in the signal are evaluated using our computational models."
+          "title": "AI / Computational Analysis",
+          "description": "Computational methods analyze the extracted features and identify patterns that may be relevant to neurological screening."
         },
         "screening": {
           "title": "Screening Output",
-          "description": "The system produces an output intended to support neurological screening — not a diagnosis."
+          "description": "The system produces a screening output intended to support neurological screening — not a diagnosis."
         }
       }
     },
@@ -120,6 +144,7 @@
       "eyebrow": "Transformation",
       "title": "From signal to insight",
       "description": "A raw recording becomes useful information only after it is represented, characterized and evaluated. The diagram below shows this transformation conceptually — the details of our internal methods are not disclosed.",
+      "currentApplicationNote": "Parkinson's disease screening is the current validated application.",
       "stage1": "Raw Voice",
       "stage2": "Signal Representation",
       "stage3": "Feature & Pattern Analysis",
@@ -128,9 +153,10 @@
     },
 
     "science": {
-      "eyebrow": "Scientific Foundation",
+      "eyebrow": "Science & Evidence",
       "title": "Built on Scientific Evidence",
       "description": "The technology is being developed and evaluated through structured scientific and clinical research. Specific figures, studies and collaborators are not published here yet — they will be added as they become available.",
+      "cta": "Explore the Science",
       "statusPending": "Details to be published",
       "items": {
         "researchTag": "Research",
@@ -156,19 +182,19 @@
 
     "cta": {
       "eyebrow": "Next",
-      "title": "Explore the Applications",
+      "title": "Ready to start a screening?",
       "description": "Parkinson's disease is currently the first validated application of our voice-based screening technology.",
-      "primary": "Explore Applications",
-      "secondary": "Contact Us"
+      "primary": "Start Screening",
+      "secondary": "Explore Applications"
     }
   },
 
   "applications": {
     "hero": {
       "eyebrow": "Applications",
-      "title": "Applications of Voice-Based Neurological Screening",
-      "description": "The technology is initially focused on Parkinson's disease screening — the first validated application — with potential to support broader neurological research in the future.",
-      "ctaPrimary": "See the Current Application",
+      "title": "Voice-Based Screening for Neurological Health",
+      "description": "Neuronous applies voice-based technology to neurological screening. Parkinson's disease is the current validated application, with potential to support broader neurological research in the future.",
+      "ctaPrimary": "Start Screening",
       "ctaSecondary": "Future Directions"
     },
 
@@ -191,6 +217,7 @@
       "eyebrow": "Why Voice",
       "title": "Voice as a measurable signal",
       "description": "Speech and voice contain acoustic and temporal characteristics that researchers can study in relation to neurological function. Changes in these characteristics may carry information relevant to screening — which is what our approach is designed to analyze.",
+      "role": "The technology captures voice information, analyzes measurable voice characteristics using computational methods, and produces a screening output — it is not a diagnostic system.",
       "chain1": "Voice",
       "chain2": "Measurable acoustic & signal characteristics",
       "chain3": "Computational analysis",
@@ -202,7 +229,7 @@
       "title": "A four-step screening pathway",
       "description": "The same underlying approach that powers our Parkinson's screening pathway. The Technology page explains each step in more detail.",
       "steps": {
-        "capture": "Voice Capture",
+        "capture": "Record Your Voice",
         "processing": "Signal Processing",
         "analysis": "Computational Analysis",
         "screening": "Screening Support"
@@ -225,12 +252,130 @@
       "footnote": "We do not present any future application as a validated capability unless it has been supported by appropriate scientific and clinical evidence."
     },
 
+    "science": {
+      "eyebrow": "Science & Evidence",
+      "title": "Grounded in research",
+      "description": "The technology is being developed and evaluated through structured scientific and clinical research. Detailed evidence, methods and limitations are documented on the Science page.",
+      "cta": "Explore the Science"
+    },
+
+    "cta": {
+      "eyebrow": "Next",
+      "title": "Ready to start a screening?",
+      "description": "Parkinson's disease is currently the first validated application of our voice-based screening technology.",
+      "primary": "Start Screening",
+      "secondary": "Explore Technology"
+    }
+  },
+
+  "science": {
+    "hero": {
+      "eyebrow": "Science & Evidence",
+      "title": "Research behind the technology",
+      "description": "Neuronous is grounded in research on voice signals and their relevance to neurological screening. This page documents the scientific foundation and validation approach behind the technology.",
+      "ctaSecondary": "Explore the Technology",
+      "ctaTertiary": "Publications & References"
+    },
+
+    "overview": {
+      "eyebrow": "Research Overview",
+      "title": "Voice as a measurable research signal",
+      "description": "Voice and speech contain measurable acoustic and temporal characteristics. Research investigates whether these characteristics carry information relevant to neurological function — the foundation of our screening approach.",
+      "note": "The Technology page explains how the underlying system works. This page documents the scientific foundation and evidence behind it.",
+      "chain1": "Voice",
+      "chain2": "Measurable signal",
+      "chain3": "Computational analysis",
+      "chain4": "Neurological screening"
+    },
+
+    "validation": {
+      "eyebrow": "Validation",
+      "title": "Validation status",
+      "description": "Parkinson's disease screening is the current validated application. Detailed validation information is being prepared and will be published here when available.",
+      "note": "We publish only verified results. Until then, this section remains a structured placeholder — not a summary of unconfirmed outcomes.",
+      "metaStudyKey": "Study",
+      "metaPopulationKey": "Population",
+      "metaMethodKey": "Method",
+      "metaFindingKey": "Key finding",
+      "metaSourceKey": "Source",
+      "metaPending": "To be published"
+    },
+
+    "publications": {
+      "eyebrow": "Publications",
+      "title": "Publications & Research",
+      "description": "Peer-reviewed publications and research work related to our approach will be listed here. The layout below is prepared to receive real entries with title, authors, source and year.",
+      "statusPending": "To be published",
+      "footnote": "No publications are listed until they are verified and publicly available.",
+      "items": {
+        "item1": {
+          "title": "Publication entry",
+          "meta": "Authors · Source · Year",
+          "text": "A short summary of the publication and its relevance to the technology will appear here."
+        },
+        "item2": {
+          "title": "Publication entry",
+          "meta": "Authors · Source · Year",
+          "text": "A short summary of the publication and its relevance to the technology will appear here."
+        }
+      }
+    },
+
+    "findings": {
+      "eyebrow": "Findings",
+      "title": "Research data & findings",
+      "description": "Key observations and measured outcomes will be presented here as they become available. We do not publish provisional numbers — the layout below is prepared to receive verified findings.",
+      "statusPending": "To be published",
+      "items": {
+        "finding1Tag": "Finding",
+        "finding1Title": "Voice characteristics",
+        "finding1Text": "Measured vocal characteristics and their relevance to neurological screening will be summarized here.",
+        "finding2Tag": "Finding",
+        "finding2Title": "Speech patterns",
+        "finding2Text": "Observed temporal and structural patterns in speech and their relation to the screening approach will be documented here.",
+        "finding3Tag": "Finding",
+        "finding3Title": "Computational results",
+        "finding3Text": "Computational analysis results relevant to screening will be summarized here once verified.",
+        "finding4Tag": "Finding",
+        "finding4Title": "Screening assessment",
+        "finding4Text": "Performance characteristics of the screening approach will be documented here when available — not before."
+      }
+    },
+
+    "references": {
+      "eyebrow": "References",
+      "title": "Scientific sources",
+      "description": "Supporting literature, methodological references and external research will be listed here as the scientific record develops.",
+      "statusPending": "To be added",
+      "footnote": "References are added only when they are directly relevant and verifiable.",
+      "items": {
+        "ref1": {
+          "title": "Reference entry",
+          "meta": "Authors · Source · Year"
+        },
+        "ref2": {
+          "title": "Reference entry",
+          "meta": "Authors · Source · Year"
+        },
+        "ref3": {
+          "title": "Reference entry",
+          "meta": "Authors · Source · Year"
+        }
+      }
+    },
+
+    "screeningNotice": {
+      "eyebrow": "Important Distinction",
+      "title": "Screening Is Not Diagnosis",
+      "description": "The scientific evidence behind a screening approach does not turn that approach into a diagnosis. This technology is intended to support neurological screening and does not replace professional medical evaluation, clinical assessment or a definitive diagnosis."
+    },
+
     "cta": {
       "eyebrow": "Continue",
-      "title": "Explore how the technology works",
-      "description": "For researchers, clinicians and partners interested in the scientific and technical foundations behind our screening approach.",
-      "technology": "Explore the Technology",
-      "contact": "Talk to Us"
+      "title": "Ready to start a screening?",
+      "description": "Parkinson's disease is currently the first validated application of our voice-based screening technology.",
+      "primary": "Start Screening",
+      "secondary": "Explore Applications"
     }
   },
 
@@ -238,7 +383,7 @@
     "hero": {
       "eyebrow": "Team & Science",
       "title": "The People Behind the Technology",
-      "description": "Meaningful screening technology is built at the intersection of several disciplines — technology, signal analysis, neuroscience and clinical research. The people behind this project come together from these directions, with a shared focus on scientific rigor."
+      "description": "Neuronous is built around scientific and technical expertise — combining voice and signal analysis with neurological research and clinical perspective. The people behind the project come together from these directions with a shared focus on scientific rigor."
     },
 
     "members": {
@@ -275,25 +420,136 @@
       }
     },
 
+    "capabilities": {
+      "eyebrow": "Expertise",
+      "title": "Scientific & professional background",
+      "description": "The team brings together expertise across the disciplines required to build a scientifically grounded screening technology. Detailed background information is being prepared and will be published here.",
+      "items": {
+        "scienceTitle": "Scientific research",
+        "scienceText": "Research background in voice, signal analysis and neurological function.",
+        "techTitle": "Technology & engineering",
+        "techText": "Engineering of the systems that capture, process and analyze the voice signal.",
+        "aiTitle": "AI & computational analysis",
+        "aiText": "Development of the computational methods used to identify relevant patterns.",
+        "clinicalTitle": "Clinical & validation perspective",
+        "clinicalText": "Scientific and clinical perspective guiding evaluation and screening design."
+      }
+    },
+
     "science": {
       "eyebrow": "Science & Collaboration",
       "title": "Built at the intersection of disciplines",
-      "description": "Developing meaningful screening technology requires more than one kind of expertise. It brings together people working on the technical side of signal and voice analysis with those who understand neurological research and clinical practice. Progress depends on these perspectives being connected — not treated separately."
+      "description": "Developing meaningful screening technology requires more than one kind of expertise. It brings together people working on the technical side of signal and voice analysis with those who understand neurological research and clinical practice. Progress depends on these perspectives being connected — not treated separately.",
+      "cta": "Explore Our Science"
     },
 
     "foundation": {
       "eyebrow": "Scientific Foundation",
       "title": "Grounded in research",
-      "description": "Scientific validation is a core part of how the technology is being developed. The Technology page explains the underlying approach and the evidence that supports it.",
+      "description": "Scientific validation is a core part of how the technology is being developed. The Technology and Science pages document the underlying approach and the evidence that supports it.",
       "link": "Explore the Technology"
     },
 
     "cta": {
-      "eyebrow": "Get in Touch",
-      "title": "Interested in working with us?",
-      "description": "We welcome conversations with researchers, clinicians, partners and investors.",
+      "eyebrow": "Next",
+      "title": "Ready to start a screening?",
+      "description": "Parkinson's disease is currently the first validated application of our voice-based screening technology.",
+      "primary": "Start Screening",
+      "secondary": "Explore Applications"
+    }
+  },
+
+  "privacy": {
+    "hero": {
+      "eyebrow": "Privacy",
+      "title": "Privacy & Data Protection",
+      "description": "Privacy is central to how Neuronous approaches voice-based screening. This page explains — in plain terms — how we think about data, what is involved in the screening process, and the principles that guide our work.",
+      "note": "This page describes principles and structure, not a finalized legal policy. Specific operational details will be published as they are confirmed."
+    },
+
+    "intro": {
+      "eyebrow": "Introduction",
+      "title": "Why privacy matters to Neuronous",
+      "description": "Screening technologies work with information that is personal. Because our approach is built on voice, we take the responsible handling of that information as a starting condition for the technology — not as an afterthought.",
+      "body1": "Voice is one of the most personal signals a person can share. It carries identity, expression and context. Any screening technology that works with voice therefore has an obligation to treat that data with care, and to be transparent about what it does with it.",
+      "body2": "This page describes the principles that guide our approach to privacy and data protection. It is written to be readable rather than legalistic, and it reflects our current understanding of the responsibilities involved in building a voice-based screening technology."
+    },
+
+    "voice": {
+      "eyebrow": "Voice Data",
+      "title": "Voice and audio in the screening process",
+      "description": "The screening process is built around voice. Understanding what that means — and what role voice data plays — is part of understanding how the technology works.",
+      "whatTitle": "What voice data is",
+      "whatText": "Voice data refers to recordings or derived representations of a person's voice that are captured during the screening process. These signals are the input to the analysis step.",
+      "roleTitle": "Its role in analysis",
+      "roleText": "The voice signal is processed computationally so that measurable characteristics can be analyzed. The result of that analysis contributes to a screening output — it is not a medical diagnosis.",
+      "sensitivityTitle": "Why it is sensitive",
+      "sensitivityText": "Voice can carry information beyond the words being spoken. For this reason, voice data is treated as sensitive information and handled with the same care as other personal data."
+    },
+
+    "data": {
+      "eyebrow": "Data",
+      "title": "Data collection and use",
+      "description": "The categories below describe the types of information that may be involved in using the screening technology, and the purposes they are intended to serve.",
+      "collectionTitle": "What may be collected",
+      "usageTitle": "How it may be used",
+      "items": {
+        "voiceKey": "Voice data",
+        "voiceVal": "Voice recordings or derived voice signals captured during screening.",
+        "userKey": "User-provided information",
+        "userVal": "Basic information provided directly by the user as part of the process.",
+        "techKey": "Technical information",
+        "techVal": "Technical information needed to operate and improve the service.",
+        "screeningKey": "Screening",
+        "screeningVal": "Providing the screening experience and producing a screening output.",
+        "analysisKey": "Analysis",
+        "analysisVal": "Performing the voice analysis that supports screening.",
+        "researchKey": "Research",
+        "researchVal": "Improving the technology and supporting scientific development."
+      },
+      "footnote": "The categories above describe the scope of the technology. Specific operational details — such as exact data fields, sub-processors or retention — will be documented here as they are finalized."
+    },
+
+    "storage": {
+      "eyebrow": "Storage & Security",
+      "title": "Storage, retention & security",
+      "description": "The operational details that govern where data is stored, how long it is retained and how it is protected are still being finalized. We do not publish unconfirmed specifics.",
+      "note": "Until these details are settled, this section remains a structured placeholder — not a summary of assumptions.",
+      "metaStorageKey": "Storage location",
+      "metaRetentionKey": "Retention period",
+      "metaDeletionKey": "Deletion",
+      "metaAccessKey": "Access control",
+      "metaTransitKey": "Secure transmission",
+      "metaPending": "To be provided"
+    },
+
+    "rights": {
+      "eyebrow": "Your choices",
+      "title": "User rights & privacy choices",
+      "description": "Individuals interacting with the technology should be able to understand what happens to their data and to ask questions about it. The specific rights and procedures will be documented here as they are finalized.",
+      "items": {
+        "accessTitle": "Access & understanding",
+        "accessText": "Understanding what information is involved in a screening interaction and how it is handled.",
+        "questionsTitle": "Asking questions",
+        "questionsText": "Reaching out with privacy-related questions or concerns about how data is used.",
+        "controlTitle": "Control over participation",
+        "controlText": "Choosing whether to take part in a screening interaction, and being informed about what participation involves."
+      },
+      "footnote": "A formal description of user rights and the process for exercising them will be published together with the finalized privacy documentation."
+    },
+
+    "screeningNotice": {
+      "eyebrow": "Important Distinction",
+      "title": "Screening Is Not Diagnosis",
+      "description": "Neuronous provides a screening technology. A screening result is not a medical diagnosis, and it does not replace evaluation by a qualified clinician. Any medical decision should be made in consultation with a healthcare professional."
+    },
+
+    "cta": {
+      "eyebrow": "Questions",
+      "title": "Questions about privacy?",
+      "description": "If you have questions about privacy, data handling or the screening process, please reach out. We welcome the conversation.",
       "contact": "Contact Us",
-      "applications": "Explore Applications"
+      "secondary": "Explore the Science"
     }
   },
 
@@ -301,8 +557,8 @@
     "hero": {
       "eyebrow": "Contact",
       "title": "Let's start a conversation",
-      "description": "For research, clinical, partnership or investment enquiries — we welcome direct conversations.",
-      "audience": "Investors · Research · Partnerships"
+      "description": "Have a question, research inquiry, partnership opportunity, or simply want to learn more about Neuronous? Get in touch — we welcome direct conversations.",
+      "audience": "Investors · Research · Partnerships · Healthcare"
     },
 
     "info": {
@@ -321,6 +577,15 @@
       "namePlaceholder": "Your full name",
       "email": "Email",
       "emailPlaceholder": "you@example.com",
+      "reason": "Reason for contact",
+      "reasonOptions": {
+        "general": "General inquiry",
+        "research": "Research",
+        "partner": "Partnership",
+        "health": "Healthcare",
+        "invest": "Investment",
+        "other": "Other"
+      },
       "subject": "Subject",
       "subjectPlaceholder": "How can we help?",
       "message": "Message",
@@ -329,14 +594,36 @@
       "note": "We'll respond using the email address you provide."
     },
 
-    "closing": {
-      "title": "Have a question or want to explore a collaboration?",
-      "description": "Reach out directly at"
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Common questions",
+      "description": "A short set of questions we are frequently asked. For privacy-related details, please refer to the Privacy page.",
+      "items": {
+        "howTitle": "How does the screening work?",
+        "howText": "A voice sample is recorded and analyzed computationally to identify patterns relevant to neurological screening. The output is a screening result — not a medical diagnosis.",
+        "durationTitle": "How long does the screening take?",
+        "durationText": "The screening process is designed to be quick and non-invasive. Specific timing information will be provided once the screening platform is available.",
+        "resultTitle": "How do I receive my result?",
+        "resultText": "A screening output is produced as part of the process. Details on how the result is delivered will be provided together with the screening platform.",
+        "voiceTitle": "How is my voice data used?",
+        "voiceText": "Voice data is used to perform the analysis that supports screening. More detail is available in our Privacy page.",
+        "voiceLink": "Learn more in Privacy",
+        "diagnosisTitle": "Is the screening a diagnosis?",
+        "diagnosisText": "No. The screening result is not a substitute for a medical diagnosis or professional medical advice. Any medical decision should be made in consultation with a qualified healthcare professional."
+      }
+    },
+
+    "cta": {
+      "eyebrow": "Next",
+      "title": "Ready to start a screening?",
+      "description": "Parkinson's disease is currently the first validated application of our voice-based screening technology.",
+      "primary": "Start Screening",
+      "secondary": "Explore Applications"
     }
   },
 
   "footer": {
-    "tagline": "Voice-based screening for neurological disorders.",
+    "tagline": "Voice-based technology for neurological screening.",
     "disclaimer": "This technology is intended for screening purposes and does not provide a medical diagnosis.",
     "rights": "All rights reserved."
   }

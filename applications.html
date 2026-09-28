@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title data-i18n="meta.applicationsTitle">Applications — Voice-Based Neurological Screening</title>
+  <title data-i18n="meta.applicationsTitle">Applications — Neuronous</title>
   <meta name="description" data-i18n-attr="content" data-i18n="meta.applicationsDescription"
-        content="Parkinson's disease is the first validated application of our voice-based neurological screening technology, with broader neurological research as a future direction." />
+        content="Parkinson's disease screening is the current validated application of Neuronous' voice-based neurological screening technology, with broader neurological research as a future direction." />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" data-i18n-attr="content" data-i18n="meta.applicationsTitle"
-        content="Applications — Voice-Based Neurological Screening" />
+        content="Applications — Neuronous" />
   <meta property="og:description" data-i18n-attr="content" data-i18n="meta.applicationsDescription"
-        content="Parkinson's disease is the first validated application, with broader neurological research as a future direction." />
+        content="Parkinson's disease screening is the current validated application. Broader neurological research is a future direction." />
   <meta property="og:image" content="/assets/og-cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -32,21 +32,23 @@
 
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Home">
+      <a class="brand" href="/index.html" aria-label="Neuronous">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 32 12" width="32" height="12" fill="none">
             <path d="M0 6h3l2-4 3 8 3-10 3 12 3-8 2 2h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
-        <span class="brand-name">Vocalis</span>
+        <span class="brand-name">Neuronous</span>
       </a>
 
       <nav class="primary-nav" aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
           <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
           <li><a href="/applications.html" data-i18n="nav.applications" aria-current="page">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science">Science</a></li>
           <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
           <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
@@ -74,10 +76,12 @@
     <div class="mobile-menu" id="mobileMenu" hidden>
       <nav aria-label="Mobile">
         <ul>
-          <li><a href="/" data-i18n="nav.home">Home</a></li>
+          <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
           <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
           <li><a href="/applications.html" data-i18n="nav.applications" aria-current="page">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science">Science</a></li>
           <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
           <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
@@ -92,17 +96,23 @@
         <div class="apps-hero-copy">
           <p class="eyebrow" data-i18n="applications.hero.eyebrow">Applications</p>
           <h1 id="apps-hero-title" data-i18n="applications.hero.title">
-            Applications of Voice-Based Neurological Screening
+            Voice-Based Screening for Neurological Health
           </h1>
           <p class="lead" data-i18n="applications.hero.description">
-            The technology is initially focused on Parkinson's disease screening — the first
-            validated application — with potential to support broader neurological research
-            in the future.
+            Neuronous applies voice-based technology to neurological screening.
+            Parkinson's disease is the current validated application, with potential
+            to support broader neurological research in the future.
           </p>
 
           <div class="apps-hero-actions">
-            <a class="btn btn-primary" href="#current-application" data-i18n="applications.hero.ctaPrimary">
-              See the Current Application
+            <!-- Placeholder — the external screening platform is not yet available. -->
+            <a
+              class="btn btn-primary"
+              href="#"
+              data-screening-link
+              data-i18n="applications.hero.ctaPrimary"
+            >
+              Start Screening
             </a>
             <a class="btn btn-ghost" href="#future-directions" data-i18n="applications.hero.ctaSecondary">
               Future Directions
@@ -126,15 +136,12 @@
 
             <circle cx="280" cy="210" r="190" fill="url(#appsGlow)" />
 
-            <!-- baseline -->
             <line x1="40" y1="210" x2="520" y2="210" stroke="#0B1726" stroke-opacity="0.08" stroke-dasharray="2 6" />
 
-            <!-- main signal -->
             <path class="app-wave app-wave-1"
               d="M40,210 C70,210 80,120 110,120 C140,120 150,300 180,300 C210,300 220,90 250,90 C280,90 290,320 320,320 C350,320 360,140 390,140 C420,140 430,260 460,260 C485,260 500,210 520,210"
               fill="none" stroke="url(#appsGrad)" stroke-width="1.6" stroke-linecap="round" />
 
-            <!-- echo lines -->
             <path class="app-wave app-wave-2"
               d="M40,210 C80,210 100,160 140,160 C180,160 200,270 240,270 C280,270 300,150 340,150 C380,150 400,240 440,240 C480,240 500,210 520,210"
               fill="none" stroke="#0B1726" stroke-opacity="0.14" stroke-width="1" stroke-linecap="round" />
@@ -143,7 +150,6 @@
               d="M40,210 C90,210 110,190 160,190 C210,190 230,230 280,230 C330,230 350,180 400,180 C450,180 470,210 520,210"
               fill="none" stroke="#0B1726" stroke-opacity="0.08" stroke-width="1" stroke-linecap="round" />
 
-            <!-- sample nodes -->
             <circle cx="110" cy="120" r="2.5" fill="#3DD6C6" />
             <circle cx="250" cy="90"  r="2.5" fill="#3DD6C6" />
             <circle cx="390" cy="140" r="2.5" fill="#3DD6C6" />
@@ -153,7 +159,7 @@
       </div>
     </section>
 
-    <!-- 2. CURRENT VALIDATED APPLICATION (dark contrast anchor) -->
+    <!-- 2. CURRENT VALIDATED APPLICATION (dark anchor) -->
     <section class="apps-current reveal" id="current-application" aria-labelledby="current-title">
       <div class="container apps-current-inner">
         <div class="apps-current-copy">
@@ -164,8 +170,8 @@
             Parkinson's Disease Screening
           </h2>
           <p class="lead lead--onDark" data-i18n="applications.current.description">
-            Parkinson's disease is the first application of our voice-based technology to
-            have been validated. Voice carries measurable characteristics that may be
+            Parkinson's disease is the first application of our voice-based technology
+            to have been validated. Voice carries measurable characteristics that may be
             relevant to neurological assessment. Our system analyzes these voice-derived
             signals computationally to support screening.
           </p>
@@ -196,7 +202,7 @@
       </div>
     </section>
 
-    <!-- 3. WHY VOICE / WHY PARKINSON'S -->
+    <!-- 3. WHY VOICE / ROLE OF THE TECHNOLOGY -->
     <section class="apps-why reveal" aria-labelledby="why-title">
       <div class="container">
         <div class="apps-why-inner">
@@ -207,9 +213,14 @@
             </h2>
             <p class="lead" data-i18n="applications.whyVoice.description">
               Speech and voice contain acoustic and temporal characteristics that
-              researchers can study in relation to neurological function. Changes in these
-              characteristics may carry information relevant to screening — which is what
-              our approach is designed to analyze.
+              researchers can study in relation to neurological function. Changes in
+              these characteristics may carry information relevant to screening — which
+              is what our approach is designed to analyze.
+            </p>
+            <p class="apps-why-role" data-i18n="applications.whyVoice.role">
+              The technology captures voice information, analyzes measurable voice
+              characteristics using computational methods, and produces a screening
+              output — it is not a diagnostic system.
             </p>
           </div>
 
@@ -242,7 +253,7 @@
       </div>
     </section>
 
-    <!-- 4. HOW THE TECHNOLOGY IS APPLIED -->
+    <!-- 4. APPLICATION WORKFLOW -->
     <section class="apps-workflow reveal" aria-labelledby="workflow-title">
       <div class="container">
         <div class="section-head">
@@ -259,7 +270,7 @@
         <ol class="app-steps" aria-label="Screening pathway">
           <li class="app-step" data-appstep="1">
             <div class="app-step-index">01</div>
-            <h3 class="app-step-title" data-i18n="applications.workflow.steps.capture">Voice Capture</h3>
+            <h3 class="app-step-title" data-i18n="applications.workflow.steps.capture">Record Your Voice</h3>
             <div class="app-step-glyph" aria-hidden="true">
               <svg viewBox="0 0 72 32" width="72" height="32">
                 <path class="app-step-wave"
@@ -321,7 +332,7 @@
       </div>
     </section>
 
-    <!-- 5. FUTURE RESEARCH DIRECTIONS (explicitly not validated) -->
+    <!-- 5. FUTURE RESEARCH DIRECTIONS -->
     <section class="apps-future reveal" id="future-directions" aria-labelledby="future-title">
       <div class="container">
         <div class="section-head">
@@ -378,24 +389,52 @@
       </div>
     </section>
 
-    <!-- 6. FINAL CTA -->
+    <!-- 6. SCIENCE / EVIDENCE CONNECTION -->
+    <section class="apps-science reveal" aria-labelledby="apps-science-title">
+      <div class="container">
+        <div class="apps-science-inner">
+          <div class="apps-science-copy">
+            <p class="eyebrow" data-i18n="applications.science.eyebrow">Science &amp; Evidence</p>
+            <h2 id="apps-science-title" data-i18n="applications.science.title">
+              Grounded in research
+            </h2>
+            <p class="lead" data-i18n="applications.science.description">
+              The technology is being developed and evaluated through structured
+              scientific and clinical research. Detailed evidence, methods and
+              limitations are documented on the Science page.
+            </p>
+            <a class="section-link" href="/science.html" data-i18n="applications.science.cta">
+              Explore the Science
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FINAL CTA -->
     <section class="apps-cta reveal" aria-labelledby="apps-cta-title">
       <div class="container">
         <div class="apps-cta-inner">
-          <p class="eyebrow" data-i18n="applications.cta.eyebrow">Continue</p>
+          <p class="eyebrow" data-i18n="applications.cta.eyebrow">Next</p>
           <h2 id="apps-cta-title" data-i18n="applications.cta.title">
-            Explore how the technology works
+            Ready to start a screening?
           </h2>
           <p class="lead" data-i18n="applications.cta.description">
-            For researchers, clinicians and partners interested in the scientific and
-            technical foundations behind our screening approach.
+            Parkinson's disease is currently the first validated application of our
+            voice-based screening technology.
           </p>
           <div class="apps-cta-actions">
-            <a class="btn btn-primary" href="/technology.html" data-i18n="applications.cta.technology">
-              Explore the Technology
+            <!-- Placeholder — the external screening platform is not yet available. -->
+            <a
+              class="btn btn-primary"
+              href="#"
+              data-screening-link
+              data-i18n="applications.cta.primary"
+            >
+              Start Screening
             </a>
-            <a class="btn btn-ghost" href="/contact.html" data-i18n="applications.cta.contact">
-              Talk to Us
+            <a class="btn btn-ghost" href="/technology.html" data-i18n="applications.cta.secondary">
+              Explore Technology
             </a>
           </div>
         </div>
@@ -407,9 +446,9 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="brand-name">Vocalis</span>
+        <span class="brand-name">Neuronous</span>
         <p class="footer-tag" data-i18n="footer.tagline">
-          Voice-based screening for neurological disorders.
+          Voice-based technology for neurological screening.
         </p>
       </div>
 
@@ -417,7 +456,9 @@
         <ul>
           <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
           <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
+          <li><a href="/science.html" data-i18n="nav.science">Science</a></li>
           <li><a href="/team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
           <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
@@ -427,7 +468,7 @@
           This technology is intended for screening purposes and does not provide a medical diagnosis.
         </p>
         <p class="footer-copy">
-          © <span id="year"></span> Vocalis. <span data-i18n="footer.rights">All rights reserved.</span>
+          © <span id="year"></span> Neuronous. <span data-i18n="footer.rights">All rights reserved.</span>
         </p>
       </div>
     </div>
@@ -436,7 +477,7 @@
   <script src="/js/language.js" defer></script>
   <script src="/js/main.js" defer></script>
 
-  <!-- Scoped stagger for the workflow steps (mirrors the Technology page pattern). -->
+  <!-- Scoped stagger for the workflow steps (same pattern as Technology page). -->
   <script>
     (function () {
       "use strict";
