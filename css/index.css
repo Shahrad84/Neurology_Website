@@ -1,8 +1,35 @@
 /* =========================================================
    Home page — section-specific styles
+   Relies on tokens and primitives from /css/global.css
    ========================================================= */
 
-/* ---------- HERO ---------- */
+/* Shared helpers used on this page */
+.eyebrow--accent { color: var(--accent); }
+
+/* Small arrowed link (same pattern used elsewhere on the site) */
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--ink-strong);
+  border-block-end: 1px solid var(--line-strong);
+  padding-block-end: 0.2rem;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.section-link::after {
+  content: "→";
+  display: inline-block;
+  transition: transform 0.25s var(--ease);
+}
+html[dir="rtl"] .section-link::after { content: "←"; }
+.section-link:hover { color: var(--accent); border-color: var(--accent); }
+.section-link:hover::after { transform: translateX(4px); }
+html[dir="rtl"] .section-link:hover::after { transform: translateX(-4px); }
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
 .hero {
   padding-block: clamp(3.5rem, 7vw, 7rem) clamp(3rem, 6vw, 6rem);
   position: relative;
@@ -24,12 +51,10 @@
 }
 
 .hero-copy h1 {
-  margin-block-start: 0.5rem;
-  margin-block-end: 1.25rem;
-  max-width: 18ch;
+  margin-block: 0.5rem 1.25rem;
+  max-width: 16ch;
 }
-
-html[lang="fa"] .hero-copy h1 { max-width: 22ch; }
+html[lang="fa"] .hero-copy h1 { max-width: 20ch; }
 
 .hero-copy .lead {
   margin-block-end: 2rem;
@@ -40,15 +65,6 @@ html[lang="fa"] .hero-copy h1 { max-width: 22ch; }
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-}
-
-.hero-note {
-  margin-block-start: 1.75rem;
-  font-size: 0.82rem;
-  color: var(--muted);
-  max-width: 46ch;
-  padding-inline-start: 0.9rem;
-  border-inline-start: 2px solid var(--accent);
 }
 
 /* Hero visual */
@@ -91,19 +107,41 @@ html[lang="fa"] .hero-copy h1 { max-width: 22ch; }
   .wave { stroke-dashoffset: 0; animation: none; }
 }
 
-/* ---------- THE PROBLEM ---------- */
-.problem .section-head {
+/* =========================================================
+   2. WHAT IS NEURONOUS?
+   ========================================================= */
+.about .section-head {
   max-width: 680px;
   margin-block-end: clamp(2.5rem, 5vw, 4rem);
 }
 
-.problem h2 {
-  margin-block-end: 1.25rem;
+.about h2 {
+  margin-block-end: 1rem;
   max-width: 24ch;
 }
 
-/* Reuses the global .pillar component, laid out as a horizontal three-up grid */
-.problem-panel {
+/* The `.flow`, `.flow-step`, `.flow-index`, `.flow-label`, `.flow-arrow`
+   components are reused verbatim from global styles. */
+
+/* =========================================================
+   3. WHY VOICE?
+   ========================================================= */
+.why-voice {
+  background: var(--bg-elevated);
+  border-block: 1px solid var(--line);
+}
+
+.why-voice .section-head {
+  max-width: 680px;
+  margin-block-end: clamp(2rem, 4vw, 3rem);
+}
+
+.why-voice h2 {
+  margin-block-end: 1rem;
+  max-width: 22ch;
+}
+
+.why-voice-panel {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1px;
@@ -114,41 +152,23 @@ html[lang="fa"] .hero-copy h1 { max-width: 22ch; }
 }
 
 @media (min-width: 720px) {
-  .problem-panel {
+  .why-voice-panel {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.problem-panel .pillar {
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto;
-  align-items: baseline;
-  background: var(--bg);
+.why-voice-panel .pillar {
+  grid-template-rows: auto;
 }
 
-/* ---------- HOW IT WORKS ---------- */
-.how-it-works .section-head {
-  max-width: 640px;
-  margin-block-end: clamp(2rem, 4vw, 3rem);
+.why-voice-cta {
+  margin-block-start: clamp(1.75rem, 3vw, 2.5rem);
 }
 
-.how-it-works h2 {
-  margin-block-end: 0;
-  max-width: 26ch;
-}
-
-/* `.flow`, `.flow-step`, `.flow-index`, `.flow-label` and `.flow-arrow`
-   are reused verbatim from the existing stylesheet. */
-
-/* ---------- TECHNOLOGY TEASER ---------- */
-/* Reuses the existing `.application` section wrapper and visuals. */
-.application {
-  border-block-start: 1px solid var(--line);
-  border-block-end: 1px solid var(--line);
-  background: var(--bg-elevated);
-}
-
-.application-inner {
+/* =========================================================
+   4. PARKINSON'S DISEASE — CURRENT FOCUS
+   ========================================================= */
+.current-focus-inner {
   display: grid;
   grid-template-columns: 1fr;
   gap: clamp(2rem, 4vw, 4rem);
@@ -156,85 +176,28 @@ html[lang="fa"] .hero-copy h1 { max-width: 22ch; }
 }
 
 @media (min-width: 900px) {
-  .application-inner {
+  .current-focus-inner {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 }
 
-.application h2 {
-  margin-block-end: 1rem;
+.current-focus h2 {
+  margin-block: 0.5rem 1rem;
 }
 
-.application .lead {
+.current-focus .lead {
   margin-block-end: 1.75rem;
 }
 
-.application-visual {
+.current-focus-visual {
   width: 100%;
   max-width: 440px;
   margin-inline: auto;
 }
 
-/* ---------- SCIENCE / EVIDENCE TEASER ---------- */
-.science-inner {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(2rem, 4vw, 4rem);
-  align-items: start;
-}
-
-@media (min-width: 900px) {
-  .science-inner {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-  }
-}
-
-.science h2 { margin-block-end: 1rem; }
-.science .lead { margin-block-end: 1.75rem; }
-
-.science-panel {
-  display: grid;
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-
-.pillar {
-  background: var(--bg);
-  padding: 1.5rem 1.75rem;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto;
-  column-gap: 1.25rem;
-  row-gap: 0.25rem;
-  align-items: baseline;
-}
-
-.pillar-index {
-  grid-row: 1 / 3;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: 0.08em;
-  padding-block-start: 0.35rem;
-}
-
-.pillar-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--ink-strong);
-  letter-spacing: -0.01em;
-}
-
-.pillar-text {
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.55;
-}
-
-/* ---------- FINAL CTA ---------- */
+/* =========================================================
+   5. FINAL CTA
+   ========================================================= */
 .final-cta {
   text-align: start;
 }
@@ -242,7 +205,7 @@ html[lang="fa"] .hero-copy h1 { max-width: 22ch; }
 .cta-inner {
   max-width: 720px;
   margin-inline: auto;
-  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.75rem, 4vw, 3rem);
+  padding: clamp(2.5rem, 5vw, 3.75rem) clamp(1.75rem, 4vw, 3rem);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--bg-elevated);
@@ -264,17 +227,24 @@ html[dir="rtl"] .cta-inner::before {
 }
 
 .cta-inner h2 {
-  margin-block-end: 1rem;
+  margin-block-end: 1.75rem;
   max-width: 22ch;
 }
-
-.cta-inner .lead { margin-block-end: 2rem; }
 
 .cta-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
+
+/* =========================================================
+   Persian typography refinements (page-local)
+   ========================================================= */
+html[lang="fa"] .hero-copy h1,
+html[lang="fa"] .about h2,
+html[lang="fa"] .why-voice h2,
+html[lang="fa"] .current-focus h2,
+html[lang="fa"] .cta-inner h2 { letter-spacing: 0; }
 
 /* =========================================================
    Navigation responsiveness for seven items

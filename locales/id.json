@@ -39,7 +39,7 @@
   "home": {
     "hero": {
       "title": "Skrining neurologis berbasis suara",
-      "description": "Neuronous mengembangkan teknologi berbasis suara untuk skrining neurologis. Sampel suara singkat dianalisis secara komputasional untuk mengidentifikasi pola yang relevan dengan skrining — dirancang untuk mendukung kesadaran awal, bukan untuk memberikan diagnosis.",
+      "description": "Neuronous adalah platform berbasis AI yang menganalisis sinyal suara untuk mendeteksi pola bermakna yang terkait dengan kesehatan neurologis dan kesehatan secara keseluruhan. Platform ini mengubah perubahan suara yang halus menjadi wawasan yang dapat ditindaklanjuti untuk deteksi dini, pemantauan yang lebih baik, dan perawatan yang lebih terinformasi.",
       "ctaPrimary": "Mulai Skrining",
       "ctaSecondary": "Hubungi Kami",
       "note": "Skrining mendukung kesadaran dan langkah awal — bukan pengganti diagnosis klinis."
@@ -54,7 +54,7 @@
       "accessTitle": "Tantangan akses",
       "accessText": "Penilaian neurologis dapat memerlukan keahlian klinis dan lingkungan khusus yang tidak selalu tersedia dengan mudah.",
       "voiceTitle": "Mengapa suara",
-      "voiceText": "Suara mengandung karakteristik akustik dan temporal terukur yang dapat dianalisis secara komputasional dan dipelajari kaitannya dengan kondisi neurologis."
+      "voiceText": "Suara mencerminkan kombinasi unik dari fungsi neurologis, fisik, dan kognitif. Ini memberikan cara yang non-invasif, nyaman, dan hemat biaya untuk memantau kesehatan dan mendeteksi perubahan sejak dini."
     },
 
     "howItWorks": {

@@ -3,19 +3,12 @@
    Depends on tokens/primitives in /css/global.css
    ========================================================= */
 
-/* ---------- Shared helpers on this page ---------- */
-.eyebrow--accent { color: var(--accent); }
-
-.lead--onDark {
-  color: rgba(247, 248, 246, 0.72);
-}
-
-/* Section-level small link (arrowed) that can appear inside .section-head */
+/* Small arrowed link (same pattern used elsewhere on the site) */
 .section-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-block-start: 1.25rem;
+  margin-block-start: 1.5rem;
   font-weight: 500;
   color: var(--ink-strong);
   border-block-end: 1px solid var(--line-strong);
@@ -57,19 +50,12 @@ html[dir="rtl"] .section-link:hover::after { transform: translateX(-4px); }
 
 .apps-hero-copy h1 {
   margin-block: 0.5rem 1.25rem;
-  max-width: 20ch;
+  max-width: 22ch;
 }
-html[lang="fa"] .apps-hero-copy h1 { max-width: 24ch; }
+html[lang="fa"] .apps-hero-copy h1 { max-width: 26ch; }
 
 .apps-hero-copy .lead {
-  margin-block-end: 2rem;
   max-width: 54ch;
-}
-
-.apps-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
 }
 
 /* Hero visual */
@@ -104,352 +90,179 @@ html[lang="fa"] .apps-hero-copy h1 { max-width: 24ch; }
 }
 
 /* =========================================================
-   2. CURRENT VALIDATED APPLICATION — dark anchor section
+   2 & 3 & 4. TIER SECTIONS (TODAY / NEXT / FUTURE)
    ========================================================= */
-.apps-current {
-  background: var(--ink-strong);
-  color: #F7F8F6;
-  border-block: 1px solid rgba(247, 248, 246, 0.08);
-  position: relative;
-  overflow: hidden;
-}
-
-.apps-current::before {
-  content: "";
-  position: absolute;
-  inset-block-end: -60px;
-  inset-inline-start: -5%;
-  width: 110%;
-  height: 160px;
-  background:
-    repeating-linear-gradient(
-      to right,
-      rgba(61, 214, 198, 0.06) 0 2px,
-      transparent 2px 12px
-    );
-  mask-image: linear-gradient(to top, rgba(0,0,0,1), transparent 90%);
-  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), transparent 90%);
-  pointer-events: none;
-}
-
-.apps-current-inner {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(2rem, 4vw, 4rem);
-  align-items: start;
-  position: relative;
-  z-index: 1;
-}
-
-@media (min-width: 900px) {
-  .apps-current-inner {
-    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-    gap: clamp(3rem, 5vw, 5rem);
-  }
-}
-
-.apps-current h2 {
-  color: #fff;
-  margin-block: 0.5rem 1.25rem;
-  font-size: clamp(1.8rem, 3.6vw, 2.75rem);
-  letter-spacing: -0.025em;
-  max-width: 22ch;
-}
-
-.apps-current-copy .lead {
-  max-width: 56ch;
-}
-
-.apps-current-note {
-  margin-block-start: 1.75rem;
-  padding-inline-start: 1rem;
-  border-inline-start: 2px solid var(--accent);
-  color: rgba(247, 248, 246, 0.72);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  max-width: 52ch;
-}
-
-.apps-current-meta {
-  display: grid;
-  gap: 0;
-  border-block-start: 1px solid rgba(247, 248, 246, 0.14);
-}
-
-.meta-row {
-  display: grid;
-  grid-template-columns: minmax(90px, 0.6fr) 1fr;
-  gap: 1rem;
-  padding-block: 1rem;
-  border-block-end: 1px solid rgba(247, 248, 246, 0.10);
-}
-
-.meta-key {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(247, 248, 246, 0.55);
-  align-self: center;
-}
-
-.meta-val {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #F7F8F6;
-  line-height: 1.5;
-}
-
-html[lang="fa"] .meta-key {
-  letter-spacing: 0.02em;
-  text-transform: none;
-  font-size: 0.82rem;
-}
-
-/* =========================================================
-   3. WHY VOICE / ROLE OF THE TECHNOLOGY
-   ========================================================= */
-.apps-why .apps-why-inner {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(2.5rem, 5vw, 4rem);
-  align-items: start;
-}
-
-@media (min-width: 900px) {
-  .apps-why .apps-why-inner {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: clamp(3rem, 6vw, 6rem);
-  }
-}
-
-.apps-why h2 {
-  margin-block: 0.5rem 1rem;
-  max-width: 20ch;
-}
-
-.apps-why .lead {
-  max-width: 52ch;
-}
-
-/* Short paragraph clarifying the technology's role — visually distinct
-   from the main .lead but not a new section. */
-.apps-why-role {
-  margin-block-start: 1.5rem;
-  padding-inline-start: 1rem;
-  border-inline-start: 2px solid var(--accent);
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.65;
-  max-width: 52ch;
-}
-
-/* Chain diagram */
-.why-chain {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  padding-inline-start: 0.25rem;
-}
-
-.chain-node {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: baseline;
-  gap: 1rem;
-  padding-block: 1.25rem;
+.tier {
   border-block-end: 1px solid var(--line);
+  padding-block: clamp(3rem, 6vw, 5rem);
 }
 
-.chain-node--accent {
-  border-block-end: 0;
+.tier--today {
+  background: var(--bg);
 }
 
-.chain-index {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-}
-
-.chain-label {
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
-  font-weight: 500;
-  color: var(--ink-strong);
-  line-height: 1.4;
-}
-
-.chain-node--accent .chain-label {
-  color: var(--ink-strong);
-  position: relative;
-  padding-inline-start: 1rem;
-}
-.chain-node--accent .chain-label::before {
-  content: "";
-  position: absolute;
-  inset-block-start: 0.6em;
-  inset-inline-start: 0;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
-.chain-connector {
-  display: none;
-}
-
-/* =========================================================
-   4. FUTURE RESEARCH DIRECTIONS
-   ========================================================= */
-.apps-future .section-head {
-  max-width: 760px;
-  margin-block-end: clamp(2.5rem, 5vw, 4rem);
-}
-
-.apps-future h2 { margin-block-end: 1rem; }
-
-.apps-future .lead strong {
-  color: var(--ink-strong);
-  font-weight: 600;
-}
-
-.apps-future-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-}
-
-@media (min-width: 720px) {
-  .apps-future-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-}
-
-.future-card {
-  padding: clamp(1.5rem, 3vw, 2rem);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  position: relative;
-}
-
-.future-card--current {
+.tier--next,
+.tier--future {
   background: var(--bg-elevated);
-  border-color: var(--line-strong);
 }
 
-.future-card--current::before {
-  content: "";
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: clamp(1.5rem, 3vw, 2rem);
-  inset-inline-end: clamp(1.5rem, 3vw, 2rem);
-  height: 2px;
-  background: var(--accent);
-  border-end-start-radius: 2px;
-  border-end-end-radius: 2px;
+.tier-head {
+  display: grid;
+  gap: 0.75rem;
+  margin-block-end: clamp(1.75rem, 3vw, 2.5rem);
 }
 
-.future-card-head {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.future-card-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-html[lang="fa"] .future-card-tag {
-  letter-spacing: 0.02em;
-  text-transform: none;
-  font-size: 0.82rem;
-}
-
-.future-card--current .future-card-tag { color: var(--accent); }
-
-.future-card-title {
-  font-size: clamp(1.15rem, 1.9vw, 1.35rem);
-  font-weight: 600;
-  color: var(--ink-strong);
-  letter-spacing: -0.01em;
-  line-height: 1.25;
-}
-
-.future-card-text {
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  max-width: 46ch;
-}
-
-.future-card-status {
-  margin-block-start: auto;
-  padding-block-start: 1.25rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--muted);
+.tier-status {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border-block-start: 1px solid var(--line);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  align-self: start;
+  justify-self: start;
+  padding-block: 0.35rem;
+  padding-inline: 0.85rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
 }
 
-.future-card-status::before {
+.tier-status::before {
   content: "";
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--line-strong);
+  background: var(--muted);
   flex: 0 0 auto;
 }
 
-.future-card-status--current {
+/* TODAY: filled accent dot */
+.tier-status--today {
   color: var(--ink-strong);
+  border-color: var(--accent);
 }
-.future-card-status--current::before {
+.tier-status--today::before {
   background: var(--accent);
 }
 
-.apps-future-footnote {
-  margin-block-start: clamp(1.75rem, 3vw, 2.5rem);
-  padding-inline-start: 1rem;
-  border-inline-start: 2px solid var(--line-strong);
-  font-size: 0.85rem;
+html[lang="fa"] .tier-status {
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-size: 0.82rem;
+}
+
+.tier-head h2 {
+  margin: 0;
+  max-width: 24ch;
+}
+
+.tier--today .tier-head h2 {
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  letter-spacing: -0.025em;
+}
+
+.tier-body {
+  max-width: 68ch;
+  display: grid;
+  gap: 1rem;
+}
+
+.tier-body .lead {
+  max-width: 62ch;
+}
+
+.tier-support {
+  font-size: 0.95rem;
   color: var(--muted);
   line-height: 1.65;
-  max-width: 68ch;
+  max-width: 62ch;
+}
+
+.tier-example {
+  margin-block-start: 0.5rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--line-strong);
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 62ch;
+  font-style: italic;
+}
+
+/* Visual differentiation between tiers, without making them look validated */
+.tier--next .tier-head h2,
+.tier--future .tier-head h2 {
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  letter-spacing: -0.02em;
 }
 
 /* =========================================================
-   5. SCIENCE / EVIDENCE CONNECTION
+   5. BENEFITS
    ========================================================= */
-.apps-science {
-  background: var(--bg-elevated);
-  border-block: 1px solid var(--line);
-}
-
-.apps-science-inner {
+.benefits .section-head {
   max-width: 720px;
+  margin-block-end: clamp(2.5rem, 5vw, 4rem);
 }
 
-.apps-science h2 {
-  margin-block: 0.5rem 1rem;
-  max-width: 22ch;
+.benefits h2 { margin-block-end: 1rem; }
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
 
-.apps-science .lead {
-  max-width: 58ch;
+@media (min-width: 720px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.benefit {
+  background: var(--bg);
+  padding: 1.75rem 1.5rem 1.75rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  row-gap: 0.35rem;
+  align-items: baseline;
+}
+
+.benefit-index {
+  grid-row: 1 / 3;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  padding-block-start: 0.35rem;
+}
+
+.benefit-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.benefit-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -457,6 +270,7 @@ html[lang="fa"] .future-card-tag {
    ========================================================= */
 .apps-cta {
   border-block-start: 1px solid var(--line);
+  padding-block: clamp(3rem, 6vw, 5rem);
 }
 
 .apps-cta-inner {
@@ -484,8 +298,8 @@ html[dir="rtl"] .apps-cta-inner::before {
 }
 
 .apps-cta-inner h2 {
-  margin-block: 0.5rem 1rem;
-  max-width: 22ch;
+  margin-block-end: 1rem;
+  max-width: 24ch;
 }
 
 .apps-cta-inner .lead { margin-block-end: 2rem; }
@@ -499,15 +313,16 @@ html[dir="rtl"] .apps-cta-inner::before {
 /* =========================================================
    Persian typography refinements (page-local)
    ========================================================= */
-html[lang="fa"] .future-card-title,
-html[lang="fa"] .apps-current h2,
-html[lang="fa"] .apps-science h2 { letter-spacing: 0; }
+html[lang="fa"] .tier-head h2,
+html[lang="fa"] .benefit-title,
+html[lang="fa"] .apps-cta-inner h2 { letter-spacing: 0; }
+
+html[lang="fa"] .tier-support,
+html[lang="fa"] .tier-example,
+html[lang="fa"] .benefit-text { line-height: 1.85; }
 
 /* =========================================================
    Navigation responsiveness for seven items
-   (Applies only between 900px and 1100px where the header
-   would otherwise wrap. Above 1100px the default spacing
-   from global.css applies unchanged.)
    ========================================================= */
 @media (min-width: 900px) and (max-width: 1100px) {
   .nav-list {

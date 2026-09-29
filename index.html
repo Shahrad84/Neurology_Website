@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title data-i18n="meta.title">Neuronous — Voice-Based Neurological Screening</title>
-  <meta name="description" data-i18n-attr="content" data-i18n="meta.description" content="Neuronous develops voice-based technology for neurological screening, with Parkinson's disease as the first validated application." />
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.description"
+        content="Neuronous uses AI-powered voice analysis to identify meaningful patterns related to neurological and overall health." />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" data-i18n-attr="content" data-i18n="meta.ogTitle" content="Neuronous — Voice-Based Neurological Screening" />
-  <meta property="og:description" data-i18n-attr="content" data-i18n="meta.ogDescription" content="Voice-based technology for neurological screening. Screening, not diagnosis." />
+  <meta property="og:title" data-i18n-attr="content" data-i18n="meta.ogTitle"
+        content="Neuronous — Voice-Based Neurological Screening" />
+  <meta property="og:description" data-i18n-attr="content" data-i18n="meta.ogDescription"
+        content="AI-powered voice analysis for neurological and overall health." />
   <meta property="og:image" content="/assets/og-cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -73,7 +76,7 @@
     <div class="mobile-menu" id="mobileMenu" hidden>
       <nav aria-label="Mobile">
         <ul>
-          <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="/index.html" data-i18n="nav.home" aria-current="page">Home</a></li>
           <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
           <li><a href="/applications.html" data-i18n="nav.applications">Applications</a></li>
           <li><a href="/science.html" data-i18n="nav.science">Science</a></li>
@@ -91,20 +94,16 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="brand.tagline">Neuro intelligence for better health</p>
           <h1 id="hero-title" data-i18n="home.hero.title">
-            Voice-based screening for neurological disorders
+            Your Voice. A Signal of Your Health.
           </h1>
           <p class="lead" data-i18n="home.hero.description">
-            Neuronous develops voice-based technology for neurological screening.
-            A short voice sample is analyzed computationally to identify patterns
-            relevant to screening — designed to support early awareness, not to
-            provide a diagnosis.
+            Neuronous uses AI-powered voice analysis to identify meaningful patterns
+            related to neurological and overall health.
           </p>
 
           <div class="hero-actions">
-            <!-- Destination intentionally left as a placeholder until the external
-                 screening platform is available. Replace `href` at launch. -->
+            <!-- Placeholder — the external screening platform is not yet available. -->
             <a
               class="btn btn-primary"
               href="#"
@@ -113,22 +112,15 @@
             >
               Start Screening
             </a>
-            <a class="btn btn-ghost" href="/contact.html" data-i18n="home.hero.ctaSecondary">
-              Contact Us
-            </a>
           </div>
-
-          <p class="hero-note" data-i18n="home.hero.note">
-            Screening supports awareness and early conversation — it does not replace a clinical diagnosis.
-          </p>
         </div>
 
         <div class="hero-visual" aria-hidden="true">
           <svg class="waveform" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet" role="img">
             <defs>
               <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%"  stop-color="#26384A" stop-opacity="0.15" />
-                <stop offset="50%" stop-color="#3DD6C6" stop-opacity="1" />
+                <stop offset="0%"   stop-color="#26384A" stop-opacity="0.15" />
+                <stop offset="50%"  stop-color="#3DD6C6" stop-opacity="1" />
                 <stop offset="100%" stop-color="#26384A" stop-opacity="0.15" />
               </linearGradient>
             </defs>
@@ -155,109 +147,78 @@
       </div>
     </section>
 
-    <!-- 2. THE PROBLEM -->
-    <section class="problem reveal" aria-labelledby="problem-title">
+
+    <!-- 2. What is Neuronous? -->
+    <section class="why-voice reveal" aria-labelledby="why-voice-title">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow" data-i18n="home.problem.eyebrow">The Problem</p>
-          <h2 id="problem-title" data-i18n="home.problem.title">
-            Accessible neurological screening matters
+          <h2 id="why-voice-title" data-i18n="home.whyVoice.title">
+            What is Neuronous?
           </h2>
-          <p class="lead narrow" data-i18n="home.problem.description">
-            Earlier identification of potential neurological indicators can support
-            timely follow-up. Yet neurological assessment often depends on specialized
-            clinical settings and expertise that may not always be easily accessible.
+          <p class="lead narrow" data-i18n="home.whyVoice.description">
+Neuronous is an AI-powered platform that analyzes voice signals to detect meaningful patterns related to neurological and overall health. It turns subtle voice changes into actionable insights for earlier detection, better monitoring and more informed care.
+          </p>
+        </div>
+      </section>
+
+
+
+
+    <!-- 2. WHY VOICE? -->
+    <section class="why-voice reveal" aria-labelledby="why-voice-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="why-voice-title" data-i18n="home.whyVoice.title">
+            Why voice?
+          </h2>
+          <p class="lead narrow" data-i18n="home.whyVoice.description">
+            Voice reflects a unique combination of neurological, physical and cognitive
+            functions. It provides a non-invasive, convenient and cost-effective way to monitor health and detect changes early.
           </p>
         </div>
 
-        <div class="problem-panel" role="list" aria-label="Three ideas">
-          <div class="pillar" role="listitem">
+        <!-- <ul class="why-voice-panel" role="list" aria-label="Voice signal properties">
+          <li class="pillar" role="listitem">
             <span class="pillar-index">A</span>
-            <h3 class="pillar-title" data-i18n="home.problem.earlyTitle">Early screening</h3>
-            <p class="pillar-text" data-i18n="home.problem.earlyText">
-              Earlier identification of potential neurological indicators can support
-              timely follow-up and evaluation.
-            </p>
-          </div>
-          <div class="pillar" role="listitem">
+            <h3 class="pillar-title" data-i18n="home.whyVoice.item1Title">Non-Invasive</h3>
+          </li>
+          <li class="pillar" role="listitem">
             <span class="pillar-index">B</span>
-            <h3 class="pillar-title" data-i18n="home.problem.accessTitle">Access challenges</h3>
-            <p class="pillar-text" data-i18n="home.problem.accessText">
-              Neurological assessment can require clinical expertise and specialized
-              settings, which may not always be readily available.
-            </p>
-          </div>
-          <div class="pillar" role="listitem">
+            <h3 class="pillar-title" data-i18n="home.whyVoice.item2Title">Remote</h3>
+          </li>
+          <li class="pillar" role="listitem">
             <span class="pillar-index">C</span>
-            <h3 class="pillar-title" data-i18n="home.problem.voiceTitle">Why voice</h3>
-            <p class="pillar-text" data-i18n="home.problem.voiceText">
-              Voice contains measurable acoustic and temporal characteristics that can
-              be computationally analyzed and studied in relation to neurological
-              conditions.
-            </p>
-          </div>
+            <h3 class="pillar-title" data-i18n="home.whyVoice.item3Title">Repeatable</h3>
+          </li>
+        </ul> -->
+
+        <div class="why-voice-cta">
+          <a class="section-link" href="/technology.html" data-i18n="home.whyVoice.cta">
+            Explore the Technology
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- 3. HOW IT WORKS -->
-    <section class="how-it-works reveal" aria-labelledby="how-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow" data-i18n="home.howItWorks.eyebrow">How It Works</p>
-          <h2 id="how-title" data-i18n="home.howItWorks.title">
-            Three steps, from voice to screening support
+    <!-- 4. PARKINSON'S DISEASE — CURRENT FOCUS -->
+    <section class="current-focus reveal" aria-labelledby="current-focus-title">
+      <div class="container current-focus-inner">
+        <div class="current-focus-copy">
+          <p class="eyebrow eyebrow--accent" data-i18n="home.currentFocus.eyebrow">TODAY</p>
+          <h2 id="current-focus-title" data-i18n="home.currentFocus.title">
+            Parkinson's Disease
           </h2>
-        </div>
-
-        <ol class="flow" aria-label="How it works">
-          <li class="flow-step">
-            <span class="flow-index">01</span>
-            <span class="flow-label" data-i18n="home.howItWorks.step1">Record Your Voice</span>
-          </li>
-          <li class="flow-arrow" aria-hidden="true">
-            <svg viewBox="0 0 40 12" width="40" height="12">
-              <path d="M0 6h34M28 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </li>
-          <li class="flow-step">
-            <span class="flow-index">02</span>
-            <span class="flow-label" data-i18n="home.howItWorks.step2">Voice Analysis</span>
-          </li>
-          <li class="flow-arrow" aria-hidden="true">
-            <svg viewBox="0 0 40 12" width="40" height="12">
-              <path d="M0 6h34M28 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </li>
-          <li class="flow-step">
-            <span class="flow-index">03</span>
-            <span class="flow-label" data-i18n="home.howItWorks.step3">Receive Your Screening Result</span>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- 4. TECHNOLOGY TEASER -->
-    <section class="application reveal" aria-labelledby="technology-title">
-      <div class="container application-inner">
-        <div class="application-copy">
-          <p class="eyebrow" data-i18n="home.technology.eyebrow">Our Technology</p>
-          <h2 id="technology-title" data-i18n="home.technology.title">
-            Voice-derived signals, analyzed for screening
-          </h2>
-          <p class="lead" data-i18n="home.technology.description">
-            Voice-derived signals can be processed and analyzed to identify patterns
-            relevant to neurological screening. Parkinson's disease is the first
-            application where this approach has been validated.
+          <p class="lead" data-i18n="home.currentFocus.description">
+            Parkinson's disease is the current focus of Neuronous' voice-based
+            neurological screening technology.
           </p>
-          <a class="link-arrow" href="/technology.html" data-i18n="home.technology.cta">
-            Explore Technology
+          <a class="section-link" href="/applications.html" data-i18n="home.currentFocus.cta">
+            Explore Applications
           </a>
         </div>
 
-        <div class="application-visual" aria-hidden="true">
+        <div class="current-focus-visual" aria-hidden="true">
           <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet">
-            <rect x="0" y="0" width="400" height="300" fill="none"/>
             <g fill="#26384A" fill-opacity="0.22">
               <rect x="30"  y="180" width="6" height="60"  rx="2"/>
               <rect x="46"  y="150" width="6" height="90"  rx="2"/>
@@ -290,78 +251,27 @@
       </div>
     </section>
 
-    <!-- 5. SCIENCE / EVIDENCE TEASER -->
-    <section class="science reveal" aria-labelledby="science-title">
-      <div class="container">
-        <div class="science-inner">
-          <div class="science-copy">
-            <p class="eyebrow" data-i18n="home.science.eyebrow">Science &amp; Evidence</p>
-            <h2 id="science-title" data-i18n="home.science.title">Grounded in research</h2>
-            <p class="lead" data-i18n="home.science.description">
-              Our approach is grounded in research, validation, and ongoing scientific
-              development. Peer-reviewed evidence and clinical collaboration details
-              will be published as they become available.
-            </p>
-            <a class="link-arrow" href="/science.html" data-i18n="home.science.cta">
-              Explore Science
-            </a>
-          </div>
-
-          <div class="science-panel" role="list" aria-label="Research pillars">
-            <div class="pillar" role="listitem">
-              <span class="pillar-index">A</span>
-              <h3 class="pillar-title" data-i18n="home.science.pillar1Title">Scientific Foundation</h3>
-              <p class="pillar-text" data-i18n="home.science.pillar1Text">
-                Developed with a research-first approach.
-              </p>
-            </div>
-            <div class="pillar" role="listitem">
-              <span class="pillar-index">B</span>
-              <h3 class="pillar-title" data-i18n="home.science.pillar2Title">Validation</h3>
-              <p class="pillar-text" data-i18n="home.science.pillar2Text">
-                Validation work is ongoing — details to be published.
-              </p>
-            </div>
-            <div class="pillar" role="listitem">
-              <span class="pillar-index">C</span>
-              <h3 class="pillar-title" data-i18n="home.science.pillar3Title">Transparency</h3>
-              <p class="pillar-text" data-i18n="home.science.pillar3Text">
-                Evidence, methods and limitations will be shared openly.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. FINAL CTA -->
+    <!-- 5. FINAL CTA
     <section class="final-cta reveal" aria-labelledby="cta-title">
       <div class="container">
         <div class="cta-inner">
           <h2 id="cta-title" data-i18n="home.cta.title">
-            Building the future of neurological screening.
+            Your Voice. A Signal of Your Health.
           </h2>
-          <p class="lead" data-i18n="home.cta.description">
-            We're working with clinicians, researchers and partners to bring
-            voice-based screening into everyday practice.
-          </p>
           <div class="cta-actions">
-            <!-- Placeholder destination, same as hero CTA — replace at launch. -->
-            <a
+            Placeholder — the external screening platform is not yet available. -->
+            <!-- <a
               class="btn btn-primary"
               href="#"
               data-screening-link
               data-i18n="home.cta.button"
             >
-              Start Your Screening
-            </a>
-            <a class="btn btn-ghost" href="/applications.html" data-i18n="home.cta.buttonSecondary">
-              Explore Applications
+              Start Screening
             </a>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
   </main>
 
