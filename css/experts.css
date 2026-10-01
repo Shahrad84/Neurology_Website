@@ -1,18 +1,18 @@
 /* =========================================================
-   Team page — section-specific styles
+   Experts page — section-specific styles
    Depends on tokens/primitives in /css/global.css
    ========================================================= */
 
 /* =========================================================
    1. HERO
    ========================================================= */
-.team-hero {
+.experts-hero {
   padding-block: clamp(3rem, 6vw, 6rem) clamp(3rem, 5vw, 5.5rem);
   border-block-end: 1px solid var(--line);
   overflow: hidden;
 }
 
-.team-hero-inner {
+.experts-hero-inner {
   display: grid;
   grid-template-columns: 1fr;
   gap: clamp(2rem, 4vw, 3.5rem);
@@ -20,23 +20,23 @@
 }
 
 @media (min-width: 900px) {
-  .team-hero-inner {
+  .experts-hero-inner {
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
     gap: clamp(3rem, 5vw, 5rem);
   }
 }
 
-.team-hero-copy h1 {
+.experts-hero-copy h1 {
   margin-block: 0.5rem 1.25rem;
-  max-width: 18ch;
+  max-width: 20ch;
 }
-html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
+html[lang="fa"] .experts-hero-copy h1 { max-width: 24ch; }
 
-.team-hero-copy .lead {
-  max-width: 56ch;
+.experts-hero-copy .lead {
+  max-width: 52ch;
 }
 
-.team-hero-visual {
+.experts-hero-visual {
   width: 100%;
   max-width: 620px;
   margin-inline: auto;
@@ -44,52 +44,68 @@ html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
   position: relative;
 }
 
-.team-hero-graph {
+.experts-graph {
   width: 100%;
   height: 100%;
   overflow: visible;
 }
 
-.team-wave {
+.experts-wave {
   stroke-dasharray: 1400;
   stroke-dashoffset: 1400;
-  animation: teamDraw 2s var(--ease) forwards;
+  animation: expertsDraw 2s var(--ease) forwards;
 }
 
-@keyframes teamDraw {
+@keyframes expertsDraw {
   to { stroke-dashoffset: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .team-wave { stroke-dashoffset: 0; animation: none; }
+  .experts-wave { stroke-dashoffset: 0; animation: none; }
 }
 
 /* =========================================================
-   2. TEAM MEMBERS
+   2. INTRODUCTION
    ========================================================= */
-.team-members {
-  background: var(--bg);
+.experts-intro {
   border-block-end: 1px solid var(--line);
 }
 
-.team-members .section-head {
+.experts-intro .section-head {
+  max-width: 720px;
+}
+
+.experts-intro h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 24ch;
+}
+
+/* =========================================================
+   3. OUR EXPERTS
+   ========================================================= */
+.experts-list {
+  background: var(--bg-elevated);
+  border-block-end: 1px solid var(--line);
+}
+
+.experts-list .section-head {
   max-width: 720px;
   margin-block-end: clamp(2.5rem, 5vw, 4rem);
 }
 
-.team-members h2 {
+.experts-list h2 {
   margin-block: 0.5rem 1rem;
   max-width: 22ch;
 }
 
-.team-grid {
+.experts-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: clamp(2rem, 4vw, 3rem);
 }
 
 @media (min-width: 640px) {
-  .team-grid {
+  .experts-grid {
     grid-template-columns: 1fr 1fr;
     column-gap: clamp(1.75rem, 4vw, 2.5rem);
     row-gap: clamp(2.5rem, 4vw, 3.5rem);
@@ -97,14 +113,14 @@ html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
 }
 
 @media (min-width: 1100px) {
-  .team-grid {
+  .experts-grid {
     grid-template-columns: repeat(4, 1fr);
     column-gap: clamp(1.25rem, 2.5vw, 2rem);
     row-gap: 0;
   }
 }
 
-.team-member {
+.expert-card {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -113,26 +129,18 @@ html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
   border-block-start: 1px solid var(--line);
 }
 
-.team-member__index {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-  line-height: 1;
-}
-
-.team-member__image {
+/* Photo placeholder */
+.expert-photo {
   width: 100%;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  background: var(--bg-elevated);
+  background: var(--bg);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   position: relative;
 }
 
-.team-member__image img {
+.expert-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -141,11 +149,11 @@ html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
   transition: transform 0.6s var(--ease);
 }
 
-.team-member:hover .team-member__image img {
+.expert-card:hover .expert-photo img {
   transform: scale(1.02);
 }
 
-.team-member__placeholder {
+.expert-photo__placeholder {
   width: 100%;
   height: 100%;
   display: flex;
@@ -158,7 +166,7 @@ html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
   position: relative;
 }
 
-.team-member__placeholder::before {
+.expert-photo__placeholder::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -169,65 +177,39 @@ html[lang="fa"] .team-hero-copy h1 { max-width: 22ch; }
   pointer-events: none;
 }
 
-.team-member__placeholder svg {
+.expert-photo__placeholder svg {
   position: relative;
   z-index: 1;
 }
 
-.team-member__body {
+/* Body */
+.expert-body {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  min-height: 1px; /* ensures empty body still occupies the box */
+  min-height: 1px;
 }
 
-.team-member__label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-block-end: 0.35rem;
-}
-html[lang="fa"] .team-member__label {
-  letter-spacing: 0.04em;
-  text-transform: none;
-  font-size: 0.82rem;
-}
-
-/* Empty placeholders — reserved vertical space so layout stays even.
-   When real content is inserted via JSON, the .team-member__name,
-   .team-member__role, and .team-member__bio will populate automatically. */
-.team-member__name,
-.team-member__role,
-.team-member__bio {
-  margin: 0;
-}
-
-.team-member__name {
-  font-size: clamp(1.15rem, 1.9vw, 1.35rem);
+.expert-name {
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
   font-weight: 600;
   color: var(--ink-strong);
   letter-spacing: -0.01em;
-  line-height: 1.25;
-  min-height: 1.25em;
-}
-
-.team-member__name:empty::before,
-.team-member__role:empty::before,
-.team-member__bio:empty::before {
-  content: "";
-  display: block;
-}
-
-.team-member__role {
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--ink-soft);
+  line-height: 1.3;
+  margin: 0;
   min-height: 1.3em;
 }
 
-.team-member__bio {
+.expert-field {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1.4;
+  margin: 0;
+  min-height: 1.4em;
+}
+
+.expert-bio {
   margin-block-start: 0.75rem;
   font-size: 0.92rem;
   color: var(--muted);
@@ -236,34 +218,54 @@ html[lang="fa"] .team-member__label {
   min-height: 3em;
 }
 
-.team-member::after {
-  content: "";
-  position: absolute;
-  inset-block-start: -1px;
-  inset-inline-start: 0;
-  width: 0;
-  height: 1px;
-  background: var(--accent);
-  transition: width 0.4s var(--ease);
+/* Professional links row */
+.expert-links {
+  margin-block-start: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.78rem;
+  color: var(--muted);
 }
-.team-member:hover::after { width: 100%; }
+
+.expert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--ink-soft);
+  border-block-end: 1px solid transparent;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.expert-link:not([href=""]):hover {
+  color: var(--accent);
+  border-block-end-color: var(--accent);
+}
+
+.expert-link[href=""] {
+  color: var(--line-strong);
+  pointer-events: none;
+  cursor: default;
+}
 
 /* =========================================================
-   3. SCIENTIFIC & TECHNICAL EXPERTISE
+   4. AREAS OF EXPERTISE
    ========================================================= */
-.team-expertise {
-  background: var(--bg-elevated);
+.experts-areas {
   border-block-end: 1px solid var(--line);
 }
 
-.team-expertise .section-head {
+.experts-areas .section-head {
   max-width: 720px;
   margin-block-end: clamp(2.5rem, 5vw, 4rem);
 }
 
-.team-expertise h2 { margin-block-end: 1rem; }
+.experts-areas h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 22ch;
+}
 
-.expertise-grid {
+.areas-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1px;
@@ -274,52 +276,74 @@ html[lang="fa"] .team-member__label {
 }
 
 @media (min-width: 720px) {
-  .expertise-grid {
+  .areas-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1080px) {
-  .expertise-grid {
+  .areas-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.expertise-card {
+.area-card {
   background: var(--bg);
-  padding: 1.75rem 1.5rem 2rem;
+  padding: 1.75rem 1.5rem 1.75rem;
   display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 1rem;
-  align-items: baseline;
+  gap: 0.5rem;
 }
 
-.expertise-index {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  font-variant-numeric: tabular-nums;
-  padding-block-start: 0.35rem;
-}
-
-.expertise-title {
-  font-size: 1.02rem;
+.area-title {
+  font-size: 1rem;
   font-weight: 600;
   color: var(--ink-strong);
   letter-spacing: -0.01em;
   line-height: 1.35;
 }
 
+.area-text {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 /* =========================================================
-   4. SCIENCE CTA
+   5. RESEARCH & EXPERTISE
    ========================================================= */
-.team-cta {
-  border-block-start: 1px solid var(--line);
+.experts-research {
+  background: var(--bg-elevated);
+  border-block-end: 1px solid var(--line);
+}
+
+.experts-research-inner {
+  max-width: 720px;
+}
+
+.experts-research h2 {
+  margin-block: 0.5rem 1rem;
+  max-width: 22ch;
+}
+
+.experts-research .lead {
+  margin-block-end: 1.75rem;
+  max-width: 56ch;
+}
+
+.experts-research-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* =========================================================
+   6. FINAL CTA
+   ========================================================= */
+.experts-cta {
   padding-block: clamp(3rem, 6vw, 5rem);
 }
 
-.team-cta-inner {
+.experts-cta-inner {
   max-width: 760px;
   margin-inline: auto;
   padding: clamp(2.5rem, 5vw, 3.75rem) clamp(1.75rem, 4vw, 3rem);
@@ -330,7 +354,7 @@ html[lang="fa"] .team-member__label {
   overflow: hidden;
 }
 
-.team-cta-inner::before {
+.experts-cta-inner::before {
   content: "";
   position: absolute;
   inset-block-start: 0;
@@ -339,18 +363,20 @@ html[lang="fa"] .team-member__label {
   height: 2px;
   background: linear-gradient(to right, var(--accent), transparent);
 }
-html[dir="rtl"] .team-cta-inner::before {
+html[dir="rtl"] .experts-cta-inner::before {
   background: linear-gradient(to left, var(--accent), transparent);
 }
 
-.team-cta-inner h2 {
+.experts-cta-inner h2 {
   margin-block-end: 1rem;
   max-width: 24ch;
 }
 
-.team-cta-inner .lead { margin-block-end: 2rem; }
+.experts-cta-inner .lead {
+  margin-block-end: 2rem;
+}
 
-.team-cta-actions {
+.experts-cta-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -359,13 +385,15 @@ html[dir="rtl"] .team-cta-inner::before {
 /* =========================================================
    Persian typography refinements (page-local)
    ========================================================= */
-html[lang="fa"] .team-member__name,
-html[lang="fa"] .team-members h2,
-html[lang="fa"] .team-expertise h2,
-html[lang="fa"] .team-cta-inner h2 { letter-spacing: 0; }
+html[lang="fa"] .experts-hero-copy h1,
+html[lang="fa"] .experts-intro h2,
+html[lang="fa"] .experts-list h2,
+html[lang="fa"] .area-title,
+html[lang="fa"] .experts-research h2,
+html[lang="fa"] .experts-cta-inner h2 { letter-spacing: 0; }
 
-html[lang="fa"] .team-member { line-height: 1.75; }
-html[lang="fa"] .team-member__bio { line-height: 1.85; }
+html[lang="fa"] .expert-bio,
+html[lang="fa"] .area-text { line-height: 1.85; }
 
 /* =========================================================
    Navigation responsiveness for seven items
