@@ -46,7 +46,6 @@
           <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
           <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
           <li><a href="/research.html" data-i18n="nav.research" aria-current="page">Research</a></li>
-          <li><a href="/experts.html" data-i18n="nav.experts">Experts</a></li>
           <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
           <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
@@ -78,7 +77,6 @@
           <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
           <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
           <li><a href="/research.html" data-i18n="nav.research" aria-current="page">Research</a></li>
-          <li><a href="/experts.html" data-i18n="nav.experts">Experts</a></li>
           <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
           <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
@@ -236,30 +234,39 @@
     </section>
 
     <!-- 5. RESEARCH IN PROGRESS -->
-    <section class="research-progress reveal" aria-labelledby="research-progress-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="research-progress-title" data-i18n="research.progress.title">
-            Research in Progress
-          </h2>
-          <p class="lead narrow" data-i18n="research.progress.description">
-            Current areas of ongoing research and exploration.
-          </p>
-        </div>
+<section class="research-progress reveal" aria-labelledby="research-progress-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="research-progress-title" data-i18n="research.progress.title">
+        Research in Progress
+      </h2>
+      <p class="lead narrow" data-i18n="research.progress.description">
+        Current areas of ongoing research and exploration.
+      </p>
+    </div>
 
-        <ul class="progress-tags" role="list" aria-label="Research areas in progress">
-          <li class="progress-tag" data-i18n="research.progress.items.parkinsons">
-            Longitudinal monitoring of patients with neurological disorders through voice analysis          </li>
-          <li class="progress-tag" data-i18n="research.progress.items.longitudinal">
-            Investigating the relationship between voice signals and other health indicators and behavioral characteristics
-          </li>
-          <li class="progress-tag" data-i18n="research.progress.items.biomarkers">
-            Investigating the impact of phonation type, frequency, and resolution on the identification of patients with neurological disorders
-          </li>
-        </ul>
-      </div>
-    </section>
+    <ul class="progress-tags" role="list" aria-label="Research areas in progress">
+      <li class="progress-tag" data-i18n="research.progress.items.parkinsons">
+        Longitudinal monitoring of patients with neurological disorders through voice analysis
+      </li>
+      <li class="progress-tag" data-i18n="research.progress.items.longitudinal">
+        Investigating the relationship between voice signals and other health indicators and behavioral characteristics
+      </li>
+      <li class="progress-tag" data-i18n="research.progress.items.biomarkers">
+        Investigating the impact of phonation type, frequency, and resolution on the identification of patients with neurological disorders
+      </li>
+    </ul>
 
+    <div class="progress-collaborate">
+      <p class="progress-collaborate-text" data-i18n="research.progress.collaborate.text">
+        Interested in collaborating on research?
+      </p>
+      <a class="section-link" href="/contact.html" data-i18n="research.progress.collaborate.link">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- 6. OUR EXPERTS -->
 <section class="experts-list reveal" aria-labelledby="experts-list-title">
@@ -276,44 +283,81 @@
     <ol class="experts-grid" role="list">
 
       <li class="expert-card">
-        <div class="expert-index" aria-hidden="true">01</div>
+        <div class="expert-photo">
+          <!-- Placeholder visual. When a real photo is available, replace the
+               inner .expert-photo__placeholder with:
+               <img src="assets/images/experts/expert-01.jpg" alt="" loading="lazy" /> -->
+          <div class="expert-photo__placeholder" role="img" aria-label="Photo placeholder">
+            <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+              <circle cx="20" cy="15" r="6" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
+              <path d="M6,34 C6,26 12,22 20,22 C28,22 34,26 34,34"
+                    fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+            </svg>
+          </div>
+        </div>
+
         <div class="expert-body">
           <p class="expert-name" data-i18n="experts.profiles.expert01.name">[Name]</p>
           <p class="expert-field" data-i18n="experts.profiles.expert01.expertise">[Expertise]</p>
-          <p class="expert-role" data-i18n="experts.profiles.expert01.role">[Position]</p>
         </div>
       </li>
 
       <li class="expert-card">
-        <div class="expert-index" aria-hidden="true">02</div>
+        <div class="expert-photo">
+          <div class="expert-photo__placeholder" role="img" aria-label="Photo placeholder">
+            <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+              <circle cx="20" cy="15" r="6" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
+              <path d="M6,34 C6,26 12,22 20,22 C28,22 34,26 34,34"
+                    fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+            </svg>
+          </div>
+        </div>
+
         <div class="expert-body">
           <p class="expert-name" data-i18n="experts.profiles.expert02.name">[Name]</p>
           <p class="expert-field" data-i18n="experts.profiles.expert02.expertise">[Expertise]</p>
-          <p class="expert-role" data-i18n="experts.profiles.expert02.role">[Position]</p>
         </div>
       </li>
 
       <li class="expert-card">
-        <div class="expert-index" aria-hidden="true">03</div>
+        <div class="expert-photo">
+          <div class="expert-photo__placeholder" role="img" aria-label="Photo placeholder">
+            <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+              <circle cx="20" cy="15" r="6" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
+              <path d="M6,34 C6,26 12,22 20,22 C28,22 34,26 34,34"
+                    fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+            </svg>
+          </div>
+        </div>
+
         <div class="expert-body">
           <p class="expert-name" data-i18n="experts.profiles.expert03.name">[Name]</p>
           <p class="expert-field" data-i18n="experts.profiles.expert03.expertise">[Expertise]</p>
-          <p class="expert-role" data-i18n="experts.profiles.expert03.role">[Position]</p>
         </div>
       </li>
 
       <li class="expert-card">
-        <div class="expert-index" aria-hidden="true">04</div>
+        <div class="expert-photo">
+          <div class="expert-photo__placeholder" role="img" aria-label="Photo placeholder">
+            <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+              <circle cx="20" cy="15" r="6" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
+              <path d="M6,34 C6,26 12,22 20,22 C28,22 34,26 34,34"
+                    fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+            </svg>
+          </div>
+        </div>
+
         <div class="expert-body">
           <p class="expert-name" data-i18n="experts.profiles.expert04.name">[Name]</p>
           <p class="expert-field" data-i18n="experts.profiles.expert04.expertise">[Expertise]</p>
-          <p class="expert-role" data-i18n="experts.profiles.expert04.role">[Position]</p>
         </div>
       </li>
 
     </ol>
   </div>
 </section>
+
+
 
 
   </main>
@@ -331,7 +375,6 @@
         <ul>
           <li><a href="/technology.html" data-i18n="nav.technology">Technology</a></li>
           <li><a href="/research.html" data-i18n="nav.research">Research</a></li>
-          <li><a href="/experts.html" data-i18n="nav.experts">Experts</a></li>
           <li><a href="/privacy.html" data-i18n="nav.privacy">Privacy</a></li>
           <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>

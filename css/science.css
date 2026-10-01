@@ -632,9 +632,32 @@ html[lang="fa"] .research-hero-copy h1 { max-width: 24ch; }
   background: rgba(61, 214, 198, 0.06);
 }
 
+/* Collaboration invitation — small footer of the section */
+.progress-collaborate {
+  margin-block-start: clamp(2rem, 4vw, 3rem);
+  padding-block-start: clamp(1.5rem, 3vw, 2rem);
+  border-block-start: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1.5rem;
+}
+
+.progress-collaborate-text {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.progress-collaborate .section-link {
+  margin-block-start: 0;
+  align-self: baseline;
+}
+
 
 /* =========================================================
-   3. OUR EXPERTS
+   6. OUR EXPERTS
    ========================================================= */
 .experts-list {
   background: var(--bg-elevated);
@@ -654,100 +677,118 @@ html[lang="fa"] .research-hero-copy h1 { max-width: 24ch; }
 .experts-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
-  border-block-start: 1px solid var(--line);
+  gap: clamp(2rem, 4vw, 3rem);
 }
 
 @media (min-width: 640px) {
   .experts-grid {
     grid-template-columns: 1fr 1fr;
+    column-gap: clamp(1.75rem, 4vw, 2.5rem);
+    row-gap: clamp(2.5rem, 4vw, 3.5rem);
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1100px) {
   .experts-grid {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: clamp(1.25rem, 2.5vw, 2rem);
+    row-gap: 0;
   }
 }
 
 .expert-card {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1.5rem;
   position: relative;
-  padding-block: clamp(1.5rem, 3vw, 2rem);
-  padding-inline-end: 1rem;
-  border-block-end: 1px solid var(--line);
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--line);
 }
 
-@media (min-width: 640px) {
-  .expert-card {
-    padding-inline: 1.5rem 1.25rem;
-    border-block-end: 1px solid var(--line);
-    border-inline-start: 1px solid var(--line);
-  }
-  .expert-card:nth-child(odd) {
-    border-inline-start: 0;
-    padding-inline-start: 0;
-  }
+/* Photo placeholder */
+.expert-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  position: relative;
 }
 
-@media (min-width: 1080px) {
-  .expert-card {
-    border-block-end: 0;
-    padding-block: clamp(1.75rem, 3vw, 2.25rem);
-    padding-inline: 1.5rem 1.25rem;
-    border-inline-start: 1px solid var(--line);
-  }
-  .expert-card:nth-child(odd) {
-    border-inline-start: 1px solid var(--line);
-    padding-inline-start: 1.5rem;
-  }
-  .expert-card:first-child {
-    border-inline-start: 0;
-    padding-inline-start: 0;
-  }
+.expert-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s var(--ease);
 }
 
-.expert-index {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+.expert-card:hover .expert-photo img {
+  transform: scale(1.02);
+}
+
+.expert-photo__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--muted);
-  font-variant-numeric: tabular-nums;
-  line-height: 1;
+  opacity: 0.7;
+  background:
+    linear-gradient(180deg, rgba(38, 56, 74, 0.02), rgba(38, 56, 74, 0.05));
+  position: relative;
 }
 
+.expert-photo__placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(11, 23, 38, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 23, 38, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.expert-photo__placeholder svg {
+  position: relative;
+  z-index: 1;
+}
+
+/* Body */
 .expert-body {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  min-height: 1px;
 }
 
 .expert-name {
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
   font-weight: 600;
   color: var(--ink-strong);
   letter-spacing: -0.01em;
   line-height: 1.3;
   margin: 0;
+  min-height: 1.3em;
 }
 
 .expert-field {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--accent);
   line-height: 1.4;
   margin: 0;
+  min-height: 1.4em;
 }
 
-.expert-role {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--muted);
-  line-height: 1.4;
-  margin: 0;
-}
+/* Persian typography refinements for this section */
+html[lang="fa"] .expert-name { letter-spacing: 0; }
+
+
 
 /* =========================================================
    Persian typography refinements (page-local)
