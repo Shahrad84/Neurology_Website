@@ -688,11 +688,11 @@ html[lang="fa"] .research-hero-copy h1 { max-width: 24ch; }
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1080px) {
   .experts-grid {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: clamp(1.25rem, 2.5vw, 2rem);
-    row-gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: clamp(1.5rem, 3vw, 2rem);
+    row-gap: clamp(2.5rem, 4vw, 3rem);
   }
 }
 
